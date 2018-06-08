@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="134" >
+        <EntityTypeShape EntityType="Model1.Bancos" Width="1.5" PointX="20.125" PointY="25.75" />
+        <EntityTypeShape EntityType="Model1.CuentasCorrientes" Width="1.5" PointX="20.25" PointY="22.875" />
+        <EntityTypeShape EntityType="Model1.Cheques" Width="1.5" PointX="18.875" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Chequera" Width="1.5" PointX="17.625" PointY="24.375" />
+        <EntityTypeShape EntityType="Model1.FormasPago_Cobro" Width="2" PointX="19.875" PointY="16.875" />
+        <EntityTypeShape EntityType="Model1.TipoResponsableInscripto" Width="1.5" PointX="30.125" PointY="12.25" />
+        <EntityTypeShape EntityType="Model1.Deposito" Width="1.5" PointX="16.375" PointY="20.5" />
+        <EntityTypeShape EntityType="Model1.Tesoreria" Width="1.5" PointX="17.375" PointY="12.375" />
+        <EntityTypeShape EntityType="Model1.MovimientoDinero" Width="1.5" PointX="15.375" PointY="14.5" />
+        <AssociationConnector Association="Model1.TesoreriaMovimientoDinero" />
+        <EntityTypeShape EntityType="Model1.Extraccion" Width="1.5" PointX="14.125" PointY="20" />
+        <EntityTypeShape EntityType="Model1.TipoMovimiento" Width="1.5" PointX="15.625" PointY="17.625" />
+        <InheritanceConnector EntityType="Model1.Deposito" />
+        <InheritanceConnector EntityType="Model1.Extraccion" />
+        <AssociationConnector Association="Model1.TipoMovimientoMovimientoDinero" />
+        <AssociationConnector Association="Model1.CuentasCorrientesBancos" />
+        <AssociationConnector Association="Model1.TipoMovimientoDepositoCuentasCorrientes" />
+        <AssociationConnector Association="Model1.TipoMovimientoExtraccionCuentasCorrientes" />
+        <AssociationConnector Association="Model1.ChequeraCheques" />
+        <EntityTypeShape EntityType="Model1.RetencionesDGI" Width="1.5" PointX="15.75" PointY="25.875" />
+        <EntityTypeShape EntityType="Model1.Efectivo" Width="1.5" PointX="23.5" PointY="20.5" />
+        <EntityTypeShape EntityType="Model1.Comprobante" Width="1.5" PointX="22.625" PointY="13.375" />
+        <EntityTypeShape EntityType="Model1.TipoTalonario" Width="1.5" PointX="19.75" PointY="12.375" />
+        <EntityTypeShape EntityType="Model1.DébitoAutomático" Width="1.5" PointX="21.375" PointY="20.375" />
+        <EntityTypeShape EntityType="Model1.Talonario" Width="1.5" PointX="19.5" PointY="14.5" />
+        <AssociationConnector Association="Model1.TipoTalonarioTalonario" />
+        <AssociationConnector Association="Model1.TipoComprobanteTalonario" />
+        <AssociationConnector Association="Model1.FormasDePagoCheques" />
+        <AssociationConnector Association="Model1.DébitoAutomáticoCuentasCorrientes" />
+        <AssociationConnector Association="Model1.FormasDePagoDébitoAutomático" />
+        <EntityTypeShape EntityType="Model1.BajaMatricula" Width="1.5" PointX="13.125" PointY="4" />
+        <AssociationConnector Association="Model1.FormasDePagoPagoEfectivo" />
+        <EntityTypeShape EntityType="Model1.Tarjeta" Width="1.5" PointX="26.875" PointY="19.5" />
+        <AssociationConnector Association="Model1.FormasDePagoTarjeta" />
+        <EntityTypeShape EntityType="Model1.Débito" Width="1.5" PointX="28.25" PointY="21.375" />
+        <EntityTypeShape EntityType="Model1.Crédito" Width="1.5" PointX="25.625" PointY="21.375" />
+        <InheritanceConnector EntityType="Model1.Débito" />
+        <InheritanceConnector EntityType="Model1.Crédito" />
+        <AssociationConnector Association="Model1.TarjetaBancos" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model1.TipoComprobante" Width="1.5" PointX="27.75" PointY="14.125" />
+        <AssociationConnector Association="Model1.ComprobanteTipoComprobante" />
+        <AssociationConnector Association="Model1.TesoreriaComprobante" />
+        <AssociationConnector Association="Model1.ComprobanteFormasDePago" />
+        <EntityTypeShape EntityType="Model1.Profesional" Width="1.5" PointX="23.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TipoProfesional" Width="1.5" PointX="20.125" PointY="4.5" />
+        <EntityTypeShape EntityType="Model1.Matricula" Width="1.5" PointX="18.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TitulosProfesional" Width="1.5" PointX="26.625" PointY="3" />
+        <AssociationConnector Association="Model1.TitulosProfesionalProfesional" />
+        <AssociationConnector Association="Model1.TipoProfesionalProfesional" />
+        <AssociationConnector Association="Model1.ProfesionalTipoResponsableInscripto" />
+        <AssociationConnector Association="Model1.ProfesionalMatricula" />
+        <AssociationConnector Association="Model1.BajaMatriculaMatricula" />
+        <EntityTypeShape EntityType="Model1.CobroMatriculaxMes" Width="1.5" PointX="14" PointY="6.375" />
+        <EntityTypeShape EntityType="Model1.MesXAño" Width="1.5" PointX="12.75" PointY="8.625" />
+        <AssociationConnector Association="Model1.MesXAñoPagoMatriculaxMes" />
+        <AssociationConnector Association="Model1.MatriculaPagoMatriculaxMes" />
+        <EntityTypeShape EntityType="Model1.Factura" Width="1.5" PointX="18.5" PointY="9.25" />
+        <EntityTypeShape EntityType="Model1.Recibo" Width="1.5" PointX="22.5" PointY="10.125" />
+        <AssociationConnector Association="Model1.PagoMatriculaxMesRecibo" />
+        <EntityTypeShape EntityType="Model1.Colegio" Width="1.5" PointX="26" PointY="10.25" />
+        <AssociationConnector Association="Model1.FacturaTesoreria" />
+        <InheritanceConnector EntityType="Model1.Factura" />
+        <InheritanceConnector EntityType="Model1.Recibo" />
+        <EntityTypeShape EntityType="Model1.AltaMatricula" Width="1.5" PointX="16.125" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="Model1.BajaMatriculaInscripción" />
+        <AssociationConnector Association="Model1.InscripciónMatricula" />
+        <EntityTypeShape EntityType="Model1.ValoresCobroActual" Width="1.5" PointX="26.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model1.ChequeraCuentasCorrientes" />
+        <AssociationConnector Association="Model1.CréditoCuentasCorrientes" />
+        <AssociationConnector Association="Model1.DébitoCuentasCorrientes" />
+        <AssociationConnector Association="Model1.InscripciónTalonario" />
+        <EntityTypeShape EntityType="Model1.TiposDescuento" Width="1.5" PointX="5" PointY="6.125" />
+        <EntityTypeShape EntityType="Model1.Descuento" Width="1.5" PointX="8.5" PointY="4.5" />
+        <EntityTypeShape EntityType="Model1.GrupoKinesiologos" Width="1.5" PointX="28.75" PointY="2.875" />
+        <AssociationConnector Association="Model1.ProfesionalGrupoKinesiologos" />
+        <EntityTypeShape EntityType="Model1.DomicilioLaboral" Width="1.5" PointX="31.625" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="Model1.ProfesionalConsultorio" />
+        <AssociationConnector Association="Model1.GrupoKinesiologosConsultorio" />
+        <EntityTypeShape EntityType="Model1.Zona" Width="1.5" PointX="29.5" PointY="8.5" />
+        <AssociationConnector Association="Model1.ConsultorioZona" />
+        <EntityTypeShape EntityType="Model1.Localidades" Width="1.5" PointX="35.5" PointY="9" />
+        <EntityTypeShape EntityType="Model1.ObraSocial" Width="1.5" PointX="37.25" PointY="13.75" />
+        <EntityTypeShape EntityType="Model1.CategoríaMatricula" Width="1.5" PointX="16.125" PointY="0.5" />
+        <AssociationConnector Association="Model1.MatriculaCategoríaMatricula" />
+        <EntityTypeShape EntityType="Model1.SidePreki" Width="1.5" PointX="32.625" PointY="16.875" />
+        <EntityTypeShape EntityType="Model1.CobroSidePreki" Width="1.5" PointX="27" PointY="16.25" />
+        <AssociationConnector Association="Model1.MesXAñoCobroSidePreki" />
+        <AssociationConnector Association="Model1.CobroSidePrekiSidePreki" />
+        <AssociationConnector Association="Model1.ProfesionalCobroSidePreki" />
+        <EntityTypeShape EntityType="Model1.Linea_Factura" Width="1.5" PointX="33.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model1.OrdenesPractica" Width="1.5" PointX="33.75" PointY="15.25" />
+        <AssociationConnector Association="Model1.LocalidadesZona" />
+        <AssociationConnector Association="Model1.ProfesionalOrdenesPractica" />
+        <AssociationConnector Association="Model1.OrdenesPracticaObraSocial" />
+        <EntityTypeShape EntityType="Model1.PlanEmbargoJudicial" Width="1.5" PointX="26.625" PointY="7" />
+        <EntityTypeShape EntityType="Model1.Entity1" Width="1.5" PointX="3.25" PointY="8.125" />
+        <AssociationConnector Association="Model1.EmbargoJudicialProfesional" />
+        <EntityTypeShape EntityType="Model1.SeguroVida" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.PolizaSeguro" Width="1.5" PointX="20.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.IndependienteAsociado" Width="1.5" PointX="22.75" PointY="3.125" />
+        <AssociationConnector Association="Model1.SeguroContraIncendiosIndependienteAsociado" />
+        <InheritanceConnector EntityType="Model1.IndependienteAsociado" />
+        <EntityTypeShape EntityType="Model1.Dependiente" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Model1.TipoBajaMatricula" Width="1.5" PointX="10.875" PointY="3.125" />
+        <AssociationConnector Association="Model1.TipoBajaMatriculaBajaMatricula" />
+        <EntityTypeShape EntityType="Model1.Jubilación" Width="1.5" PointX="4.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Model1.Fallecimiento" Width="1.5" PointX="3.875" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Traslado" Width="1.5" PointX="5.875" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.AbandonoProfesión" Width="1.5" PointX="7.625" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.SanciónDisciplinaria" Width="1.5" PointX="9.5" PointY="0.75" />
+        <InheritanceConnector EntityType="Model1.Fallecimiento" />
+        <InheritanceConnector EntityType="Model1.Traslado" />
+        <InheritanceConnector EntityType="Model1.AbandonoProfesión" />
+        <InheritanceConnector EntityType="Model1.SanciónDisciplinaria" />
+        <InheritanceConnector EntityType="Model1.Jubilación" />
+        <EntityTypeShape EntityType="Model1.MotivoAlta" Width="1.5" PointX="14.125" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="Model1.MotivoAltaInscripción" />
+        <EntityTypeShape EntityType="Model1.Aseguradora" Width="1.5" PointX="23.375" PointY="0.75" />
+        <AssociationConnector Association="Model1.SeguroAseguradora" />
+        <EntityTypeShape EntityType="Model1.TipoSeguro" Width="1.5" PointX="18.5" PointY="0.5" />
+        <AssociationConnector Association="Model1.TipoSeguroPolizaSeguro" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
