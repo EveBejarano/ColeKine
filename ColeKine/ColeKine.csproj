@@ -61,5 +61,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Funcionalidades no consideradas.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
