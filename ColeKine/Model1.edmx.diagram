@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="89" ShowGrid="true" SnapToGrid="false" DisplayType="true" >
+      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="42" ShowGrid="true" SnapToGrid="false" DisplayType="true" >
         <EntityTypeShape EntityType="Model1.Bancos" Width="1.5" PointX="51.375" PointY="45.75" />
         <EntityTypeShape EntityType="Model1.CuentaBancaria" Width="1.5" PointX="44.75" PointY="44.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.Cheques" Width="1.5" PointX="43.25" PointY="39.25" IsExpanded="true" />
