@@ -14,7 +14,7 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BancosSet" EntityType="Model1.Bancos" />
-          <EntitySet Name="CuentasCorrientesSet" EntityType="Model1.CuentasCorrientes" />
+          <EntitySet Name="CuentaBancariaSet" EntityType="Model1.CuentaBancaria" />
           <EntitySet Name="ChequesSet" EntityType="Model1.Cheques" />
           <EntitySet Name="ChequeraSet" EntityType="Model1.Chequera" />
           <EntitySet Name="FormasPago_CobroSet" EntityType="Model1.FormasPago_Cobro" />
@@ -22,16 +22,16 @@
           <EntitySet Name="TesoreriaSet" EntityType="Model1.Tesoreria" />
           <EntitySet Name="MovimientoDineroSet" EntityType="Model1.MovimientoDinero" />
           <AssociationSet Name="CuentasCorrientesBancos" Association="Model1.CuentasCorrientesBancos">
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
             <End Role="Bancos" EntitySet="BancosSet" />
           </AssociationSet>
           <AssociationSet Name="TipoMovimientoDepositoCuentasCorrientes" Association="Model1.TipoMovimientoDepositoCuentasCorrientes">
             <End Role="TipoMovimientoDeposito" EntitySet="MovimientoDineroSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <AssociationSet Name="TipoMovimientoExtraccionCuentasCorrientes" Association="Model1.TipoMovimientoExtraccionCuentasCorrientes">
             <End Role="TipoMovimientoExtraccion" EntitySet="MovimientoDineroSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <AssociationSet Name="ChequeraCheques" Association="Model1.ChequeraCheques">
             <End Role="Chequera" EntitySet="ChequeraSet" />
@@ -47,7 +47,7 @@
           </AssociationSet>
           <AssociationSet Name="DébitoAutomáticoCuentasCorrientes" Association="Model1.DébitoAutomáticoCuentasCorrientes">
             <End Role="DébitoAutomático" EntitySet="DébitoAutomáticoSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <AssociationSet Name="FormasDePagoDébitoAutomático" Association="Model1.FormasDePagoDébitoAutomático">
             <End Role="FormasDePago" EntitySet="FormasPago_CobroSet" />
@@ -121,15 +121,15 @@
           <EntitySet Name="ValoresCobroActualSet" EntityType="Model1.ValoresCobroActual" />
           <AssociationSet Name="ChequeraCuentasCorrientes" Association="Model1.ChequeraCuentasCorrientes">
             <End Role="Chequera" EntitySet="ChequeraSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <AssociationSet Name="CréditoCuentasCorrientes" Association="Model1.CréditoCuentasCorrientes">
             <End Role="Crédito" EntitySet="TarjetaSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <AssociationSet Name="DébitoCuentasCorrientes" Association="Model1.DébitoCuentasCorrientes">
             <End Role="Débito" EntitySet="TarjetaSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <EntitySet Name="DescuentoSet" EntityType="Model1.Descuento" />
           <EntitySet Name="GrupoKinesiologosSet" EntityType="Model1.GrupoKinesiologos" />
@@ -158,14 +158,14 @@
             <End Role="Matricula" EntitySet="MatriculaSet" />
             <End Role="CategoríaMatricula" EntitySet="CategoríaMatriculaSet" />
           </AssociationSet>
-          <EntitySet Name="SidePrekiSet" EntityType="Model1.SidePreki" />
+          <EntitySet Name="CajaProvisionalSet" EntityType="Model1.CajaProvisional" />
           <AssociationSet Name="MesXAñoCobroSidePreki" Association="Model1.MesXAñoCobroSidePreki">
             <End Role="MesXAño" EntitySet="MesXAñoSet" />
             <End Role="CobroSidePreki" EntitySet="DescuentoSet" />
           </AssociationSet>
           <AssociationSet Name="CobroSidePrekiSidePreki" Association="Model1.CobroSidePrekiSidePreki">
             <End Role="CobroSidePreki" EntitySet="DescuentoSet" />
-            <End Role="SidePreki" EntitySet="SidePrekiSet" />
+            <End Role="SidePreki" EntitySet="CajaProvisionalSet" />
           </AssociationSet>
           <EntitySet Name="Linea_FacturaSet" EntityType="Model1.Linea_Factura" />
           <EntitySet Name="OrdenPracticaSet" EntityType="Model1.OrdenPractica" />
@@ -276,10 +276,6 @@
             <End Role="ReciboSueldo" EntitySet="ReciboHonorariosSet" />
             <End Role="TiposDescuento" EntitySet="DescuentoSet" />
           </AssociationSet>
-          <AssociationSet Name="PlanEmbargoJudicialDescuentoEmbargo" Association="Model1.PlanEmbargoJudicialDescuentoEmbargo">
-            <End Role="PlanEmbargoJudicial" EntitySet="PlanEmbargoJudicialSet" />
-            <End Role="DescuentoEmbargo" EntitySet="DescuentoSet" />
-          </AssociationSet>
           <AssociationSet Name="FacturaObraSocialReciboPagoObraSocial" Association="Model1.FacturaObraSocialReciboPagoObraSocial">
             <End Role="FacturaObraSocial" EntitySet="ComprobanteSet" />
             <End Role="ReciboPagoObraSocial" EntitySet="ComprobanteSet" />
@@ -310,10 +306,10 @@
             <End Role="DescuentoCK" EntitySet="DescuentoSet" />
             <End Role="Colegio" EntitySet="ColegioSet" />
           </AssociationSet>
-          <EntitySet Name="PlanMoratoriaSet" EntityType="Model1.PlanMoratoria" />
+          <EntitySet Name="PlanCobroSet" EntityType="Model1.PlanCobro" />
           <EntitySet Name="CuotaMoratoriaSet" EntityType="Model1.CuotaMoratoria" />
           <AssociationSet Name="PlanMoratoriaCuotaMoratoria" Association="Model1.PlanMoratoriaCuotaMoratoria">
-            <End Role="PlanMoratoria" EntitySet="PlanMoratoriaSet" />
+            <End Role="PlanMoratoria" EntitySet="PlanCobroSet" />
             <End Role="CuotaMoratoria" EntitySet="CuotaMoratoriaSet" />
           </AssociationSet>
           <AssociationSet Name="CuotaMoratoriaDescuentoMoratoria" Association="Model1.CuotaMoratoriaDescuentoMoratoria">
@@ -322,7 +318,7 @@
           </AssociationSet>
           <AssociationSet Name="ProfesionalPlanMoratoria" Association="Model1.ProfesionalPlanMoratoria">
             <End Role="Profesional" EntitySet="ProfesionalSet" />
-            <End Role="PlanMoratoria" EntitySet="PlanMoratoriaSet" />
+            <End Role="PlanMoratoria" EntitySet="PlanCobroSet" />
           </AssociationSet>
           <EntitySet Name="ServicioSet" EntityType="Model1.Servicio" />
           <EntitySet Name="ProveedorSet" EntityType="Model1.Proveedor" />
@@ -484,7 +480,7 @@
           </AssociationSet>
           <AssociationSet Name="InscripciónSidePrekiSidePreki" Association="Model1.InscripciónSidePrekiSidePreki">
             <End Role="InscripciónSidePreki" EntitySet="ComprobanteInscripciónSidePrekiSet" />
-            <End Role="SidePreki" EntitySet="SidePrekiSet" />
+            <End Role="SidePreki" EntitySet="CajaProvisionalSet" />
           </AssociationSet>
           <AssociationSet Name="AportaSidePrekiComprobanteInscripciónSidePreki" Association="Model1.AportaSidePrekiComprobanteInscripciónSidePreki">
             <End Role="AportaSidePreki" EntitySet="ProfesionalSet" />
@@ -497,7 +493,7 @@
           </AssociationSet>
           <AssociationSet Name="SeguroVidaSidePreki" Association="Model1.SeguroVidaSidePreki">
             <End Role="SeguroVida" EntitySet="PolizaSeguroVidaSet" />
-            <End Role="SidePreki" EntitySet="SidePrekiSet" />
+            <End Role="SidePreki" EntitySet="CajaProvisionalSet" />
           </AssociationSet>
           <EntitySet Name="CuotasXMesXAñoSet" EntityType="Model1.CuotasXMesXAño" />
           <AssociationSet Name="CuotasXMesXAñoSeguro" Association="Model1.CuotasXMesXAñoSeguro">
@@ -531,7 +527,7 @@
           </AssociationSet>
           <AssociationSet Name="ProfesionalCuentasCorrientes" Association="Model1.ProfesionalCuentasCorrientes">
             <End Role="Profesional" EntitySet="ProfesionalSet" />
-            <End Role="CuentasCorrientes" EntitySet="CuentasCorrientesSet" />
+            <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
           <EntitySet Name="TipoSocioSet" EntityType="Model1.TipoSocio" />
           <AssociationSet Name="TipoSocioProfesional" Association="Model1.TipoSocioProfesional">
@@ -677,6 +673,43 @@
             <End Role="FormularioSeguro" EntitySet="FormularioSeguroSet" />
             <End Role="Profesional" EntitySet="ProfesionalSet" />
           </AssociationSet>
+          <EntitySet Name="CuotaEmbargoSet" EntityType="Model1.CuotaEmbargo" />
+          <AssociationSet Name="PlanEmbargoJudicialCuotaEmbargo" Association="Model1.PlanEmbargoJudicialCuotaEmbargo">
+            <End Role="PlanEmbargoJudicial" EntitySet="PlanEmbargoJudicialSet" />
+            <End Role="CuotaEmbargo" EntitySet="CuotaEmbargoSet" />
+          </AssociationSet>
+          <AssociationSet Name="CuotaEmbargoDescuentoEmbargo" Association="Model1.CuotaEmbargoDescuentoEmbargo">
+            <End Role="CuotaEmbargo" EntitySet="CuotaEmbargoSet" />
+            <End Role="DescuentoEmbargo" EntitySet="DescuentoSet" />
+          </AssociationSet>
+          <AssociationSet Name="CuotaEmbargoDeudas" Association="Model1.CuotaEmbargoDeudas">
+            <End Role="CuotaEmbargo" EntitySet="CuotaEmbargoSet" />
+            <End Role="Deudas" EntitySet="DeudasSet" />
+          </AssociationSet>
+          <AssociationSet Name="PlanEmbargoJudicialCuentaBancaria" Association="Model1.PlanEmbargoJudicialCuentaBancaria">
+            <End Role="PlanEmbargoJudicial" EntitySet="PlanEmbargoJudicialSet" />
+            <End Role="CuentaBancaria" EntitySet="CuentaBancariaSet" />
+          </AssociationSet>
+          <EntitySet Name="SubsidiosSet" EntityType="Model1.Subsidios" />
+          <EntitySet Name="PagoSubsidioSet" EntityType="Model1.PagoSubsidio" />
+          <AssociationSet Name="PagoSubsidioSubsidios" Association="Model1.PagoSubsidioSubsidios">
+            <End Role="PagoSubsidio" EntitySet="PagoSubsidioSet" />
+            <End Role="Subsidios" EntitySet="SubsidiosSet" />
+          </AssociationSet>
+          <AssociationSet Name="PagoSubsidioProfesional" Association="Model1.PagoSubsidioProfesional">
+            <End Role="PagoSubsidio" EntitySet="PagoSubsidioSet" />
+            <End Role="Profesional" EntitySet="ProfesionalSet" />
+          </AssociationSet>
+          <EntitySet Name="PréstamoSet" EntityType="Model1.Préstamo" />
+          <AssociationSet Name="PréstamoProfesional" Association="Model1.PréstamoProfesional">
+            <End Role="Préstamo" EntitySet="PréstamoSet" />
+            <End Role="Profesional" EntitySet="ProfesionalSet" />
+          </AssociationSet>
+          <AssociationSet Name="PréstamoPlanMoratoria" Association="Model1.PréstamoPlanMoratoria">
+            <End Role="Préstamo" EntitySet="PréstamoSet" />
+            <End Role="PlanMoratoria" EntitySet="PlanCobroSet" />
+          </AssociationSet>
+          <EntitySet Name="CuotaPrestamoSet" EntityType="Model1.CuotaPrestamo" />
           </EntityContainer>
         <EntityType Name="Bancos">
           <Key>
@@ -686,7 +719,7 @@
           <NavigationProperty Name="CuentasCorrientes" Relationship="Model1.CuentasCorrientesBancos" FromRole="Bancos" ToRole="CuentasCorrientes" />
           <NavigationProperty Name="Tarjeta" Relationship="Model1.TarjetaBancos" FromRole="Bancos" ToRole="Tarjeta" />
         </EntityType>
-        <EntityType Name="CuentasCorrientes">
+        <EntityType Name="CuentaBancaria">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -700,6 +733,9 @@
           <NavigationProperty Name="Débito" Relationship="Model1.DébitoCuentasCorrientes" FromRole="CuentasCorrientes" ToRole="Débito" />
           <NavigationProperty Name="Profesional" Relationship="Model1.ProfesionalCuentasCorrientes" FromRole="CuentasCorrientes" ToRole="Profesional" />
           <Property Name="ProfesionalId" Type="Int32" Nullable="false" />
+          <Property Name="CorrienteOAhorro" Type="String" Nullable="false" />
+          <Property Name="TipoMoneda" Type="String" Nullable="false" />
+          <NavigationProperty Name="PlanEmbargoJudicial" Relationship="Model1.PlanEmbargoJudicialCuentaBancaria" FromRole="CuentaBancaria" ToRole="PlanEmbargoJudicial" />
         </EntityType>
         <EntityType Name="Cheques">
           <Key>
@@ -762,16 +798,16 @@
           <NavigationProperty Name="Tesoreria" Relationship="Model1.TesoreriaMovimientoDinero" FromRole="MovimientoDinero" ToRole="Tesoreria" />
         </EntityType>
         <Association Name="CuentasCorrientesBancos">
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="1" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="1" />
           <End Type="Model1.Bancos" Role="Bancos" Multiplicity="*" />
         </Association>
         <Association Name="TipoMovimientoDepositoCuentasCorrientes">
           <End Type="Model1.Deposito" Role="TipoMovimientoDeposito" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
         <Association Name="TipoMovimientoExtraccionCuentasCorrientes">
           <End Type="Model1.Extraccion" Role="TipoMovimientoExtraccion" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
         <Association Name="ChequeraCheques">
           <End Type="Model1.Chequera" Role="Chequera" Multiplicity="1" />
@@ -820,7 +856,7 @@
         </Association>
         <Association Name="DébitoAutomáticoCuentasCorrientes">
           <End Type="Model1.DébitoAutomático" Role="DébitoAutomático" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
         <Association Name="FormasDePagoDébitoAutomático">
           <End Type="Model1.FormasPago_Cobro" Role="FormasDePago" Multiplicity="1" />
@@ -908,6 +944,11 @@
           <NavigationProperty Name="NovedadesXProfesional" Relationship="Model1.ProfesionalNovedadesXProfesional" FromRole="Profesional" ToRole="NovedadesXProfesional" />
           <NavigationProperty Name="FormasPago_Cobro" Relationship="Model1.ProfesionalFormasPago_Cobro" FromRole="Profesional" ToRole="FormasPago_Cobro" />
           <NavigationProperty Name="FormularioSeguro" Relationship="Model1.FormularioSeguroProfesional" FromRole="Profesional" ToRole="FormularioSeguro" />
+          <NavigationProperty Name="PagoSubsidio" Relationship="Model1.PagoSubsidioProfesional" FromRole="Profesional" ToRole="PagoSubsidio" />
+          <NavigationProperty Name="Préstamo" Relationship="Model1.PréstamoProfesional" FromRole="Profesional" ToRole="Préstamo" />
+          <Property Name="PréstamoId" Type="Int32" Nullable="false" />
+          <Property Name="FechaFallecimiento" Type="String" Nullable="false" />
+          <Property Name="Fallecimiento" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -1028,15 +1069,15 @@
         </EntityType>
         <Association Name="ChequeraCuentasCorrientes">
           <End Type="Model1.Chequera" Role="Chequera" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
         <Association Name="CréditoCuentasCorrientes">
           <End Type="Model1.Crédito" Role="Crédito" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
         <Association Name="DébitoCuentasCorrientes">
           <End Type="Model1.Débito" Role="Débito" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
         <EntityType Name="Descuento">
           <Key>
@@ -1049,7 +1090,7 @@
         </EntityType>
         <EntityType Name="DescuentoEmbargo" BaseType="Model1.Descuento">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="PlanEmbargoJudicial" Relationship="Model1.PlanEmbargoJudicialDescuentoEmbargo" FromRole="DescuentoEmbargo" ToRole="PlanEmbargoJudicial" />
+          <NavigationProperty Name="CuotaEmbargo" Relationship="Model1.CuotaEmbargoDescuentoEmbargo" FromRole="DescuentoEmbargo" ToRole="CuotaEmbargo" />
         </EntityType>
         <EntityType Name="GrupoKinesiologos">
           <Key>
@@ -1126,7 +1167,7 @@
           <End Type="Model1.Matricula" Role="Matricula" Multiplicity="1" />
           <End Type="Model1.CategoríaMatricula" Role="CategoríaMatricula" Multiplicity="*" />
         </Association>
-        <EntityType Name="SidePreki">
+        <EntityType Name="CajaProvisional">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -1157,7 +1198,7 @@
         </Association>
         <Association Name="CobroSidePrekiSidePreki">
           <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="1" />
-          <End Type="Model1.SidePreki" Role="SidePreki" Multiplicity="*" />
+          <End Type="Model1.CajaProvisional" Role="SidePreki" Multiplicity="*" />
         </Association>
         <EntityType Name="Linea_Factura">
           <Key>
@@ -1197,7 +1238,14 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Profesional" Relationship="Model1.EmbargoJudicialProfesional" FromRole="EmbargoJudicial" ToRole="Profesional" />
-          <NavigationProperty Name="DescuentoEmbargo" Relationship="Model1.PlanEmbargoJudicialDescuentoEmbargo" FromRole="PlanEmbargoJudicial" ToRole="DescuentoEmbargo" />
+          <Property Name="PorcentajeOMonto" Type="String" Nullable="false" />
+          <Property Name="MontoACobrar" Type="String" Nullable="false" />
+          <Property Name="FechaInicio" Type="String" Nullable="false" />
+          <Property Name="FechaFin" Type="String" Nullable="false" />
+          <Property Name="MontoCobrado" Type="String" Nullable="false" />
+          <NavigationProperty Name="CuotaEmbargo" Relationship="Model1.PlanEmbargoJudicialCuotaEmbargo" FromRole="PlanEmbargoJudicial" ToRole="CuotaEmbargo" />
+          <Property Name="PorcentajeARetener" Type="String" Nullable="false" />
+          <NavigationProperty Name="CuentaBancaria" Relationship="Model1.PlanEmbargoJudicialCuentaBancaria" FromRole="PlanEmbargoJudicial" ToRole="CuentaBancaria" />
         </EntityType>
         <Association Name="EmbargoJudicialProfesional">
           <End Type="Model1.PlanEmbargoJudicial" Role="EmbargoJudicial" Multiplicity="1" />
@@ -1304,6 +1352,7 @@
           <Property Name="FechaInicioCobertura" Type="String" Nullable="false" />
           <Property Name="FechaFinCobertura" Type="String" Nullable="false" />
           <Property Name="CantidadCuotas" Type="String" Nullable="false" />
+          <Property Name="DiaDelMesACobrar" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="TipoSeguroPolizaSeguro">
           <End Type="Model1.PolizaColectiva" Role="TipoSeguro" Multiplicity="1" />
@@ -1335,7 +1384,7 @@
         <EntityType Name="SeguroMalaPraxis" BaseType="Model1.PolizaColectiva">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="SeguroIncendios" BaseType="Model1.PolizaColectiva">
+        <EntityType Name="SeguroResCivilIncendio" BaseType="Model1.PolizaColectiva">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="ConvenioPrestadores">
@@ -1486,10 +1535,6 @@
           <End Type="Model1.ReciboHonorarios" Role="ReciboSueldo" Multiplicity="1" />
           <End Type="Model1.Descuento" Role="TiposDescuento" Multiplicity="*" />
         </Association>
-        <Association Name="PlanEmbargoJudicialDescuentoEmbargo">
-          <End Type="Model1.PlanEmbargoJudicial" Role="PlanEmbargoJudicial" Multiplicity="1" />
-          <End Type="Model1.DescuentoEmbargo" Role="DescuentoEmbargo" Multiplicity="*" />
-        </Association>
         <EntityType Name="ReciboPagoMatricula" BaseType="Model1.Recibo">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="CobroMatriculaxMes" Relationship="Model1.CobroMatriculaxMesReciboPagoMatricula" FromRole="ReciboPagoMatricula" ToRole="CobroMatriculaxMes" />
@@ -1565,7 +1610,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="CuotaMoratoria" Relationship="Model1.CuotaMoratoriaDescuentoMoratoria" FromRole="DescuentoMoratoria" ToRole="CuotaMoratoria" />
         </EntityType>
-        <EntityType Name="PlanMoratoria">
+        <EntityType Name="PlanCobro">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -1574,6 +1619,7 @@
           <NavigationProperty Name="Profesional" Relationship="Model1.ProfesionalPlanMoratoria" FromRole="PlanMoratoria" ToRole="Profesional" />
           <Property Name="Motivo" Type="String" Nullable="false" />
           <Property Name="TotalAPagar" Type="String" Nullable="false" />
+          <NavigationProperty Name="Préstamo" Relationship="Model1.PréstamoPlanMoratoria" FromRole="PlanMoratoria" ToRole="Préstamo" />
         </EntityType>
         <EntityType Name="CuotaMoratoria">
           <Key>
@@ -1586,7 +1632,7 @@
           <Property Name="DeudasId" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="PlanMoratoriaCuotaMoratoria">
-          <End Type="Model1.PlanMoratoria" Role="PlanMoratoria" Multiplicity="1" />
+          <End Type="Model1.PlanCobro" Role="PlanMoratoria" Multiplicity="1" />
           <End Type="Model1.CuotaMoratoria" Role="CuotaMoratoria" Multiplicity="*" />
         </Association>
         <Association Name="CuotaMoratoriaDescuentoMoratoria">
@@ -1595,7 +1641,7 @@
         </Association>
         <Association Name="ProfesionalPlanMoratoria">
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
-          <End Type="Model1.PlanMoratoria" Role="PlanMoratoria" Multiplicity="*" />
+          <End Type="Model1.PlanCobro" Role="PlanMoratoria" Multiplicity="*" />
         </Association>
         <EntityType Name="Servicio">
           <Key>
@@ -1922,7 +1968,7 @@
         </Association>
         <Association Name="InscripciónSidePrekiSidePreki">
           <End Type="Model1.ComprobanteInscripciónSidePreki" Role="InscripciónSidePreki" Multiplicity="*" />
-          <End Type="Model1.SidePreki" Role="SidePreki" Multiplicity="1" />
+          <End Type="Model1.CajaProvisional" Role="SidePreki" Multiplicity="1" />
         </Association>
         <Association Name="AportaSidePrekiComprobanteInscripciónSidePreki">
           <End Type="Model1.AportaSidePreki" Role="AportaSidePreki" Multiplicity="1" />
@@ -1934,7 +1980,7 @@
         </Association>
         <Association Name="SeguroVidaSidePreki">
           <End Type="Model1.PolizaSeguroVida" Role="SeguroVida" Multiplicity="*" />
-          <End Type="Model1.SidePreki" Role="SidePreki" Multiplicity="1" />
+          <End Type="Model1.CajaProvisional" Role="SidePreki" Multiplicity="1" />
         </Association>
         <EntityType Name="DescuentoSeguros" BaseType="Model1.Descuento">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
@@ -1993,7 +2039,7 @@
         </Association>
         <Association Name="ProfesionalCuentasCorrientes">
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
-          <End Type="Model1.CuentasCorrientes" Role="CuentasCorrientes" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Profesional">
               <PropertyRef Name="Id" />
@@ -2112,6 +2158,7 @@
           <NavigationProperty Name="CuotaSeguro" Relationship="Model1.CuotaSeguroDeudas" FromRole="Deudas" ToRole="CuotaSeguro" />
           <NavigationProperty Name="CuotaSeguroVida" Relationship="Model1.CuotaSeguroVidaDeudas" FromRole="Deudas" ToRole="CuotaSeguroVida" />
           <Property Name="CuotaSeguroVidaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CuotaEmbargo" Relationship="Model1.CuotaEmbargoDeudas" FromRole="Deudas" ToRole="CuotaEmbargo" />
         </EntityType>
         <Association Name="DeudasCobroMatriculaxMes">
           <End Type="Model1.Deudas" Role="Deudas" Multiplicity="1" />
@@ -2289,6 +2336,98 @@
           <End Type="Model1.FormularioSeguro" Role="FormularioSeguro" Multiplicity="1" />
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="*" />
         </Association>
+        <EntityType Name="CuotaEmbargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="PlanEmbargoJudicial" Relationship="Model1.PlanEmbargoJudicialCuotaEmbargo" FromRole="CuotaEmbargo" ToRole="PlanEmbargoJudicial" />
+          <NavigationProperty Name="DescuentoEmbargo" Relationship="Model1.CuotaEmbargoDescuentoEmbargo" FromRole="CuotaEmbargo" ToRole="DescuentoEmbargo" />
+          <NavigationProperty Name="Deudas" Relationship="Model1.CuotaEmbargoDeudas" FromRole="CuotaEmbargo" ToRole="Deudas" />
+        </EntityType>
+        <Association Name="PlanEmbargoJudicialCuotaEmbargo">
+          <End Type="Model1.PlanEmbargoJudicial" Role="PlanEmbargoJudicial" Multiplicity="1" />
+          <End Type="Model1.CuotaEmbargo" Role="CuotaEmbargo" Multiplicity="*" />
+        </Association>
+        <Association Name="CuotaEmbargoDescuentoEmbargo">
+          <End Type="Model1.CuotaEmbargo" Role="CuotaEmbargo" Multiplicity="1" />
+          <End Type="Model1.DescuentoEmbargo" Role="DescuentoEmbargo" Multiplicity="*" />
+        </Association>
+        <Association Name="CuotaEmbargoDeudas">
+          <End Type="Model1.CuotaEmbargo" Role="CuotaEmbargo" Multiplicity="*" />
+          <End Type="Model1.Deudas" Role="Deudas" Multiplicity="1" />
+        </Association>
+        <Association Name="PlanEmbargoJudicialCuentaBancaria">
+          <End Type="Model1.PlanEmbargoJudicial" Role="PlanEmbargoJudicial" Multiplicity="*" />
+          <End Type="Model1.CuentaBancaria" Role="CuentaBancaria" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Subsidios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <Property Name="Monto" Type="String" Nullable="false" />
+          <NavigationProperty Name="PagoSubsidio" Relationship="Model1.PagoSubsidioSubsidios" FromRole="Subsidios" ToRole="PagoSubsidio" />
+          <Property Name="FechaInicio" Type="String" Nullable="false" />
+          <Property Name="FechaFin" Type="String" Nullable="false" />
+          <Property Name="Vigente" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PagoSubsidio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Subsidios" Relationship="Model1.PagoSubsidioSubsidios" FromRole="PagoSubsidio" ToRole="Subsidios" />
+          <NavigationProperty Name="Profesional" Relationship="Model1.PagoSubsidioProfesional" FromRole="PagoSubsidio" ToRole="Profesional" />
+          </EntityType>
+        <Association Name="PagoSubsidioSubsidios">
+          <End Type="Model1.PagoSubsidio" Role="PagoSubsidio" Multiplicity="1" />
+          <End Type="Model1.Subsidios" Role="Subsidios" Multiplicity="*" />
+        </Association>
+        <Association Name="PagoSubsidioProfesional">
+          <End Type="Model1.PagoSubsidio" Role="PagoSubsidio" Multiplicity="*" />
+          <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Préstamo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Profesional" Relationship="Model1.PréstamoProfesional" FromRole="Préstamo" ToRole="Profesional" />
+          <NavigationProperty Name="PlanMoratoria" Relationship="Model1.PréstamoPlanMoratoria" FromRole="Préstamo" ToRole="PlanMoratoria" />
+        </EntityType>
+        <Association Name="PréstamoProfesional">
+          <End Type="Model1.Préstamo" Role="Préstamo" Multiplicity="1" />
+          <End Type="Model1.Profesional" Role="Profesional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Préstamo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Profesional">
+              <PropertyRef Name="PréstamoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PréstamoPlanMoratoria">
+          <End Type="Model1.Préstamo" Role="Préstamo" Multiplicity="1" />
+          <End Type="Model1.PlanCobro" Role="PlanMoratoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Préstamo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PlanMoratoria">
+              <PropertyRef Name="PréstamoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CuotaPrestamo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
