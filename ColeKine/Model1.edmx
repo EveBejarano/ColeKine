@@ -886,14 +886,10 @@
           <NavigationProperty Name="TipoTalonario" Relationship="Model1.TipoTalonarioComprobante" FromRole="Comprobante" ToRole="TipoTalonario" />
         </EntityType>
         <EntityType Name="Talonario">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="AltaMatricula" Relationship="Model1.AltaMatriculaTipoTalonario" FromRole="TipoTalonario" ToRole="AltaMatricula" />
           <NavigationProperty Name="Comprobante" Relationship="Model1.TipoTalonarioComprobante" FromRole="TipoTalonario" ToRole="Comprobante" />
           <NavigationProperty Name="ReciboCobroInscripcion" Relationship="Model1.ReciboCobroInscripcionTalonario" FromRole="Talonario" ToRole="ReciboCobroInscripcion" />
-          <Property Name="Nombre" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="DébitoAutomático">
           <Key>
@@ -1042,9 +1038,6 @@
           <End Type="Model1.Matricula" Role="Matricula" Multiplicity="*" />
         </Association>
         <EntityType Name="CobroMatriculaxMes">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Matricula" Relationship="Model1.MatriculaPagoMatriculaxMes" FromRole="PagoMatriculaxMes" ToRole="Matricula" />
           <NavigationProperty Name="ReciboPagoMatricula" Relationship="Model1.CobroMatriculaxMesReciboPagoMatricula" FromRole="CobroMatriculaxMes" ToRole="ReciboPagoMatricula" />
@@ -1316,9 +1309,6 @@
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="*" />
         </Association>
         <EntityType Name="PolizaSeguroVida">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="CobroSidePreki" Relationship="Model1.SeguroVidaCobroSidePreki" FromRole="SeguroVida" ToRole="CobroSidePreki" />
           <Property Name="MontoACobrar" Type="String" Nullable="false" />
