@@ -87,10 +87,9 @@
         <AssociationConnector Association="Model1.OrdenesPracticaObraSocial" />
         <EntityTypeShape EntityType="Model1.PlanEmbargoJudicial" Width="1.5" PointX="52.125" PointY="14.125" />
         <AssociationConnector Association="Model1.EmbargoJudicialProfesional" />
-        <EntityTypeShape EntityType="Model1.PolizaSeguroVida" Width="1.5" PointX="45.125" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model1.FormularioSeguro" Width="1.5" PointX="36.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.PolizaSeguroVida" Width="3.25" PointX="43.375" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.FormularioSeguro" Width="2" PointX="36.75" PointY="15.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.Factura_AportaSidePreki" PointX="45.75" PointY="14.5" Width="2.375" IsExpanded="true" />
-        <AssociationConnector Association="Model1.SeguroContraIncendiosIndependienteAsociado" />
         <EntityTypeShape EntityType="Model1.TipoBajaMatricula" Width="1.5" PointX="19.125" PointY="19.375" />
         <AssociationConnector Association="Model1.TipoBajaMatriculaBajaMatricula" />
         <EntityTypeShape EntityType="Model1.Jubilación" Width="1.5" PointX="14.25" PointY="16.75" />
@@ -103,7 +102,7 @@
         <InheritanceConnector EntityType="Model1.AbandonoProfesión" />
         <InheritanceConnector EntityType="Model1.SanciónDisciplinaria" />
         <InheritanceConnector EntityType="Model1.Jubilación" />
-        <EntityTypeShape EntityType="Model1.MotivoAlta" Width="1.5" PointX="36.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.MotivoAlta" Width="1.5" PointX="36.75" PointY="18.625" IsExpanded="true" />
         <AssociationConnector Association="Model1.MotivoAltaInscripción" />
         <EntityTypeShape EntityType="Model1.Aseguradora" Width="1.5" PointX="38.875" PointY="5.5" />
         <EntityTypeShape EntityType="Model1.PolizaColectiva" Width="1.5" PointX="36.75" PointY="12" />
@@ -244,12 +243,10 @@
         <InheritanceConnector EntityType="Model1.Factura_AportaSidePreki" />
         <AssociationConnector Association="Model1.SeguroVidaCobroSidePreki" />
         <AssociationConnector Association="Model1.SeguroVidaSidePreki" />
-        <EntityTypeShape EntityType="Model1.DescuentoSeguros" Width="1.5" PointX="34.5" PointY="12" />
-        <EntityTypeShape EntityType="Model1.CuotasXMesXAño" Width="1.5" PointX="39.25" PointY="9.375" />
-        <AssociationConnector Association="Model1.CuotasXMesXAñoSeguroVida" />
+        <EntityTypeShape EntityType="Model1.DescuentoSeguros" Width="1.5" PointX="40.25" PointY="15.75" />
+        <EntityTypeShape EntityType="Model1.CuotasXMesXAño" Width="1.5" PointX="38.875" PointY="9.625" />
         <AssociationConnector Association="Model1.CuotasXMesXAñoSeguro" />
         <AssociationConnector Association="Model1.PolizaColectivaAseguradora" />
-        <AssociationConnector Association="Model1.DescuentoSegurosPolizaColectiva" />
         <InheritanceConnector EntityType="Model1.SeguroMalaPraxis" />
         <InheritanceConnector EntityType="Model1.SeguroIncendios" />
         <EntityTypeShape EntityType="Model1.FormularioSeguroVida" Width="1.5" PointX="41.625" PointY="2.625" />
@@ -276,7 +273,7 @@
         <AssociationConnector Association="Model1.CobroMatriculaxMesColegio" />
         <EntityTypeShape EntityType="Model1.ValoresCuotaMatricula" Width="1.5" PointX="26.25" PointY="22.375" />
         <AssociationConnector Association="Model1.ValoresCuotaMatriculaMesXAño" />
-        <EntityTypeShape EntityType="Model1.Deudas" Width="1.5" PointX="40.625" PointY="23.5" />
+        <EntityTypeShape EntityType="Model1.Deudas" Width="1.5" PointX="40.75" PointY="19.125" />
         <AssociationConnector Association="Model1.DeudasCobroMatriculaxMes" />
         <AssociationConnector Association="Model1.DeudasServiciosConsumidos" />
         <AssociationConnector Association="Model1.DeudasCuotaMoratoria" />
@@ -292,6 +289,21 @@
         <AssociationConnector Association="Model1.CobroMatriculaxMesDescuentoMatricula" />
         <InheritanceConnector EntityType="Model1.DescuentoMatricula" />
         <AssociationConnector Association="Model1.DescuentoSidePrekiCobroSidePreki" />
+        <AssociationConnector Association="Model1.DescuentoSegurosFormularioSeguro" />
+        <InheritanceConnector EntityType="Model1.DescuentoSeguros" />
+        <EntityTypeShape EntityType="Model1.CuotaXMesXAñoSeguroVida" Width="1.5" PointX="43.125" PointY="9.875" />
+        <AssociationConnector Association="Model1.CuotaXMesXAñoSeguroVidaPolizaSeguroVida" />
+        <EntityTypeShape EntityType="Model1.CuotaSeguro" Width="1.5" PointX="34.625" PointY="10.25" />
+        <AssociationConnector Association="Model1.CuotaSeguroDescuentoSeguros" />
+        <AssociationConnector Association="Model1.CuotaSeguroCuotasXMesXAño" />
+        <AssociationConnector Association="Model1.CuotaSeguroFormularioSeguro" />
+        <EntityTypeShape EntityType="Model1.CuotaSeguroVida" Width="1.5" PointX="35.875" PointY="7.75" />
+        <AssociationConnector Association="Model1.CuotaSeguroVidaCuotaXMesXAñoSeguroVida" />
+        <AssociationConnector Association="Model1.CuotaSeguroVidaFormularioSeguroVida" />
+        <AssociationConnector Association="Model1.CuotaSeguroVidaCobroSidePreki" />
+        <AssociationConnector Association="Model1.CuotaSeguroDeudas" />
+        <AssociationConnector Association="Model1.CuotaSeguroVidaDeudas" />
+        <AssociationConnector Association="Model1.FormularioSeguroProfesional" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
