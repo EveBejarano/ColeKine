@@ -3,7 +3,6 @@
 - Consultas de Montos a Cobrar a Grupo de Kinesiogos (Consulta de cargos por matrícula (por profesional o asociación))
 - Ver Historial de Pagos
 
-Poner en la tabla de ValoresCuotaMatricula : El 75 % va al ______
-
+Agregar los cuatro componentes a cuotaSidePreki y a cobroSidePreki
 
 Generar Devengamiento Por Matricula Mensual
