@@ -1,6 +1,6 @@
 ﻿namespace ColeKine.Modelos
 {
-    public class AltaMatricula
+    public class Factura: TipoTalonario
     {
     }
 }

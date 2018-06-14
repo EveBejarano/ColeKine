@@ -7,5 +7,6 @@ namespace ColeKine.Modelos
         [Key]
         public int IdDeuda { get; set; }
         public TasasDeRecargo TasaDeRecargo { get; set; }
+        public Inscripcion Inscripcion { get; set; }
     }
 }
