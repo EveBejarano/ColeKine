@@ -31,6 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -45,26 +49,38 @@
     <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model11.Designer.cs">
+    <Compile Include="Model2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\BajaMatricula\AbandonoProfesion.cs" />
+    <Compile Include="Modelos\AltaMatricula.cs" />
+    <Compile Include="Modelos\BajaMatricula\BajaMatricula.cs" />
+    <Compile Include="Modelos\Matricula.cs" />
+    <Compile Include="Modelos\BajaMatricula\TipoBajaMatricula.cs" />
+    <Compile Include="Modelos\BajaMatricula\CuotaPagoJubilacion.cs" />
+    <Compile Include="Modelos\BajaMatricula\Fallecimiento.cs" />
+    <Compile Include="Modelos\BajaMatricula\Jubilación.cs" />
+    <Compile Include="Modelos\BajaMatricula\PlanPagoJubilacion.cs" />
+    <Compile Include="Modelos\BajaMatricula\SancionDisciplinaria.cs" />
+    <Compile Include="Modelos\BajaMatricula\Traslado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="Model2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model11.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Funcionalidades no consideradas.txt" />
