@@ -59,8 +59,17 @@
     <Compile Include="Modelos\BajaMatricula\AbandonoProfesion.cs" />
     <Compile Include="Modelos\AltaMatricula.cs" />
     <Compile Include="Modelos\BajaMatricula\BajaMatricula.cs" />
+    <Compile Include="Modelos\Banco.cs" />
+    <Compile Include="Modelos\CajaAhorro.cs" />
     <Compile Include="Modelos\CajaProvisional.cs" />
     <Compile Include="Modelos\CobroCuotaCajaProvisional.cs" />
+    <Compile Include="Modelos\Credito.cs" />
+    <Compile Include="Modelos\CuentaBancaria.cs" />
+    <Compile Include="Modelos\CuentaCorriente.cs" />
+    <Compile Include="Modelos\CuotaEmbargo.cs" />
+    <Compile Include="Modelos\Debito.cs" />
+    <Compile Include="Modelos\DebitoAutomatico.cs" />
+    <Compile Include="Modelos\Deposito.cs" />
     <Compile Include="Modelos\Deuda.cs" />
     <Compile Include="Modelos\Matricula.cs" />
     <Compile Include="Modelos\BajaMatricula\TipoBajaMatricula.cs" />
