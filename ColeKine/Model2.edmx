@@ -53,7 +53,6 @@
             <End Role="FormasDePago" EntitySet="FormasPago_CobroSet" />
             <End Role="DébitoAutomático" EntitySet="DébitoAutomáticoSet" />
           </AssociationSet>
-          <EntitySet Name="BajaMatriculaSet" EntityType="Model1.BajaMatricula" />
           <AssociationSet Name="FormasDePagoPagoEfectivo" Association="Model1.FormasDePagoPagoEfectivo">
             <End Role="FormasDePago" EntitySet="FormasPago_CobroSet" />
             <End Role="PagoEfectivo" EntitySet="EfectivoSet" />
@@ -95,10 +94,6 @@
             <End Role="Profesional" EntitySet="ProfesionalSet" />
             <End Role="Matricula" EntitySet="MatriculaSet" />
           </AssociationSet>
-          <AssociationSet Name="BajaMatriculaMatricula" Association="Model1.BajaMatriculaMatricula">
-            <End Role="BajaMatricula" EntitySet="BajaMatriculaSet" />
-            <End Role="Matricula" EntitySet="MatriculaSet" />
-          </AssociationSet>
           <EntitySet Name="MesXAñoSet" EntityType="Model1.MesXAño" />
           <AssociationSet Name="MatriculaPagoMatriculaxMes" Association="Model1.MatriculaPagoMatriculaxMes">
             <End Role="Matricula" EntitySet="MatriculaSet" />
@@ -110,10 +105,6 @@
             <End Role="Tesoreria" EntitySet="TesoreriaSet" />
           </AssociationSet>
           <EntitySet Name="InscripciónSet" EntityType="Model1.Inscripción" />
-          <AssociationSet Name="BajaMatriculaInscripción" Association="Model1.BajaMatriculaInscripción">
-            <End Role="BajaMatricula" EntitySet="BajaMatriculaSet" />
-            <End Role="Inscripción" EntitySet="InscripciónSet" />
-          </AssociationSet>
           <AssociationSet Name="InscripciónMatricula" Association="Model1.InscripciónMatricula">
             <End EntitySet="InscripciónSet" Role="Inscripción" />
             <End EntitySet="MatriculaSet" Role="Matricula" />
@@ -160,8 +151,8 @@
           </AssociationSet>
           <EntitySet Name="CajaPrevisionalSet" EntityType="Model1.CajaPrevisional" />
           <AssociationSet Name="MesXAñoCobroSidePreki" Association="Model1.MesXAñoCobroSidePreki">
-            <End Role="MesXAño" EntitySet="MesXAñoSet" />
-            <End Role="CobroSidePreki" EntitySet="DescuentoSet" />
+            <End EntitySet="MesXAñoSet" Role="MesXAño" />
+            <End EntitySet="DescuentoSet" Role="CobroSidePreki" />
           </AssociationSet>
           <AssociationSet Name="CobroSidePrekiSidePreki" Association="Model1.CobroSidePrekiSidePreki">
             <End Role="CobroSidePreki" EntitySet="DescuentoSet" />
@@ -183,11 +174,6 @@
             <End Role="Profesional" EntitySet="ProfesionalSet" />
           </AssociationSet>
           <EntitySet Name="FormularioSeguroSet" EntityType="Model1.FormularioSeguro" />
-          <EntitySet Name="TipoBajaMatriculaSet" EntityType="Model1.TipoBajaMatricula" />
-          <AssociationSet Name="TipoBajaMatriculaBajaMatricula" Association="Model1.TipoBajaMatriculaBajaMatricula">
-            <End Role="TipoBajaMatricula" EntitySet="TipoBajaMatriculaSet" />
-            <End Role="BajaMatricula" EntitySet="BajaMatriculaSet" />
-          </AssociationSet>
           <EntitySet Name="MotivoAltaSet" EntityType="Model1.MotivoAlta" />
           <AssociationSet Name="MotivoAltaInscripción" Association="Model1.MotivoAltaInscripción">
             <End Role="MotivoAlta" EntitySet="MotivoAltaSet" />
@@ -454,14 +440,9 @@
             <End Role="Comprobante" EntitySet="ComprobanteSet" />
           </AssociationSet>
           <EntitySet Name="FamiliarSet" EntityType="Model1.Familiar" />
-          <EntitySet Name="ValoresCuotaSidePrekiSet" EntityType="Model1.ValoresCuotaSidePreki" />
           <AssociationSet Name="FamiliarIndependiente" Association="Model1.FamiliarIndependiente">
             <End Role="Familiar" EntitySet="FamiliarSet" />
             <End Role="Independiente" EntitySet="ProfesionalSet" />
-          </AssociationSet>
-          <AssociationSet Name="ValoresCuotaSidePrekiCobroSidePreki" Association="Model1.ValoresCuotaSidePrekiCobroSidePreki">
-            <End Role="ValoresCuotaSidePreki" EntitySet="ValoresCuotaSidePrekiSet" />
-            <End Role="CobroSidePreki" EntitySet="DescuentoSet" />
           </AssociationSet>
           <EntitySet Name="ComprobanteInscripciónSidePrekiSet" EntityType="Model1.ComprobanteInscripciónSidePreki" />
           <AssociationSet Name="InscripciónSidePrekiIndependiente1" Association="Model1.InscripciónSidePrekiIndependiente1">
@@ -560,11 +541,6 @@
             <End Role="CobroMatriculaxMes" EntitySet="CobroMatriculaxMesSet" />
             <End Role="Colegio" EntitySet="ColegioSet" />
           </AssociationSet>
-          <EntitySet Name="ValoresCuotaMatriculaSet" EntityType="Model1.ValoresCuotaMatricula" />
-          <AssociationSet Name="ValoresCuotaMatriculaMesXAño" Association="Model1.ValoresCuotaMatriculaMesXAño">
-            <End Role="ValoresCuotaMatricula" EntitySet="ValoresCuotaMatriculaSet" />
-            <End Role="MesXAño" EntitySet="MesXAñoSet" />
-          </AssociationSet>
           <EntitySet Name="DeudasSet" EntityType="Model1.Deudas" />
           <AssociationSet Name="DeudasCobroMatriculaxMes" Association="Model1.DeudasCobroMatriculaxMes">
             <End Role="Deudas" EntitySet="DeudasSet" />
@@ -586,22 +562,13 @@
             <End Role="Deudas" EntitySet="DeudasSet" />
             <End Role="Inscripción" EntitySet="InscripciónSet" />
           </AssociationSet>
-          <EntitySet Name="ValoresRecargosSet" EntityType="Model1.ValoresRecargos" />
           <AssociationSet Name="MesXAñoCobroMatriculaxMes" Association="Model1.MesXAñoCobroMatriculaxMes">
-            <End Role="MesXAño" EntitySet="MesXAñoSet" />
-            <End Role="CobroMatriculaxMes" EntitySet="CobroMatriculaxMesSet" />
-          </AssociationSet>
-          <AssociationSet Name="MesXAñoValoresCuotaSidePreki" Association="Model1.MesXAñoValoresCuotaSidePreki">
-            <End Role="MesXAño" EntitySet="MesXAñoSet" />
-            <End Role="ValoresCuotaSidePreki" EntitySet="ValoresCuotaSidePrekiSet" />
+            <End EntitySet="MesXAñoSet" Role="MesXAño" />
+            <End EntitySet="CobroMatriculaxMesSet" Role="CobroMatriculaxMes" />
           </AssociationSet>
           <AssociationSet Name="MesXAñoCobroSidePreki1" Association="Model1.MesXAñoCobroSidePreki1">
-            <End Role="MesXAño" EntitySet="MesXAñoSet" />
-            <End Role="CobroSidePreki" EntitySet="DescuentoSet" />
-          </AssociationSet>
-          <AssociationSet Name="ValoresRecargosDeudas" Association="Model1.ValoresRecargosDeudas">
-            <End Role="ValoresRecargos" EntitySet="ValoresRecargosSet" />
-            <End Role="Deudas" EntitySet="DeudasSet" />
+            <End EntitySet="MesXAñoSet" Role="MesXAño" />
+            <End EntitySet="DescuentoSet" Role="CobroSidePreki" />
           </AssociationSet>
           <AssociationSet Name="ReciboCobroInscripcionDeudas" Association="Model1.ReciboCobroInscripcionDeudas">
             <End Role="ReciboCobroInscripcion" EntitySet="ReciboCobroInscripcionSet" />
@@ -901,16 +868,6 @@
           <End Type="Model1.FormasPago_Cobro" Role="FormasDePago" Multiplicity="1" />
           <End Type="Model1.DébitoAutomático" Role="DébitoAutomático" Multiplicity="*" />
         </Association>
-        <EntityType Name="BajaMatricula">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Matricula" Relationship="Model1.BajaMatriculaMatricula" FromRole="BajaMatricula" ToRole="Matricula" />
-          <Property Name="FechaBaja" Type="String" Nullable="false" />
-          <NavigationProperty Name="Inscripción" Relationship="Model1.BajaMatriculaInscripción" FromRole="BajaMatricula" ToRole="Inscripción" />
-          <NavigationProperty Name="TipoBajaMatricula" Relationship="Model1.TipoBajaMatriculaBajaMatricula" FromRole="BajaMatricula" ToRole="TipoBajaMatricula" />
-        </EntityType>
         <Association Name="FormasDePagoPagoEfectivo">
           <End Type="Model1.FormasPago_Cobro" Role="FormasDePago" Multiplicity="1" />
           <End Type="Model1.Efectivo" Role="PagoEfectivo" Multiplicity="*" />
@@ -998,7 +955,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Profesional" Relationship="Model1.ProfesionalMatricula" FromRole="Matricula" ToRole="Profesional" />
-          <NavigationProperty Name="BajaMatricula" Relationship="Model1.BajaMatriculaMatricula" FromRole="Matricula" ToRole="BajaMatricula" />
           <NavigationProperty Name="PagoMatriculaxMes" Relationship="Model1.MatriculaPagoMatriculaxMes" FromRole="Matricula" ToRole="PagoMatriculaxMes" />
           <Property Name="FechaCreación" Type="String" Nullable="false" />
           <NavigationProperty Name="Inscripción" Relationship="Model1.InscripciónMatricula" FromRole="Matricula" ToRole="Inscripción" />
@@ -1023,10 +979,6 @@
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
           <End Type="Model1.Matricula" Role="Matricula" Multiplicity="*" />
         </Association>
-        <Association Name="BajaMatriculaMatricula">
-          <End Type="Model1.BajaMatricula" Role="BajaMatricula" Multiplicity="1" />
-          <End Type="Model1.Matricula" Role="Matricula" Multiplicity="*" />
-        </Association>
         <EntityType Name="CobroMatriculaxMes">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Matricula" Relationship="Model1.MatriculaPagoMatriculaxMes" FromRole="PagoMatriculaxMes" ToRole="Matricula" />
@@ -1039,18 +991,17 @@
           <Property Name="MantenimientoMatricula" Type="String" Nullable="false" />
           <NavigationProperty Name="MesXAño" Relationship="Model1.MesXAñoCobroMatriculaxMes" FromRole="CobroMatriculaxMes" ToRole="MesXAño" />
           <NavigationProperty Name="DescuentoMatricula" Relationship="Model1.CobroMatriculaxMesDescuentoMatricula" FromRole="CobroMatriculaxMes" ToRole="DescuentoMatricula" />
+          <Property Name="CantidadDíasRetraso" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="MesXAño">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <NavigationProperty Name="CobroSidePreki" Relationship="Model1.MesXAñoCobroSidePreki" FromRole="MesXAño" ToRole="CobroSidePreki" />
-          <Property Name="Mes" Type="String" Nullable="false" />
-          <NavigationProperty Name="ValoresCuotaMatricula" Relationship="Model1.ValoresCuotaMatriculaMesXAño" FromRole="MesXAño" ToRole="ValoresCuotaMatricula" />
-          <Property Name="Año" Type="String" Nullable="false" />
+          <Property Name="Mes" Nullable="false" Type="String" />
+          <Property Name="Año" Nullable="false" Type="String" />
           <NavigationProperty Name="CobroMatriculaxMes" Relationship="Model1.MesXAñoCobroMatriculaxMes" FromRole="MesXAño" ToRole="CobroMatriculaxMes" />
-          <NavigationProperty Name="ValoresCuotaSidePreki" Relationship="Model1.MesXAñoValoresCuotaSidePreki" FromRole="MesXAño" ToRole="ValoresCuotaSidePreki" />
           <NavigationProperty Name="CobroSidePreki1" Relationship="Model1.MesXAñoCobroSidePreki1" FromRole="MesXAño" ToRole="CobroSidePreki" />
         </EntityType>
         <Association Name="MatriculaPagoMatriculaxMes">
@@ -1087,7 +1038,6 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="BajaMatricula" Relationship="Model1.BajaMatriculaInscripción" FromRole="Inscripción" ToRole="BajaMatricula" />
           <NavigationProperty Name="Matricula" Relationship="Model1.InscripciónMatricula" FromRole="Inscripción" ToRole="Matricula" />
           <Property Name="FechaInscripcion" Type="String" Nullable="false" />
           <Property Name="Pagado" Type="String" Nullable="false" />
@@ -1096,10 +1046,6 @@
           <NavigationProperty Name="ReciboCobroInscripcion" Relationship="Model1.InscripciónReciboCobroInscripcion" FromRole="Inscripción" ToRole="ReciboCobroInscripcion" />
           <NavigationProperty Name="Deudas" Relationship="Model1.DeudasInscripción" FromRole="Inscripción" ToRole="Deudas" />
         </EntityType>
-        <Association Name="BajaMatriculaInscripción">
-          <End Type="Model1.BajaMatricula" Role="BajaMatricula" Multiplicity="1" />
-          <End Type="Model1.Inscripción" Role="Inscripción" Multiplicity="*" />
-        </Association>
         <Association Name="InscripciónMatricula">
           <End Type="Model1.Inscripción" Multiplicity="1" Role="Inscripción" />
           <End Type="Model1.Matricula" Multiplicity="*" Role="Matricula" />
@@ -1223,11 +1169,10 @@
           <NavigationProperty Name="Institución" Relationship="Model1.InstituciónCajaPrevisional" FromRole="CajaPrevisional" ToRole="Institución" />
           <NavigationProperty Name="FondoDinero" Relationship="Model1.FondoDineroCajaPrevisional" FromRole="CajaPrevisional" ToRole="FondoDinero" />
         </EntityType>
-        <EntityType Name="CobroSidePreki" BaseType="Model1.Descuento">
+        <EntityType Name="CobroCuotaCajaProvisional" BaseType="Model1.Descuento">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="MesXAño" Relationship="Model1.MesXAñoCobroSidePreki" FromRole="CobroSidePreki" ToRole="MesXAño" />
           <NavigationProperty Name="SidePreki" Relationship="Model1.CobroSidePrekiSidePreki" FromRole="CobroSidePreki" ToRole="SidePreki" />
-          <NavigationProperty Name="ValoresCuotaSidePreki" Relationship="Model1.ValoresCuotaSidePrekiCobroSidePreki" FromRole="CobroSidePreki" ToRole="ValoresCuotaSidePreki" />
           <NavigationProperty Name="AportaSidePreki" Relationship="Model1.CobroSidePrekiAportaSidePreki" FromRole="CobroSidePreki" ToRole="AportaSidePreki" />
           <NavigationProperty Name="Deudas" Relationship="Model1.DeudasCobroSidePreki" FromRole="CobroSidePreki" ToRole="Deudas" />
           <Property Name="DeudasId" Type="Int32" Nullable="false" />
@@ -1240,11 +1185,11 @@
           <Property Name="Pagado" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="MesXAñoCobroSidePreki">
-          <End Type="Model1.MesXAño" Role="MesXAño" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
+          <End Type="Model1.MesXAño" Multiplicity="1" Role="MesXAño" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Multiplicity="*" Role="CobroSidePreki" />
         </Association>
         <Association Name="CobroSidePrekiSidePreki">
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="1" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Role="CobroSidePreki" Multiplicity="1" />
           <End Type="Model1.CajaPrevisional" Role="SidePreki" Multiplicity="*" />
         </Association>
         <EntityType Name="Linea_Factura">
@@ -1337,17 +1282,6 @@
           <Property Name="ConsultorioRequerido" Type="String" Nullable="false" />
           <NavigationProperty Name="FormaPagoSidePreki" Relationship="Model1.Factura_AportaSidePrekiFormasPago_Cobro" FromRole="Factura_AportaSidePreki" ToRole="FormasPago_Cobro" />
         </EntityType>
-        <EntityType Name="TipoBajaMatricula">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="BajaMatricula" Relationship="Model1.TipoBajaMatriculaBajaMatricula" FromRole="TipoBajaMatricula" ToRole="BajaMatricula" />
-        </EntityType>
-        <Association Name="TipoBajaMatriculaBajaMatricula">
-          <End Type="Model1.TipoBajaMatricula" Role="TipoBajaMatricula" Multiplicity="1" />
-          <End Type="Model1.BajaMatricula" Role="BajaMatricula" Multiplicity="*" />
-        </Association>
         <EntityType Name="MotivoAlta">
           <Key>
             <PropertyRef Name="Id" />
@@ -1918,20 +1852,6 @@
           <Property Name="Sexo" Type="String" Nullable="false" />
           <Property Name="Escolaridad" Type="String" Nullable="false" />
         </EntityType>
-        <EntityType Name="ValoresCuotaSidePreki">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="CobroSidePreki" Relationship="Model1.ValoresCuotaSidePrekiCobroSidePreki" FromRole="ValoresCuotaSidePreki" ToRole="CobroSidePreki" />
-          <Property Name="SidePrekiId" Type="Int32" Nullable="false" />
-          <Property Name="Categoría" Type="String" Nullable="false" />
-          <Property Name="MontoACobrar" Type="String" Nullable="false" />
-          <Property Name="CantidadAños" Type="String" Nullable="false" />
-          <Property Name="PorcentajeAdmnistrativo" Type="String" Nullable="false" />
-          <Property Name="PorcentajeFondo" Type="String" Nullable="false" />
-          <NavigationProperty Name="MesXAño" Relationship="Model1.MesXAñoValoresCuotaSidePreki" FromRole="ValoresCuotaSidePreki" ToRole="MesXAño" />
-        </EntityType>
         <EntityType Name="AportaSidePreki" BaseType="Model1.Profesional">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Familiar" Relationship="Model1.FamiliarIndependiente" FromRole="Independiente" ToRole="Familiar" />
@@ -1953,10 +1873,6 @@
               <PropertyRef Name="FamiliarId" />
             </Dependent>
           </ReferentialConstraint>
-        </Association>
-        <Association Name="ValoresCuotaSidePrekiCobroSidePreki">
-          <End Type="Model1.ValoresCuotaSidePreki" Role="ValoresCuotaSidePreki" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
         </Association>
         <EntityType Name="ComprobanteInscripciónSidePreki">
           <Key>
@@ -1984,7 +1900,7 @@
         </Association>
         <Association Name="SeguroVidaCobroSidePreki">
           <End Type="Model1.PolizaSeguroVida" Role="SeguroVida" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Role="CobroSidePreki" Multiplicity="*" />
         </Association>
         <Association Name="SeguroVidaSidePreki">
           <End Type="Model1.PolizaSeguroVida" Role="SeguroVida" Multiplicity="*" />
@@ -2042,7 +1958,7 @@
           <End Type="Model1.PolizaSeguroVida" Role="PolizaSeguroVida" Multiplicity="*" />
         </Association>
         <Association Name="CobroSidePrekiAportaSidePreki">
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Role="CobroSidePreki" Multiplicity="*" />
           <End Type="Model1.AportaSidePreki" Role="AportaSidePreki" Multiplicity="1" />
         </Association>
         <Association Name="ProfesionalCuentasCorrientes">
@@ -2133,24 +2049,6 @@
           <End Type="Model1.CobroMatriculaxMes" Role="CobroMatriculaxMes" Multiplicity="*" />
           <End Type="Model1.Colegio" Role="Colegio" Multiplicity="1" />
         </Association>
-        <EntityType Name="ValoresCuotaMatricula">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="MesXAño" Relationship="Model1.ValoresCuotaMatriculaMesXAño" FromRole="ValoresCuotaMatricula" ToRole="MesXAño" />
-          <Property Name="Categoria" Type="String" Nullable="false" />
-          <Property Name="Monto" Type="String" Nullable="false" />
-          <Property Name="FechaInicioVigencia" Type="String" Nullable="false" />
-          <Property Name="FechaFinVigencia" Type="String" Nullable="false" />
-          <Property Name="FondoKinesico" Type="String" Nullable="false" />
-          <Property Name="MantenimientoMatricula" Type="String" Nullable="false" />
-          <Property Name="CantidadDíasRetraso" Type="String" Nullable="false" />
-        </EntityType>
-        <Association Name="ValoresCuotaMatriculaMesXAño">
-          <End Type="Model1.ValoresCuotaMatricula" Role="ValoresCuotaMatricula" Multiplicity="1" />
-          <End Type="Model1.MesXAño" Role="MesXAño" Multiplicity="*" />
-        </Association>
         <EntityType Name="Deudas">
           <Key>
             <PropertyRef Name="Id" />
@@ -2161,7 +2059,6 @@
           <NavigationProperty Name="CuotaMoratoria" Relationship="Model1.DeudasCuotaMoratoria" FromRole="Deudas" ToRole="CuotaMoratoria" />
           <NavigationProperty Name="CobroSidePreki" Relationship="Model1.DeudasCobroSidePreki" FromRole="Deudas" ToRole="CobroSidePreki" />
           <NavigationProperty Name="Inscripción" Relationship="Model1.DeudasInscripción" FromRole="Deudas" ToRole="Inscripción" />
-          <NavigationProperty Name="ValoresRecargos" Relationship="Model1.ValoresRecargosDeudas" FromRole="Deudas" ToRole="ValoresRecargos" />
           <NavigationProperty Name="ReciboCobroInscripcion" Relationship="Model1.ReciboCobroInscripcionDeudas" FromRole="Deudas" ToRole="ReciboCobroInscripcion" />
           <NavigationProperty Name="CuotaSeguro" Relationship="Model1.CuotaSeguroDeudas" FromRole="Deudas" ToRole="CuotaSeguro" />
           <NavigationProperty Name="CuotaSeguroVida" Relationship="Model1.CuotaSeguroVidaDeudas" FromRole="Deudas" ToRole="CuotaSeguroVida" />
@@ -2198,7 +2095,7 @@
         </Association>
         <Association Name="DeudasCobroSidePreki">
           <End Type="Model1.Deudas" Role="Deudas" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Role="CobroSidePreki" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Deudas">
               <PropertyRef Name="Id" />
@@ -2212,31 +2109,13 @@
           <End Type="Model1.Deudas" Role="Deudas" Multiplicity="1" />
           <End Type="Model1.Inscripción" Role="Inscripción" Multiplicity="*" />
         </Association>
-        <EntityType Name="ValoresRecargos">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NombreCuota" Type="String" Nullable="false" />
-          <Property Name="CategoriaCuota" Type="String" Nullable="false" />
-          <Property Name="MontoAReccargar" Type="String" Nullable="false" />
-          <NavigationProperty Name="Deudas" Relationship="Model1.ValoresRecargosDeudas" FromRole="ValoresRecargos" ToRole="Deudas" />
-        </EntityType>
         <Association Name="MesXAñoCobroMatriculaxMes">
-          <End Type="Model1.MesXAño" Role="MesXAño" Multiplicity="1" />
-          <End Type="Model1.CobroMatriculaxMes" Role="CobroMatriculaxMes" Multiplicity="*" />
-        </Association>
-        <Association Name="MesXAñoValoresCuotaSidePreki">
-          <End Type="Model1.MesXAño" Role="MesXAño" Multiplicity="1" />
-          <End Type="Model1.ValoresCuotaSidePreki" Role="ValoresCuotaSidePreki" Multiplicity="*" />
+          <End Type="Model1.MesXAño" Multiplicity="1" Role="MesXAño" />
+          <End Type="Model1.CobroMatriculaxMes" Multiplicity="*" Role="CobroMatriculaxMes" />
         </Association>
         <Association Name="MesXAñoCobroSidePreki1">
-          <End Type="Model1.MesXAño" Role="MesXAño" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
-        </Association>
-        <Association Name="ValoresRecargosDeudas">
-          <End Type="Model1.ValoresRecargos" Role="ValoresRecargos" Multiplicity="1" />
-          <End Type="Model1.Deudas" Role="Deudas" Multiplicity="*" />
+          <End Type="Model1.MesXAño" Multiplicity="1" Role="MesXAño" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Multiplicity="*" Role="CobroSidePreki" />
         </Association>
         <Association Name="ReciboCobroInscripcionDeudas">
           <End Type="Model1.ReciboCobroInscripcion" Role="ReciboCobroInscripcion" Multiplicity="1" />
@@ -2252,7 +2131,7 @@
         </Association>
         <Association Name="DescuentoSidePrekiCobroSidePreki">
           <End Type="Model1.DescuentoSidePreki" Role="DescuentoSidePreki" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Role="CobroSidePreki" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DescuentoSidePreki">
               <PropertyRef Name="Id" />
@@ -2322,7 +2201,7 @@
         </Association>
         <Association Name="CuotaSeguroVidaCobroSidePreki">
           <End Type="Model1.CuotaSeguroVida" Role="CuotaSeguroVida" Multiplicity="1" />
-          <End Type="Model1.CobroSidePreki" Role="CobroSidePreki" Multiplicity="*" />
+          <End Type="Model1.CobroCuotaCajaProvisional" Role="CobroSidePreki" Multiplicity="*" />
         </Association>
         <Association Name="CuotaSeguroDeudas">
           <End Type="Model1.CuotaSeguro" Role="CuotaSeguro" Multiplicity="1" />

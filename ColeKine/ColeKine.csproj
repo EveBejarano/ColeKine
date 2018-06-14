@@ -59,6 +59,9 @@
     <Compile Include="Modelos\BajaMatricula\AbandonoProfesion.cs" />
     <Compile Include="Modelos\AltaMatricula.cs" />
     <Compile Include="Modelos\BajaMatricula\BajaMatricula.cs" />
+    <Compile Include="Modelos\CajaProvisional.cs" />
+    <Compile Include="Modelos\CobroCuotaCajaProvisional.cs" />
+    <Compile Include="Modelos\Deuda.cs" />
     <Compile Include="Modelos\Matricula.cs" />
     <Compile Include="Modelos\BajaMatricula\TipoBajaMatricula.cs" />
     <Compile Include="Modelos\BajaMatricula\CuotaPagoJubilacion.cs" />
@@ -67,6 +70,9 @@
     <Compile Include="Modelos\BajaMatricula\PlanPagoJubilacion.cs" />
     <Compile Include="Modelos\BajaMatricula\SancionDisciplinaria.cs" />
     <Compile Include="Modelos\BajaMatricula\Traslado.cs" />
+    <Compile Include="Modelos\TasasDeRecargo.cs" />
+    <Compile Include="Modelos\ValoresCuotaCajaProvisional.cs" />
+    <Compile Include="Modelos\ValoresCuotaMatricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
