@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class FormaDePagoCobro
+    class AportanteFactura: ProfesionalAportante
     {
-        public TipoTalonario TipoTalonarioAsociado { get; set; }
+        public IEnumerable<PlanEmbargo> Embargo { get; set; }
     }
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class FormaDePagoCobro
+    class PlanEmbargoPorcentaje
     {
-        public TipoTalonario TipoTalonarioAsociado { get; set; }
+        public float PorcentajeARetener { get; set; }
+        
     }
 }

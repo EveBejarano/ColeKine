@@ -17,7 +17,7 @@ namespace ColeKine.Modelos
         public int CantidadDeAñosMaxima { get; set; }
         public float PorcentajeAdministrativo { get; set; }
         public float PorcentajeFondoCaja { get; set; }
-        public IEnumerable<CobroCuotaCajaProvisional> MyProperty { get; set; }
+        public IEnumerable<CuotaCajaProvisional> MyProperty { get; set; }
         public DateTime FechaInicioVigencia { get; set; }
         public DateTime FechaFinVigencia { get; set; }
     }

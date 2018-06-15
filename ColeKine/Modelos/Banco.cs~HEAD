@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class FormaDePagoCobro
+    class Banco
     {
-        public TipoTalonario TipoTalonarioAsociado { get; set; }
     }
 }
