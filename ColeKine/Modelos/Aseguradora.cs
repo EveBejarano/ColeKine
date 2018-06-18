@@ -6,6 +6,7 @@ namespace ColeKine.Modelos
     {
         public int IdAseguradora { get; set; }
         public string Name { get; set; }
-        public IEnumerable<Poliza> PolizasAsociadas { get; set; }
+        public IEnumerable<PolizaColectiva> PolizasAsociadas { get; set; }
+        public IEnumerable<NovedadesSeguro> NovedadesAsociadas { get; set; }
     }
 }

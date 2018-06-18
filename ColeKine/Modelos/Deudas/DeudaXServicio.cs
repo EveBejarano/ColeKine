@@ -3,5 +3,7 @@
     public class DeudaXServicio: Deuda
     {
         public DescuentoXServicioConsumido DescuentoAsociado { get; set; }
+
+
     }
 }

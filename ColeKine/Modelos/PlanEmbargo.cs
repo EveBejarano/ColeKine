@@ -17,5 +17,6 @@ namespace ColeKine.Modelos
 
         public float MontoACubrir { get; set; }
         public IEnumerable<DescuentoEmbargo> DescuentosRealizadosEmbargo { get; set; }
+        public ConvenioPrestadores ConvenioProfesionalAsociado { get; set; }
     }
 }

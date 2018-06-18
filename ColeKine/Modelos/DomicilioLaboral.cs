@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class Consultorio
+    public class DomicilioLaboral
     {
-        public int IdConsultorio { get; set; }
+        public int IdDomici { get; set; }
         public string Domicilio { get; set; }
         public string Nombre { get; set; }
         public bool Habilitado { get; set; }

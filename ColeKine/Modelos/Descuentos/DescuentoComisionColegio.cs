@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class AportanteFactura: ProfesionalAportante
+    public class DescuentoComisionColegio: Descuento
     {
-        public IEnumerable<PlanEmbargo> Embargo { get; set; }
+        public float PorcentajeADescontar { get; set; }
+        public Colegio  Colegio { get; set; }
+
     }
 }

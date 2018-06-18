@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class ValoresCuotaCajaProvisional
+    public class ValoresCuotaCajaProvisional
     {
         [Key]
         public int IdValoresCuotaCajaProvisional { get; set; }
@@ -17,8 +17,8 @@ namespace ColeKine.Modelos
         public int CantidadDeAñosMaxima { get; set; }
         public float PorcentajeAdministrativo { get; set; }
         public float PorcentajeFondoCaja { get; set; }
-        public IEnumerable<CuotaCajaProvisional> MyProperty { get; set; }
+        public IEnumerable<CuotaCajaProvisional> CuotasAsociadas{ get; set; }
         public DateTime FechaInicioVigencia { get; set; }
         public DateTime FechaFinVigencia { get; set; }
-    }
+            }
 }
