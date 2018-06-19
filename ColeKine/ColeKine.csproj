@@ -70,6 +70,8 @@
     <Compile Include="Modelos\Inversion.cs" />
     <Compile Include="Modelos\LineaOrdenPractica.cs" />
     <Compile Include="Modelos\Localidad.cs" />
+    <Compile Include="Modelos\Matricula\EstadoMatricula\EstadoMatricula.cs" />
+    <Compile Include="Modelos\Matricula\EstadoMatricula\MatriculaActiva.cs" />
     <Compile Include="Modelos\Moratoria.cs" />
     <Compile Include="Modelos\NomencladorPracticas.cs" />
     <Compile Include="Modelos\NovedadesSeguro.cs" />
@@ -79,8 +81,8 @@
     <Compile Include="Modelos\PracticasXObraSocial.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
     <Compile Include="Modelos\Aseguradora.cs" />
-    <Compile Include="Modelos\BajaMatricula\AbandonoProfesion.cs" />
-    <Compile Include="Modelos\BajaMatricula\BajaMatricula.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\AbandonoProfesion.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\BajaMatricula.cs" />
     <Compile Include="Modelos\Banco.cs" />
     <Compile Include="Modelos\CategoriaMatricula.cs" />
     <Compile Include="Modelos\Cheque.cs" />
@@ -114,7 +116,7 @@
     <Compile Include="Modelos\Inscripciones\InscripcionSeguro.cs" />
     <Compile Include="Modelos\Inscripciones\InscripcionSeguroVida.cs" />
     <Compile Include="Modelos\MovimientoDeFondos.cs" />
-    <Compile Include="Modelos\Profesional\Persona.cs" />
+    <Compile Include="Modelos\Persona.cs" />
     <Compile Include="Modelos\PlanCuotas.cs" />
     <Compile Include="Modelos\PlanEmbargo.cs" />
     <Compile Include="Modelos\PlanEmbargoCuotas.cs" />
@@ -129,20 +131,20 @@
     <Compile Include="Modelos\TalonariosComprobantes\Comprobante.cs" />
     <Compile Include="Modelos\Descuentos\DescuentoXServicioConsumido.cs" />
     <Compile Include="Modelos\Factura.cs" />
-    <Compile Include="Modelos\Inscripciones\Inscripcion.cs" />
+    <Compile Include="Modelos\Inscripciones\InscripcionMatricula.cs" />
     <Compile Include="Modelos\CajaProvisional.cs" />
     <Compile Include="Modelos\Descuentos\Descuento.cs" />
     <Compile Include="Modelos\Deudas\Deuda.cs" />
     <Compile Include="Modelos\Proveedores\Linea_OrdenPago.cs" />
-    <Compile Include="Modelos\Profesional\Matricula.cs" />
-    <Compile Include="Modelos\BajaMatricula\TipoBajaMatricula.cs" />
+    <Compile Include="Modelos\Matricula\Matricula.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\TipoBajaMatricula.cs" />
     <Compile Include="Modelos\CuotaPagoJubilacion.cs" />
-    <Compile Include="Modelos\BajaMatricula\Fallecimiento.cs" />
-    <Compile Include="Modelos\BajaMatricula\Jubilación.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\Fallecimiento.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\Jubilación.cs" />
     <Compile Include="Modelos\PlanPagoJubilacion.cs" />
-    <Compile Include="Modelos\BajaMatricula\SancionDisciplinaria.cs" />
-    <Compile Include="Modelos\BajaMatricula\Traslado.cs" />
-    <Compile Include="Modelos\Profesional\MotivoAltaMatricula.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\SancionDisciplinaria.cs" />
+    <Compile Include="Modelos\Matricula\BajaMatricula\Traslado.cs" />
+    <Compile Include="Modelos\Matricula\MotivoAltaMatricula.cs" />
     <Compile Include="Modelos\Proveedores\OrdenPagoProveedor.cs" />
     <Compile Include="Modelos\Profesional\Profesional.cs" />
     <Compile Include="Modelos\Proveedores\Proveedor.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="Modelos\ValoresJerarquización.cs" />
     <Compile Include="Modelos\Zona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones\Matricula\NumeroUnicoMatricula.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model2.edmx">
