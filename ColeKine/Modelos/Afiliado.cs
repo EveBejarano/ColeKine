@@ -2,11 +2,10 @@
 
 namespace ColeKine.Modelos
 {
-    public class Afiliado
+    public class Afiliado: Persona
     {
         public int IdAfiliado { get; set; }
-        public string DNI { get; set; }
-        public string Nombre { get; set; }
+        public ObraSocial ObraSocial { get; set; }
         public IEnumerable<OrdenPractica> OrdenPractica { get; set; }
     }
 }
