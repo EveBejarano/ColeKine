@@ -3,5 +3,6 @@
     public class DescuentoMoratoria: Descuento
     {
         public Moratoria MoratoriaAsociada { get; set; }
+
     }
 }

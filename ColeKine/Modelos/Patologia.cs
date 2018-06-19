@@ -1,6 +1,6 @@
 ﻿namespace ColeKine.Modelos
 {
-    class Deposito: TipoMovimiento
+    public class Patologia
     {
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="87" ShowGrid="true" SnapToGrid="false" DisplayType="true" >
+      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="92" ShowGrid="true" SnapToGrid="false" DisplayType="true" >
         <EntityTypeShape EntityType="Model1.Bancos" Width="1.5" PointX="51.375" PointY="45.75" />
         <EntityTypeShape EntityType="Model1.CuentaBancaria" Width="2.8695987110091323" PointX="43.380401288990868" PointY="44.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.FormasPago_Cobro" Width="2" PointX="47" PointY="34.625" />
@@ -37,7 +37,7 @@
         <AssociationConnector Association="Model1.FacturaTesoreria" />
         <InheritanceConnector EntityType="Model1.Factura" />
         <InheritanceConnector EntityType="Model1.Recibo" />
-        <EntityTypeShape EntityType="Model1.ValoresCobroActual" PointX="0.75" PointY="0.75" Width="3.7988505621129036" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ValoresCobroActual" PointX="70.782053850811721" PointY="21.182693057159025" Width="3.75" IsExpanded="true" />
         <AssociationConnector Association="Model1.CréditoCuentasCorrientes" />
         <AssociationConnector Association="Model1.DébitoCuentasCorrientes" />
         <EntityTypeShape EntityType="Model1.DepartamentoObraSocial" Width="1.5" PointX="65.375" PointY="29.25" />
@@ -48,7 +48,7 @@
         <EntityTypeShape EntityType="Model1.ObraSocial" Width="1.5" PointX="64.5" PointY="40.875" />
         <AssociationConnector Association="Model1.DepartamentoObraSocialObraSocial" />
         <EntityTypeShape EntityType="Model1.NomencladorPracticas" Width="1.5" PointX="76.5" PointY="27.75" />
-        <EntityTypeShape EntityType="Model1.PracticaxObraSocial" Width="1.5" PointX="74.125" PointY="28.5" />
+        <EntityTypeShape EntityType="Model1.PracticaxObraSocial" Width="2.6209238927092997" PointX="73.0040761072907" PointY="28.5" />
         <AssociationConnector Association="Model1.DepartamentoObraSocialPracticaxObraSocial" />
         <AssociationConnector Association="Model1.PracticaxObraSocialNomencladorPracticas" />
         <EntityTypeShape EntityType="Model1.Linea_Practica" Width="1.5" PointX="73.875" PointY="33.5" />
