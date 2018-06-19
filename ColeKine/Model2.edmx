@@ -183,21 +183,6 @@
             <End Role="Profesional" EntitySet="ProfesionalSet" />
             <End Role="PlanMoratoria" EntitySet="PlanCobroSet" />
           </AssociationSet>
-          <EntitySet Name="MedicoSet" EntityType="Model1.Medico" />
-          <AssociationSet Name="OrdenPracticaMedico" Association="Model1.OrdenPracticaMedico">
-            <End Role="OrdenPractica" EntitySet="OrdenPracticaSet" />
-            <End Role="Medico" EntitySet="MedicoSet" />
-          </AssociationSet>
-          <EntitySet Name="AfiliadoSet" EntityType="Model1.Afiliado" />
-          <EntitySet Name="PatologíaSet" EntityType="Model1.Patología" />
-          <AssociationSet Name="OrdenPracticaPatología" Association="Model1.OrdenPracticaPatología">
-            <End Role="OrdenPractica" EntitySet="OrdenPracticaSet" />
-            <End Role="Patología" EntitySet="PatologíaSet" />
-          </AssociationSet>
-          <AssociationSet Name="OrdenPracticaAfiliado" Association="Model1.OrdenPracticaAfiliado">
-            <End Role="OrdenPractica" EntitySet="OrdenPracticaSet" />
-            <End Role="Afiliado" EntitySet="AfiliadoSet" />
-          </AssociationSet>
           <AssociationSet Name="FacturaObraSocialTotalAPagarPeriodoxMes" Association="Model1.FacturaObraSocialTotalAPagarPeriodoxMes">
             <End Role="FacturaObraSocial" EntitySet="ComprobanteSet" />
             <End Role="TotalAPagarPeriodoxMes" EntitySet="TotalAPagarPeriodoxMesSet" />
@@ -250,10 +235,6 @@
             <End Role="IndependienteXObraSocial" EntitySet="IndependienteXObraSocialSet" />
             <End Role="ObraSocial" EntitySet="ObraSocialSet" />
           </AssociationSet>
-          <AssociationSet Name="ObraSocialAfiliado" Association="Model1.ObraSocialAfiliado">
-            <End Role="ObraSocial" EntitySet="ObraSocialSet" />
-            <End Role="Afiliado" EntitySet="AfiliadoSet" />
-          </AssociationSet>
           <EntitySet Name="TalonarioSet" EntityType="Model1.Talonario" />
           <AssociationSet Name="TipoTalonarioComprobante" Association="Model1.TipoTalonarioComprobante">
             <End Role="TipoTalonario" EntitySet="TalonarioSet" />
@@ -277,11 +258,6 @@
           <AssociationSet Name="ProfesionalNovedadesXProfesional" Association="Model1.ProfesionalNovedadesXProfesional">
             <End Role="Profesional" EntitySet="ProfesionalSet" />
             <End Role="NovedadesXProfesional" EntitySet="NovedadesXProfesionalSet" />
-          </AssociationSet>
-          <EntitySet Name="NovedadesXObraSocialSet" EntityType="Model1.NovedadesXObraSocial" />
-          <AssociationSet Name="ObraSocialNovedadesXObraSocial" Association="Model1.ObraSocialNovedadesXObraSocial">
-            <End Role="ObraSocial" EntitySet="ObraSocialSet" />
-            <End Role="NovedadesXObraSocial" EntitySet="NovedadesXObraSocialSet" />
           </AssociationSet>
           <AssociationSet Name="ProfesionalFormasPago_Cobro" Association="Model1.ProfesionalFormasPago_Cobro">
             <End Role="Profesional" EntitySet="ProfesionalSet" />
@@ -637,9 +613,6 @@
           <Property Name="FechaCobradoObraSocial" Type="String" Nullable="false" />
           <Property Name="PagadoAKinesiologo" Type="String" Nullable="false" />
           <NavigationProperty Name="Jerarquización" Relationship="Model1.JerarquizaciónOrdenPractica" FromRole="OrdenPractica" ToRole="Jerarquización" />
-          <NavigationProperty Name="Medico" Relationship="Model1.OrdenPracticaMedico" FromRole="OrdenPractica" ToRole="Medico" />
-          <NavigationProperty Name="Patología" Relationship="Model1.OrdenPracticaPatología" FromRole="OrdenPractica" ToRole="Patología" />
-          <NavigationProperty Name="Afiliado" Relationship="Model1.OrdenPracticaAfiliado" FromRole="OrdenPractica" ToRole="Afiliado" />
         </EntityType>
         <Association Name="OrdenesPracticaObraSocial">
           <End Type="Model1.OrdenPractica" Role="OrdenesPractica" Multiplicity="1" />
@@ -698,8 +671,6 @@
           <NavigationProperty Name="DepartamentoObraSocial" Relationship="Model1.DepartamentoObraSocialObraSocial" FromRole="ObraSocial" ToRole="DepartamentoObraSocial" />
           <Property Name="CUIL" Type="String" Nullable="false" />
           <NavigationProperty Name="IndependienteXObraSocial" Relationship="Model1.IndependienteXObraSocialObraSocial" FromRole="ObraSocial" ToRole="IndependienteXObraSocial" />
-          <NavigationProperty Name="Afiliado" Relationship="Model1.ObraSocialAfiliado" FromRole="ObraSocial" ToRole="Afiliado" />
-          <NavigationProperty Name="NovedadesXObraSocial" Relationship="Model1.ObraSocialNovedadesXObraSocial" FromRole="ObraSocial" ToRole="NovedadesXObraSocial" />
         </EntityType>
         <Association Name="DepartamentoObraSocialObraSocial">
           <End Type="Model1.DepartamentoObraSocial" Role="DepartamentoObraSocial" Multiplicity="1" />
@@ -894,40 +865,6 @@
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
           <End Type="Model1.PlanCobro" Role="PlanMoratoria" Multiplicity="*" />
         </Association>
-        <EntityType Name="Medico">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="OrdenPractica" Relationship="Model1.OrdenPracticaMedico" FromRole="Medico" ToRole="OrdenPractica" />
-        </EntityType>
-        <Association Name="OrdenPracticaMedico">
-          <End Type="Model1.OrdenPractica" Role="OrdenPractica" Multiplicity="1" />
-          <End Type="Model1.Medico" Role="Medico" Multiplicity="*" />
-        </Association>
-        <EntityType Name="Afiliado">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="OrdenPractica" Relationship="Model1.OrdenPracticaAfiliado" FromRole="Afiliado" ToRole="OrdenPractica" />
-          <NavigationProperty Name="ObraSocial" Relationship="Model1.ObraSocialAfiliado" FromRole="Afiliado" ToRole="ObraSocial" />
-        </EntityType>
-        <EntityType Name="Patología">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="OrdenPractica" Relationship="Model1.OrdenPracticaPatología" FromRole="Patología" ToRole="OrdenPractica" />
-        </EntityType>
-        <Association Name="OrdenPracticaPatología">
-          <End Type="Model1.OrdenPractica" Role="OrdenPractica" Multiplicity="1" />
-          <End Type="Model1.Patología" Role="Patología" Multiplicity="*" />
-        </Association>
-        <Association Name="OrdenPracticaAfiliado">
-          <End Type="Model1.OrdenPractica" Role="OrdenPractica" Multiplicity="1" />
-          <End Type="Model1.Afiliado" Role="Afiliado" Multiplicity="*" />
-        </Association>
         <Association Name="FacturaObraSocialTotalAPagarPeriodoxMes">
           <End Type="Model1.FacturaObraSocial" Role="FacturaObraSocial" Multiplicity="1" />
           <End Type="Model1.TotalAPagarPeriodoxMes" Role="TotalAPagarPeriodoxMes" Multiplicity="*" />
@@ -1008,10 +945,6 @@
           <End Type="Model1.IndependienteXObraSocial" Role="IndependienteXObraSocial" Multiplicity="1" />
           <End Type="Model1.ObraSocial" Role="ObraSocial" Multiplicity="*" />
         </Association>
-        <Association Name="ObraSocialAfiliado">
-          <End Type="Model1.ObraSocial" Role="ObraSocial" Multiplicity="1" />
-          <End Type="Model1.Afiliado" Role="Afiliado" Multiplicity="*" />
-        </Association>
         <Association Name="TipoTalonarioComprobante">
           <End Type="Model1.Talonario" Role="TipoTalonario" Multiplicity="1" />
           <End Type="Model1.Comprobante" Role="Comprobante" Multiplicity="*" />
@@ -1061,17 +994,6 @@
         <Association Name="ProfesionalNovedadesXProfesional">
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
           <End Type="Model1.NovedadesXProfesional" Role="NovedadesXProfesional" Multiplicity="*" />
-        </Association>
-        <EntityType Name="NovedadesXObraSocial">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="ObraSocial" Relationship="Model1.ObraSocialNovedadesXObraSocial" FromRole="NovedadesXObraSocial" ToRole="ObraSocial" />
-        </EntityType>
-        <Association Name="ObraSocialNovedadesXObraSocial">
-          <End Type="Model1.ObraSocial" Role="ObraSocial" Multiplicity="1" />
-          <End Type="Model1.NovedadesXObraSocial" Role="NovedadesXObraSocial" Multiplicity="*" />
         </Association>
         <Association Name="ProfesionalFormasPago_Cobro">
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />

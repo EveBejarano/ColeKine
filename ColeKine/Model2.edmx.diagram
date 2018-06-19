@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="92" ShowGrid="true" SnapToGrid="false" DisplayType="true" >
+      <Diagram DiagramId="33dcef6086464dc79feaf49d95fd6fe7" Name="Diagram1" ZoomLevel="81" ShowGrid="true" SnapToGrid="false" DisplayType="true" >
         <EntityTypeShape EntityType="Model1.Bancos" Width="1.5" PointX="51.375" PointY="45.75" />
         <EntityTypeShape EntityType="Model1.CuentaBancaria" Width="2.8695987110091323" PointX="43.380401288990868" PointY="44.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.FormasPago_Cobro" Width="2" PointX="47" PointY="34.625" />
@@ -79,12 +79,6 @@
         <EntityTypeShape EntityType="Model1.CuotaMoratoria" Width="1.5" PointX="53" PointY="23" />
         <AssociationConnector Association="Model1.PlanMoratoriaCuotaMoratoria" />
         <AssociationConnector Association="Model1.ProfesionalPlanMoratoria" />
-        <EntityTypeShape EntityType="Model1.Medico" Width="1.5" PointX="68" PointY="32.5" />
-        <AssociationConnector Association="Model1.OrdenPracticaMedico" />
-        <EntityTypeShape EntityType="Model1.Afiliado" Width="1.5" PointX="67.375" PointY="40.375" />
-        <EntityTypeShape EntityType="Model1.Patología" Width="1.5" PointX="72.625" PointY="39.625" />
-        <AssociationConnector Association="Model1.OrdenPracticaPatología" />
-        <AssociationConnector Association="Model1.OrdenPracticaAfiliado" />
         <AssociationConnector Association="Model1.FacturaObraSocialTotalAPagarPeriodoxMes" />
         <AssociationConnector Association="Model1.Linea_ReciboObraSocialTotalAPagarPeriodoxMes" />
         <AssociationConnector Association="Model1.ReciboHonorariosTotalAPagarPeriodoxMes" />
@@ -100,15 +94,12 @@
         <EntityTypeShape EntityType="Model1.IndependienteXObraSocial" Width="3.5" PointX="64.375" PointY="25.875" />
         <AssociationConnector Association="Model1.IndependienteAsociadoIndependienteXObraSocial" />
         <AssociationConnector Association="Model1.IndependienteXObraSocialObraSocial" />
-        <AssociationConnector Association="Model1.ObraSocialAfiliado" />
         <AssociationConnector Association="Model1.TipoTalonarioComprobante" />
         <InheritanceConnector EntityType="Model1.Recibo" />
         <InheritanceConnector EntityType="Model1.Factura_AportaSidePreki" />
         <AssociationConnector Association="Model1.ProfesionalCuentasCorrientes" />
         <EntityTypeShape EntityType="Model1.NovedadesXProfesional" Width="1.5" PointX="50.25" PointY="18.75" />
         <AssociationConnector Association="Model1.ProfesionalNovedadesXProfesional" />
-        <EntityTypeShape EntityType="Model1.NovedadesXObraSocial" Width="1.5" PointX="66.625" PointY="43.25" />
-        <AssociationConnector Association="Model1.ObraSocialNovedadesXObraSocial" />
         <InheritanceConnector EntityType="Model1.Factura" />
         <AssociationConnector Association="Model1.ProfesionalFormasPago_Cobro" />
         <AssociationConnector Association="Model1.Factura_AportaSidePrekiFormasPago_Cobro" />

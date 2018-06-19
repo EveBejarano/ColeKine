@@ -1,8 +1,8 @@
 ﻿namespace ColeKine.Modelos
 {
-    public class NovedadesSeguro
+    public class Novedad
     {
-        public int IdNovedadSeguro { get; set; }
+        public int IdNovedad { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
     }
