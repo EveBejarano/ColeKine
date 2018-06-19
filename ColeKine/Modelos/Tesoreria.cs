@@ -4,7 +4,7 @@ namespace ColeKine.Modelos
 {
     public class Tesoreria
     {
-        public IEnumerable<Talonario> MyProperty { get; set; }
-        public IEnumerable<Comprobante> MyProperty { get; set; }
+        public IEnumerable<Talonario> Talonarios { get; set; }
+        public IEnumerable<Comprobante> Comprobantes { get; set; }
     }
 }

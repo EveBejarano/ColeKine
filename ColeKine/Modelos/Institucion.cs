@@ -9,7 +9,8 @@ namespace ColeKine.Modelos
     public class Institucion
     {
         public int IdInstitucion { get; set; }
-        public IEnumerable<CajaProvisional> CajasProvisional { get; set; }
+        public IEnumerable<CajaProvisional> CajasPrevisionales { get; set; }
         public IEnumerable<Colegio> Colegios { get; set; }
+        public string Presidente { get; set; }
     }
 }

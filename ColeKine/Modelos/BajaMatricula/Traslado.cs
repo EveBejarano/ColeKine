@@ -7,9 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    class Traslado: TipoBajaMatricula
+    public class Traslado: TipoBajaMatricula
     {
-        [Key]
-        public int IdTraslado { get; set; }
+        public string Origen { get; set; }
+
+        public string Destino { get; set; }
     }
 }

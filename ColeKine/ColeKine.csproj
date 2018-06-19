@@ -62,6 +62,7 @@
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Modelos\DescuentoMoratoria.cs" />
+    <Compile Include="Modelos\Domicilio.cs" />
     <Compile Include="Modelos\DomicilioLaboral.cs" />
     <Compile Include="Modelos\IngresoDinero.cs" />
     <Compile Include="Modelos\Institucion.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Modelos\Profesional\ProfesionalAportante.cs" />
     <Compile Include="Modelos\Profesional\TipoSocio.cs" />
     <Compile Include="Modelos\Profesional\TituloProfesional.cs" />
+    <Compile Include="Modelos\Provincia.cs" />
     <Compile Include="Modelos\ReciboPagoMatricula.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Comprobante.cs" />
     <Compile Include="Modelos\Descuentos\DescuentoXServicioConsumido.cs" />
@@ -128,10 +130,10 @@
     <Compile Include="Modelos\Proveedores\Linea_OrdenPago.cs" />
     <Compile Include="Modelos\Profesional\Matricula.cs" />
     <Compile Include="Modelos\BajaMatricula\TipoBajaMatricula.cs" />
-    <Compile Include="Modelos\BajaMatricula\CuotaPagoJubilacion.cs" />
+    <Compile Include="Modelos\CuotaPagoJubilacion.cs" />
     <Compile Include="Modelos\BajaMatricula\Fallecimiento.cs" />
     <Compile Include="Modelos\BajaMatricula\Jubilación.cs" />
-    <Compile Include="Modelos\BajaMatricula\PlanPagoJubilacion.cs" />
+    <Compile Include="Modelos\PlanPagoJubilacion.cs" />
     <Compile Include="Modelos\BajaMatricula\SancionDisciplinaria.cs" />
     <Compile Include="Modelos\BajaMatricula\Traslado.cs" />
     <Compile Include="Modelos\Profesional\MotivoAltaMatricula.cs" />
