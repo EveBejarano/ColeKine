@@ -71,6 +71,7 @@
     <Compile Include="Modelos\NovedadesSeguro.cs" />
     <Compile Include="Modelos\ObraSocial.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
+    <Compile Include="Modelos\Profesional\AportanteFactura.cs" />
     <Compile Include="Modelos\Aseguradora.cs" />
     <Compile Include="Modelos\BajaMatricula\AbandonoProfesion.cs" />
     <Compile Include="Modelos\BajaMatricula\BajaMatricula.cs" />

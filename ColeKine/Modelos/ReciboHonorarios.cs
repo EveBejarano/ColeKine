@@ -12,9 +12,9 @@ namespace ColeKine.Modelos
         {
             [Key]
             public int IdReciboHonorarios{ get; set; }
-            public Profesional Profesional { get; set; }
+            public ProfesionalAportante Profesional { get; set; }
             public IEnumerable<Descuento> Descuento { get; set; }
             public CuentaBancaria CuentaBancaria { get; set; }
 
-    }
-
+        }
+}
