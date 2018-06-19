@@ -12,7 +12,7 @@ namespace ColeKine.Modelos
         public GrupoFamiliar GrupoFamiliar { get; set; }
         public GrupoProfesionales GrupoProfesionales { get; set; }
         public IEnumerable<DomicilioLaboral> DomiciliosLaborales{ get; set; }
-        public IEnumerable<TituloProfesional> MyProperty { get; set; }
+        public IEnumerable<TituloProfesional> TitulosProfesional { get; set; }
         public TipoSocio TipoSocio { get; set; }
     }
 }

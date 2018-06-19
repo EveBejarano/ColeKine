@@ -17,4 +17,4 @@ namespace ColeKine.Modelos
         public CuentaBancaria CuentaBancaria { get; set; }
     }
     }
-}
+

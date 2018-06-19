@@ -8,7 +8,7 @@ namespace ColeKine.Modelos
 {
     public class DomicilioLaboral
     {
-        public int IdDomici { get; set; }
+        public int IdDomicilio { get; set; }
         public string Domicilio { get; set; }
         public string Nombre { get; set; }
         public bool Habilitado { get; set; }
