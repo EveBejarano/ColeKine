@@ -16,5 +16,6 @@ namespace ColeKine.Modelos
         public Institucion Institucion { get; set; }
         public IEnumerable<ObraSocial> ObrasSociales { get; set; }
 
+
     }
 }

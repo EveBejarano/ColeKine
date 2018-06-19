@@ -10,6 +10,6 @@ namespace ColeKine.Modelos
     {
         public int IdGrupoProfesionales { get; set; }
         public IEnumerable<Profesional> ProfesionalesAsociados { get; set; }
-        public DomicilioLaboral DomicilioLaboral { get; set; }
+        public IEnumerable<DomicilioLaboral> DomicilioLaboral { get; set; }
     }
 }

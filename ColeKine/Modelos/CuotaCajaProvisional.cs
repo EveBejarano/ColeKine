@@ -6,7 +6,10 @@ namespace ColeKine.Modelos
     {
         public CajaProvisional CajaProvisionalAsociada { get; set; }
         public ProfesionalAportante ProfesionalAsociado { get; set; }
+
+        // para sacar el valor que desea pagar en caso de no ser el minimo
         public InscripcionCajaProvisional InscripcionCajaProvisionalAsociado { get; set; }
+        
         public InscripcionSeguroVida InscripcionSeguroVida { get; set; }
 
         public int MesCorrespondiente { get; set; }
