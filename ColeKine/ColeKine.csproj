@@ -56,10 +56,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\DescuentoMoratoria.cs" />
     <Compile Include="Modelos\DomicilioLaboral.cs" />
     <Compile Include="Modelos\IngresoDinero.cs" />
     <Compile Include="Modelos\Institucion.cs" />
     <Compile Include="Modelos\Inversion.cs" />
+    <Compile Include="Modelos\Localidad.cs" />
+    <Compile Include="Modelos\Moratoria.cs" />
     <Compile Include="Modelos\NovedadesSeguro.cs" />
     <Compile Include="Modelos\ObraSocial.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
@@ -145,12 +153,13 @@
     <Compile Include="Modelos\TipoSeguro.cs" />
     <Compile Include="Modelos\ValoresCuotaCajaProvisional.cs" />
     <Compile Include="Modelos\ValoresCuotaMatricula.cs" />
+    <Compile Include="Modelos\Zona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model21.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>

@@ -88,34 +88,9 @@
             <End Role="Débito" EntitySet="TarjetaSet" />
             <End Role="CuentasCorrientes" EntitySet="CuentaBancariaSet" />
           </AssociationSet>
-          <EntitySet Name="DescuentoSet" EntityType="Model1.Descuento" />
-          <EntitySet Name="GrupoProfesionalesSet" EntityType="Model1.GrupoProfesionales" />
-          <AssociationSet Name="ProfesionalGrupoProfesionales" Association="Model1.ProfesionalGrupoProfesionales">
-            <End Role="Profesional" EntitySet="ProfesionalSet" />
-            <End Role="GrupoProfesionales" EntitySet="GrupoProfesionalesSet" />
-          </AssociationSet>
-          <EntitySet Name="DomicilioLaboralSet" EntityType="Model1.DomicilioLaboral" />
-          <AssociationSet Name="ProfesionalDomicilioLaboral" Association="Model1.ProfesionalDomicilioLaboral">
-            <End Role="Profesional" EntitySet="ProfesionalSet" />
-            <End Role="DomicilioLaboral" EntitySet="DomicilioLaboralSet" />
-          </AssociationSet>
-          <AssociationSet Name="GrupoProfesionalesDomicilioLaboral" Association="Model1.GrupoProfesionalesDomicilioLaboral">
-            <End Role="GrupoProfesionales" EntitySet="GrupoProfesionalesSet" />
-            <End Role="DomicilioLaboral" EntitySet="DomicilioLaboralSet" />
-          </AssociationSet>
-          <EntitySet Name="ZonaSet" EntityType="Model1.Zona" />
-          <AssociationSet Name="DomicilioLaboralZona" Association="Model1.DomicilioLaboralZona">
-            <End Role="DomicilioLaboral" EntitySet="DomicilioLaboralSet" />
-            <End Role="Zona" EntitySet="ZonaSet" />
-          </AssociationSet>
-          <EntitySet Name="LocalidadesSet" EntityType="Model1.Localidades" />
           <EntitySet Name="DepartamentoObraSocialSet" EntityType="Model1.DepartamentoObraSocial" />
           <EntitySet Name="Linea_FacturaSet" EntityType="Model1.Linea_Factura" />
           <EntitySet Name="OrdenPracticaSet" EntityType="Model1.OrdenPractica" />
-          <AssociationSet Name="LocalidadesZona" Association="Model1.LocalidadesZona">
-            <End Role="Localidades" EntitySet="LocalidadesSet" />
-            <End Role="Zona" EntitySet="ZonaSet" />
-          </AssociationSet>
           <AssociationSet Name="OrdenesPracticaObraSocial" Association="Model1.OrdenesPracticaObraSocial">
             <End Role="OrdenesPractica" EntitySet="OrdenPracticaSet" />
             <End Role="ObraSocial" EntitySet="DepartamentoObraSocialSet" />
@@ -172,10 +147,6 @@
             <End Role="Profesional" EntitySet="ProfesionalSet" />
             <End Role="ReciboSueldo" EntitySet="ReciboHonorariosSet" />
           </AssociationSet>
-          <AssociationSet Name="ReciboSueldoTiposDescuento" Association="Model1.ReciboSueldoTiposDescuento">
-            <End Role="ReciboSueldo" EntitySet="ReciboHonorariosSet" />
-            <End Role="TiposDescuento" EntitySet="DescuentoSet" />
-          </AssociationSet>
           <AssociationSet Name="FacturaObraSocialReciboPagoObraSocial" Association="Model1.FacturaObraSocialReciboPagoObraSocial">
             <End Role="FacturaObraSocial" EntitySet="ComprobanteSet" />
             <End Role="ReciboPagoObraSocial" EntitySet="ComprobanteSet" />
@@ -202,19 +173,11 @@
             <End Role="Jerarquización" EntitySet="JerarquizaciónSet" />
             <End Role="OrdenPractica" EntitySet="OrdenPracticaSet" />
           </AssociationSet>
-          <AssociationSet Name="DescuentoCKColegio" Association="Model1.DescuentoCKColegio">
-            <End Role="DescuentoCK" EntitySet="DescuentoSet" />
-            <End Role="Colegio" EntitySet="ColegioSet" />
-          </AssociationSet>
           <EntitySet Name="PlanCobroSet" EntityType="Model1.PlanCobro" />
           <EntitySet Name="CuotaMoratoriaSet" EntityType="Model1.CuotaMoratoria" />
           <AssociationSet Name="PlanMoratoriaCuotaMoratoria" Association="Model1.PlanMoratoriaCuotaMoratoria">
             <End Role="PlanMoratoria" EntitySet="PlanCobroSet" />
             <End Role="CuotaMoratoria" EntitySet="CuotaMoratoriaSet" />
-          </AssociationSet>
-          <AssociationSet Name="CuotaMoratoriaDescuentoMoratoria" Association="Model1.CuotaMoratoriaDescuentoMoratoria">
-            <End Role="CuotaMoratoria" EntitySet="CuotaMoratoriaSet" />
-            <End Role="DescuentoMoratoria" EntitySet="DescuentoSet" />
           </AssociationSet>
           <AssociationSet Name="ProfesionalPlanMoratoria" Association="Model1.ProfesionalPlanMoratoria">
             <End Role="Profesional" EntitySet="ProfesionalSet" />
@@ -342,18 +305,14 @@
             <End Role="CuotaMoratoria" EntitySet="CuotaMoratoriaSet" />
           </AssociationSet>
           <EntitySet Name="CobroMatriculaxMesSet" EntityType="Model1.CobroMatriculaxMes" />
-          <AssociationSet Name="CobroMatriculaxMesDescuentoMatricula" Association="Model1.CobroMatriculaxMesDescuentoMatricula">
-            <End Role="CobroMatriculaxMes" EntitySet="CobroMatriculaxMesSet" />
-            <End Role="DescuentoMatricula" EntitySet="DescuentoSet" />
-          </AssociationSet>
           <AssociationSet Name="DescuentoSegurosFormularioSeguro" Association="Model1.DescuentoSegurosFormularioSeguro">
-            <End Role="DescuentoSeguros" EntitySet="DescuentoSet" />
+            <End Role="DescuentoSeguros" EntitySet="DescuentoSegurosSet" />
             <End Role="FormularioSeguro" EntitySet="FormularioSeguroSet" />
           </AssociationSet>
           <EntitySet Name="CuotaSeguroSet" EntityType="Model1.CuotaSeguro" />
           <AssociationSet Name="CuotaSeguroDescuentoSeguros" Association="Model1.CuotaSeguroDescuentoSeguros">
             <End Role="CuotaSeguro" EntitySet="CuotaSeguroSet" />
-            <End Role="DescuentoSeguros" EntitySet="DescuentoSet" />
+            <End Role="DescuentoSeguros" EntitySet="DescuentoSegurosSet" />
           </AssociationSet>
           <AssociationSet Name="CuotaSeguroFormularioSeguro" Association="Model1.CuotaSeguroFormularioSeguro">
             <End Role="CuotaSeguro" EntitySet="CuotaSeguroSet" />
@@ -407,6 +366,7 @@
           <EntitySet Name="SeguroResCivilIncendioSet" EntityType="Model1.SeguroResCivilIncendio" />
           <EntitySet Name="SeguroMalaPraxisSet" EntityType="Model1.SeguroMalaPraxis" />
           <EntitySet Name="Factura_AportaSidePrekiSet" EntityType="Model1.Factura_AportaSidePreki" />
+          <EntitySet Name="DescuentoSegurosSet" EntityType="Model1.DescuentoSeguros" />
           </EntityContainer>
         <EntityType Name="Bancos">
           <Key>
@@ -545,8 +505,6 @@
           <NavigationProperty Name="TipoResponsableInscripto" Relationship="Model1.ProfesionalTipoResponsableInscripto" FromRole="Profesional" ToRole="TipoResponsableInscripto" />
           <NavigationProperty Name="Matricula" Relationship="Model1.ProfesionalMatricula" FromRole="Profesional" ToRole="Matricula" />
           <Property Name="EstadoCivil" Type="String" Nullable="false" />
-          <NavigationProperty Name="GrupoProfesionales" Relationship="Model1.ProfesionalGrupoProfesionales" FromRole="Profesional" ToRole="GrupoProfesionales" />
-          <NavigationProperty Name="DomicilioLaboral" Relationship="Model1.ProfesionalDomicilioLaboral" FromRole="Profesional" ToRole="DomicilioLaboral" />
           <Property Name="CUIT" Type="String" Nullable="false" />
           <NavigationProperty Name="ReciboSueldo" Relationship="Model1.ProfesionalReciboSueldo" FromRole="Profesional" ToRole="ReciboSueldo" />
           <NavigationProperty Name="PlanMoratoria" Relationship="Model1.ProfesionalPlanMoratoria" FromRole="Profesional" ToRole="PlanMoratoria" />
@@ -621,7 +579,6 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="DescuentoCK" Relationship="Model1.DescuentoCKColegio" FromRole="Colegio" ToRole="DescuentoCK" />
           <NavigationProperty Name="CobroMatriculaxMes" Relationship="Model1.CobroMatriculaxMesColegio" FromRole="Colegio" ToRole="CobroMatriculaxMes" />
           <NavigationProperty Name="Préstamo" Relationship="Model1.ColegioPréstamo" FromRole="Colegio" ToRole="Préstamo" />
         </EntityType>
@@ -633,9 +590,9 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" Nullable="false" />
-          <Property Name="Precio" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Nombre" Nullable="false" Type="String" />
+          <Property Name="Precio" Nullable="false" Type="String" />
         </EntityType>
         <Association Name="CréditoCuentasCorrientes">
           <End Type="Model1.Crédito" Role="Crédito" Multiplicity="1" />
@@ -645,65 +602,6 @@
           <End Type="Model1.Débito" Role="Débito" Multiplicity="1" />
           <End Type="Model1.CuentaBancaria" Role="CuentasCorrientes" Multiplicity="*" />
         </Association>
-        <EntityType Name="Descuento">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="ReciboSueldo" Relationship="Model1.ReciboSueldoTiposDescuento" FromRole="TiposDescuento" ToRole="ReciboSueldo" />
-          <Property Name="FechaDescuentoAplicado" Type="String" Nullable="false" />
-        </EntityType>
-        <EntityType Name="DescuentoEmbargo" BaseType="Model1.Descuento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="GrupoProfesionales">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Profesional" Relationship="Model1.ProfesionalGrupoProfesionales" FromRole="GrupoProfesionales" ToRole="Profesional" />
-          <NavigationProperty Name="DomicilioLaboral" Relationship="Model1.GrupoProfesionalesDomicilioLaboral" FromRole="GrupoProfesionales" ToRole="DomicilioLaboral" />
-        </EntityType>
-        <Association Name="ProfesionalGrupoProfesionales">
-          <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
-          <End Type="Model1.GrupoProfesionales" Role="GrupoProfesionales" Multiplicity="*" />
-        </Association>
-        <EntityType Name="DomicilioLaboral">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Profesional" Relationship="Model1.ProfesionalDomicilioLaboral" FromRole="DomicilioLaboral" ToRole="Profesional" />
-          <NavigationProperty Name="GrupoProfesionales" Relationship="Model1.GrupoProfesionalesDomicilioLaboral" FromRole="DomicilioLaboral" ToRole="GrupoProfesionales" />
-          <NavigationProperty Name="Zona" Relationship="Model1.DomicilioLaboralZona" FromRole="DomicilioLaboral" ToRole="Zona" />
-        </EntityType>
-        <Association Name="ProfesionalDomicilioLaboral">
-          <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
-          <End Type="Model1.DomicilioLaboral" Role="DomicilioLaboral" Multiplicity="*" />
-        </Association>
-        <Association Name="GrupoProfesionalesDomicilioLaboral">
-          <End Type="Model1.GrupoProfesionales" Role="GrupoProfesionales" Multiplicity="1" />
-          <End Type="Model1.DomicilioLaboral" Role="DomicilioLaboral" Multiplicity="*" />
-        </Association>
-        <EntityType Name="Zona">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="DomicilioLaboral" Relationship="Model1.DomicilioLaboralZona" FromRole="Zona" ToRole="DomicilioLaboral" />
-          <NavigationProperty Name="Localidades" Relationship="Model1.LocalidadesZona" FromRole="Zona" ToRole="Localidades" />
-        </EntityType>
-        <Association Name="DomicilioLaboralZona">
-          <End Type="Model1.DomicilioLaboral" Role="DomicilioLaboral" Multiplicity="1" />
-          <End Type="Model1.Zona" Role="Zona" Multiplicity="*" />
-        </Association>
-        <EntityType Name="Localidades">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Zona" Relationship="Model1.LocalidadesZona" FromRole="Localidades" ToRole="Zona" />
-        </EntityType>
         <EntityType Name="DepartamentoObraSocial">
           <Key>
             <PropertyRef Name="Id" />
@@ -743,10 +641,6 @@
           <NavigationProperty Name="Patología" Relationship="Model1.OrdenPracticaPatología" FromRole="OrdenPractica" ToRole="Patología" />
           <NavigationProperty Name="Afiliado" Relationship="Model1.OrdenPracticaAfiliado" FromRole="OrdenPractica" ToRole="Afiliado" />
         </EntityType>
-        <Association Name="LocalidadesZona">
-          <End Type="Model1.Localidades" Role="Localidades" Multiplicity="1" />
-          <End Type="Model1.Zona" Role="Zona" Multiplicity="*" />
-        </Association>
         <Association Name="OrdenesPracticaObraSocial">
           <End Type="Model1.OrdenPractica" Role="OrdenesPractica" Multiplicity="1" />
           <End Type="Model1.DepartamentoObraSocial" Role="ObraSocial" Multiplicity="*" />
@@ -917,10 +811,6 @@
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
           <End Type="Model1.ReciboHonorarios" Role="ReciboSueldo" Multiplicity="*" />
         </Association>
-        <Association Name="ReciboSueldoTiposDescuento">
-          <End Type="Model1.ReciboHonorarios" Role="ReciboSueldo" Multiplicity="1" />
-          <End Type="Model1.Descuento" Role="TiposDescuento" Multiplicity="*" />
-        </Association>
         <EntityType Name="ReciboPagoMatricula" BaseType="Model1.Recibo">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="CobroMatriculaxMes" Relationship="Model1.CobroMatriculaxMesReciboPagoMatricula" FromRole="ReciboPagoMatricula" ToRole="CobroMatriculaxMes" />
@@ -976,22 +866,6 @@
           <End Type="Model1.Jerarquización" Role="Jerarquización" Multiplicity="1" />
           <End Type="Model1.OrdenPractica" Role="OrdenPractica" Multiplicity="*" />
         </Association>
-        <EntityType Name="RetencionesProfesiona" BaseType="Model1.Descuento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Monto" Type="String" Nullable="false" />
-        </EntityType>
-        <EntityType Name="DescuentoComisionCK" BaseType="Model1.Descuento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Colegio" Relationship="Model1.DescuentoCKColegio" FromRole="DescuentoCK" ToRole="Colegio" />
-        </EntityType>
-        <Association Name="DescuentoCKColegio">
-          <End Type="Model1.DescuentoComisionCK" Role="DescuentoCK" Multiplicity="*" />
-          <End Type="Model1.Colegio" Role="Colegio" Multiplicity="1" />
-        </Association>
-        <EntityType Name="DescuentoMoratoria" BaseType="Model1.Descuento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="CuotaMoratoria" Relationship="Model1.CuotaMoratoriaDescuentoMoratoria" FromRole="DescuentoMoratoria" ToRole="CuotaMoratoria" />
-        </EntityType>
         <EntityType Name="PlanCobro">
           <Key>
             <PropertyRef Name="Id" />
@@ -1009,7 +883,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="PlanMoratoria" Relationship="Model1.PlanMoratoriaCuotaMoratoria" FromRole="CuotaMoratoria" ToRole="PlanMoratoria" />
-          <NavigationProperty Name="DescuentoMoratoria" Relationship="Model1.CuotaMoratoriaDescuentoMoratoria" FromRole="CuotaMoratoria" ToRole="DescuentoMoratoria" />
           <NavigationProperty Name="Deudas" Relationship="Model1.DeudasCuotaMoratoria" FromRole="CuotaMoratoria" ToRole="Deudas" />
           <Property Name="DeudasId" Type="Int32" Nullable="false" />
         </EntityType>
@@ -1017,17 +890,10 @@
           <End Type="Model1.PlanCobro" Role="PlanMoratoria" Multiplicity="1" />
           <End Type="Model1.CuotaMoratoria" Role="CuotaMoratoria" Multiplicity="*" />
         </Association>
-        <Association Name="CuotaMoratoriaDescuentoMoratoria">
-          <End Type="Model1.CuotaMoratoria" Role="CuotaMoratoria" Multiplicity="1" />
-          <End Type="Model1.DescuentoMoratoria" Role="DescuentoMoratoria" Multiplicity="*" />
-        </Association>
         <Association Name="ProfesionalPlanMoratoria">
           <End Type="Model1.Profesional" Role="Profesional" Multiplicity="1" />
           <End Type="Model1.PlanCobro" Role="PlanMoratoria" Multiplicity="*" />
         </Association>
-        <EntityType Name="DescuentoPorServicio" BaseType="Model1.Descuento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
         <EntityType Name="Medico">
           <Key>
             <PropertyRef Name="Id" />
@@ -1150,7 +1016,7 @@
           <End Type="Model1.Talonario" Role="TipoTalonario" Multiplicity="1" />
           <End Type="Model1.Comprobante" Role="Comprobante" Multiplicity="*" />
         </Association>
-        <EntityType Name="DescuentoSeguros" BaseType="Model1.Descuento">
+        <EntityType Name="DescuentoSeguros">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="FormularioSeguro" Relationship="Model1.DescuentoSegurosFormularioSeguro" FromRole="DescuentoSeguros" ToRole="FormularioSeguro" />
           <NavigationProperty Name="CuotaSeguro" Relationship="Model1.CuotaSeguroDescuentoSeguros" FromRole="DescuentoSeguros" ToRole="CuotaSeguro" />
@@ -1244,14 +1110,6 @@
               <PropertyRef Name="DeudasId" />
             </Dependent>
           </ReferentialConstraint>
-        </Association>
-        <EntityType Name="DescuentoMatricula" BaseType="Model1.Descuento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="CobroMatriculaxMes" Relationship="Model1.CobroMatriculaxMesDescuentoMatricula" FromRole="DescuentoMatricula" ToRole="CobroMatriculaxMes" />
-          </EntityType>
-        <Association Name="CobroMatriculaxMesDescuentoMatricula">
-          <End Type="Model1.CobroMatriculaxMes" Role="CobroMatriculaxMes" Multiplicity="1" />
-          <End Type="Model1.DescuentoMatricula" Role="DescuentoMatricula" Multiplicity="*" />
         </Association>
         <Association Name="DescuentoSegurosFormularioSeguro">
           <End Type="Model1.DescuentoSeguros" Role="DescuentoSeguros" Multiplicity="1" />

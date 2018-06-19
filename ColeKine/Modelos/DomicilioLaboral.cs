@@ -13,6 +13,7 @@ namespace ColeKine.Modelos
         public string Nombre { get; set; }
         public bool Habilitado { get; set; }
         public IEnumerable<Profesional> ProfesionalesAsociados { get; set; }
-        public GrupoProfesionales GrupoProfesionales { get; set; }
+        public IEnumerable<GrupoProfesionales> GrupoProfesionales { get; set; }
+        public Localidad Localidad { get; set; }
     }
 }
