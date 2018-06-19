@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class BajaMatricula
+    public class BajaMatricula
     {
         [Key]
         public int IdBajaMatricula { get; set; }

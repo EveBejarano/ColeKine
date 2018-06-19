@@ -4,7 +4,7 @@ namespace ColeKine.Modelos
 {
     public class Localidad
     {
-        public Zona Zona { get; set; }
-        public IEnumerable<DomicilioLaboral> DomiciliosLaborales { get; set; }
+        public virtual Zona Zona { get; set; }
+        public virtual IEnumerable<DomicilioLaboral> DomiciliosLaborales { get; set; }
     }
 }

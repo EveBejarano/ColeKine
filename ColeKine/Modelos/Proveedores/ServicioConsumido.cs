@@ -1,4 +1,6 @@
-﻿namespace ColeKine.Modelos
+﻿using System;
+
+namespace ColeKine.Modelos
 {
     public class ServicioConsumido
     {

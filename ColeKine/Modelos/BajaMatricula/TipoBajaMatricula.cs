@@ -7,8 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    class TipoBajaMatricula
+    public abstract class TipoBajaMatricula
     {
         public int IdTipoTipoBajaMatricula { get; set; }
+
+        public DateTime FechaBaja { get; set; }
     }
 }
