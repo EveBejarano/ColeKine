@@ -9,10 +9,11 @@ namespace ColeKine.Modelos
         [Key]
         public int IdMatricula { get; set; }
 
+        //[Remote("existeNroCliente", "Clientes", AdditionalFields = "IdCliente", HttpMethod = "POST", ErrorMessage = "{0} existente.")]
         [NumeroUnicoMatricula]
         public int NumeroMatricula { get; set; }
 
-        public float Monto { get; set; } //depende del estado y categoría
+        //public float Monto { get; set; } //depende del estado y categoría
 
         public virtual ICollection<EstadoMatricula> EstadoMatricula { get; set; } //el ultimo estado es el activo
         public virtual Profesional Profesional { get; set; }

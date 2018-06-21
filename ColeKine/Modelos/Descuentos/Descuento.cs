@@ -7,7 +7,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdDescuento { get; set; }
-        public ProfesionalAportante ProfesionalAsociado { get; set; }
+        //public ProfesionalAportante ProfesionalAsociado { get; set; }
         public string Nombre { get; set; }
         public float MontoADescontar { get; set; }
         

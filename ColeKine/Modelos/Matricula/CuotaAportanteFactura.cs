@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    class Fallecimiento: TipoBajaMatricula
+    public class CuotaAportanteFactura: CuotaMatricula
     {
-        [Key]
-        public int IdFallecimiento { get; set; }
+        public DescuentoCuotaMatricula DescuentoAsociado { get; set; }
     }
 }
