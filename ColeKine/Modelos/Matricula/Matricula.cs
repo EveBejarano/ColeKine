@@ -12,8 +12,9 @@ namespace ColeKine.Modelos
         [NumeroUnicoMatricula]
         public int NumeroMatricula { get; set; }
 
-        public virtual EstadoMatricula EstadoMatricula { get; set; }
+        public float Monto { get; set; } //depende del estado y categoría
 
+        public virtual ICollection<EstadoMatricula> EstadoMatricula { get; set; } //el ultimo estado es el activo
         public virtual Profesional Profesional { get; set; }
         public virtual IEnumerable<InscripcionMatricula> InscripcionesMatricula { get; set; }
         public virtual CategoriaMatricula Categoria { get; set; }

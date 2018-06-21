@@ -62,22 +62,27 @@
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Afiliado.cs" />
+    <Compile Include="Modelos\DepartamentoObraSocial.cs" />
     <Compile Include="Modelos\DescuentoMoratoria.cs" />
     <Compile Include="Modelos\Domicilio.cs" />
     <Compile Include="Modelos\DomicilioLaboral.cs" />
+    <Compile Include="Modelos\FacturaElectronica.cs" />
     <Compile Include="Modelos\IngresoDinero.cs" />
     <Compile Include="Modelos\Institucion.cs" />
     <Compile Include="Modelos\Inversion.cs" />
     <Compile Include="Modelos\LineaOrdenPractica.cs" />
     <Compile Include="Modelos\Localidad.cs" />
-    <Compile Include="Modelos\Matricula\EstadoMatricula\EstadoMatricula.cs" />
-    <Compile Include="Modelos\Matricula\EstadoMatricula\MatriculaActiva.cs" />
+    <Compile Include="Modelos\Matricula\EstadoMatricula.cs" />
+    <Compile Include="Modelos\Medico.cs" />
     <Compile Include="Modelos\Moratoria.cs" />
     <Compile Include="Modelos\NomencladorPracticas.cs" />
-    <Compile Include="Modelos\NovedadesSeguro.cs" />
+    <Compile Include="Modelos\Novedad.cs" />
+    <Compile Include="Modelos\NovedadObraSocial.cs" />
+    <Compile Include="Modelos\NovedadSeguro.cs" />
     <Compile Include="Modelos\ObraSocial.cs" />
     <Compile Include="Modelos\OrdenPractica.cs" />
     <Compile Include="Modelos\Patologia.cs" />
+    <Compile Include="Modelos\PeriodoFacturacion.cs" />
     <Compile Include="Modelos\PracticasXObraSocial.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
     <Compile Include="Modelos\Aseguradora.cs" />
@@ -161,6 +166,7 @@
     <Compile Include="Modelos\TipoInversion.cs" />
     <Compile Include="Modelos\TipoMovimiento.cs" />
     <Compile Include="Modelos\TipoSeguro.cs" />
+    <Compile Include="Modelos\TotalAPagarObraSocial.cs" />
     <Compile Include="Modelos\ValoresCuotaCajaProvisional.cs" />
     <Compile Include="Modelos\ValoresCuotaMatricula.cs" />
     <Compile Include="Modelos\ValoresJerarquización.cs" />
