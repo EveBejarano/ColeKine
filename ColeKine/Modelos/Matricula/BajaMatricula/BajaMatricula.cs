@@ -16,6 +16,6 @@ namespace ColeKine.Modelos
 
         public Matricula Matricula { get; set; }
 
-        public Inscripcion InscripcionMatricula { get; set; }
+        public InscripcionMatricula InscripcionMatricula { get; set; }
     }
 }
