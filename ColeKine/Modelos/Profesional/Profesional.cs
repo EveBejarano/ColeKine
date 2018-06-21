@@ -5,7 +5,7 @@ namespace ColeKine.Modelos
 {
     public class Profesional: Persona
     {
-        public IEnumerable<Inscripcion> InscripcionesAsociadas { get; set; }
+        public IEnumerable<InscripcionMatricula> InscripcionesAsociadas { get; set; }
         public IEnumerable<ServicioConsumido> ServiciosConsumidos { get; set; }
         public IEnumerable<Servicio> ServiciosAsociados { get; set; }
         public IEnumerable<Deuda> DeudasAsociadas { get; set; }

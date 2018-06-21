@@ -6,7 +6,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdReciboCobroInscripcion { get; set; }
-        public Inscripcion Inscripcion { get; set; }
+        public InscripcionMatricula Inscripcion { get; set; }
         public Deuda DeudaPagoInscripcion { get; set; }
 
     }
