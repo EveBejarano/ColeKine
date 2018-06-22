@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class EstadoMatricula
+    public abstract class EstadoMatricula
     {
         [Key]
         public int IdEstadoMatricula { get; set; }
 
         public DateTime Fecha { get; set; } // fecha desde que está en este estado
          
-
-        public string Estado { get; set; }//son activa, honoraria, baja
+        public virtual Matricula Matricula { get; set; }
 
         
     }

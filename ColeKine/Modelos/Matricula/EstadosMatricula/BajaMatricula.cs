@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class AbandonoProfesion: TipoBajaMatricula
+    public class BajaMatricula: EstadoMatricula
     {
-        [Key]
-        public int IdAbandonoProfesion { get; set; }
+        public virtual MotivoBajaMatricula MotivoBajaMatricula { get; set; }
+        
     }
 }

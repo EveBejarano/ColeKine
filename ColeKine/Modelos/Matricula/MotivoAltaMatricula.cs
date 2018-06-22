@@ -11,6 +11,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdMotivoAltaMatricula { get; set; }
+
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
