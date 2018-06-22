@@ -70,8 +70,7 @@
     <Compile Include="Modelos\Inversion.cs" />
     <Compile Include="Modelos\LineaOrdenPractica.cs" />
     <Compile Include="Modelos\Localidad.cs" />
-    <Compile Include="Modelos\Matricula\CuotaAportanteFactura.cs" />
-    <Compile Include="Modelos\Matricula\CuotaAportanteNoFactura.cs" />
+    <Compile Include="Modelos\Matricula\CobroCuotaMatricula.cs" />
     <Compile Include="Modelos\Matricula\EstadosMatricula\Activa.cs" />
     <Compile Include="Modelos\Matricula\EstadosMatricula\Honorario.cs" />
     <Compile Include="Modelos\Matricula\EstadosMatricula\MotivoBajaMatricula.cs" />
@@ -90,6 +89,7 @@
     <Compile Include="Modelos\ObraSocial\ValoresJerarquización.cs" />
     <Compile Include="Modelos\OrdenPractica.cs" />
     <Compile Include="Modelos\Patologia.cs" />
+    <Compile Include="Modelos\Periodo.cs" />
     <Compile Include="Modelos\PeriodoFacturacion.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
     <Compile Include="Modelos\Aseguradora.cs" />
