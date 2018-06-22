@@ -10,7 +10,8 @@ namespace ColeKine.Modelos
     {
         public int IdMotivoBajaMatricula { get; set; }
 
-        public string Nombre { get; set; }// abandono actividad, fallecimiento, traslado, etc..
+        public string Nombre { get; set; }// abandono actividad,
+                                          // fallecimiento, traslado, etc..
 
         public string Observaciones { get; set; }
 

@@ -1,18 +1,23 @@
-﻿namespace ColeKine.Modelos
+﻿using System;
+using System.Collections.Generic;
+
+namespace ColeKine.Modelos
 {
-    public abstract class CuotaMatricula
+    public class CuotaMatricula
     {
-        public virtual Matricula Matricula { get; set; }
+        public DateTime FechaVencimiento { get; set; }
 
-        //Si es un aportante que factura
-        //entidad CuotaAportanteFactura
-
-        //Si no factura
-        //entidad CuotaAportanteNoFactura
+        public Periodo Periodo { get; set; } //corresponde a este periodo
 
         public bool Pagada { get; set; }
 
         public float Monto { get; set; }
+
+        public float Saldo { get; set; }
+
+        public virtual Matricula Matricula { get; set; }
+
+        public virtual ICollection<CobroCuotaMatricula> CobroCuotaMatriculas { get; set; }
 
     }
 }

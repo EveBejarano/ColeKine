@@ -8,6 +8,6 @@ namespace ColeKine.Modelos
 {
     public class Activa: EstadoMatricula
     {
-        public bool Factura { get; set; } //factura o no factura
+      
     }
 }

@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class CuotaAportanteFactura: CuotaMatricula
+    public struct Periodo
     {
-        public DescuentoCuotaMatricula DescuentoAsociado { get; set; }
+        public int Mes { get; set; }
+
+        public int Año { get; set; }
     }
 }
