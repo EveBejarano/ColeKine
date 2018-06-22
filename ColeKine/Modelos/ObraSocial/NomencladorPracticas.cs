@@ -18,7 +18,7 @@ namespace ColeKine.Modelos
     }
 
     // Nomencladas - Especialidades - No nomencladas
-    internal class ClasificacionNomenclatura
+    public class ClasificacionNomenclatura
     {
         public int IdClasificacionNomenclatura { get; set; }
         public string Nombre { get; set; }
@@ -27,7 +27,7 @@ namespace ColeKine.Modelos
 
 
     // cuenta - Acum como esp - acum como no nomenclada
-    internal class ComportamientoPractica   
+    public class ComportamientoPractica   
     {
         public int IdComportamientoPractica { get; set; }
         public string Nombre { get; set; }

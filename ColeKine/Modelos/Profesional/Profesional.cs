@@ -14,5 +14,7 @@ namespace ColeKine.Modelos
         public IEnumerable<DomicilioLaboral> DomiciliosLaborales{ get; set; }
         public IEnumerable<TituloProfesional> MyProperty { get; set; }
         public TipoSocio TipoSocio { get; set; }
+
+        public IEnumerable<InsumoComprado> InsumosComprados { get; set; }
     }
 }

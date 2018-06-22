@@ -7,7 +7,7 @@ namespace ColeKine.Modelos
         public int IdServicioConsumido { get; set; }
         public float CostoServicio { get; set; }
         public DateTime FechaConsumición { get; set; }
-        public bool PagadoAObraSocial { get; set; }
+        public bool PagadoAServicio { get; set; }
         public bool CobradoAProfesional { get; set; }
         public Deuda DeudaAsociadaProfesional { get; set; }
         public Profesional ProfesionalQueConsumio { get; set; }
