@@ -16,7 +16,7 @@ namespace ColeKine.Modelos
             public IEnumerable<Descuento> Descuento { get; set; }
             public CuentaBancaria CuentaBancaria { get; set; }
 
-            public TYPE Type { get; set; }
+            
 
         }
 }

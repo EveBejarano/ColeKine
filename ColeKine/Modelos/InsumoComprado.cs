@@ -7,7 +7,7 @@ using ColeKine.Modelos.Descuentos;
 
 namespace ColeKine.Modelos
 {
-    class InsumoComprado
+    public class InsumoComprado
     {
         public string NombreObjetoComprado { get; set; }
         public float PrecioUnitario { get; set; }
