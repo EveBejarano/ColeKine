@@ -53,6 +53,7 @@
     <Compile Include="Modelos\Descuentos\DeudaXCreditoProfesional.cs" />
     <Compile Include="Modelos\Domicilio.cs" />
     <Compile Include="Modelos\DomicilioLaboral.cs" />
+    <Compile Include="Modelos\EstadoCivil.cs" />
     <Compile Include="Modelos\InsumoComprado.cs" />
     <Compile Include="Modelos\Matricula\CategoriaMatricula.cs" />
     <Compile Include="Modelos\Matricula\CobroCuotaMatricula.cs" />
