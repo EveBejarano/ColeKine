@@ -5,6 +5,6 @@ namespace ColeKine.Modelos
     public class GrupoFamiliar
     {
         public IEnumerable<Familiar> Familiares { get; set; }
-        public Profesional Profesional { get; set; }
+        public virtual Profesional Profesional { get; set; }
     }
 }
