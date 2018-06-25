@@ -1,7 +1,7 @@
 ﻿namespace ColeKine.Modelos
 {
-    public class DeudaCuotaCajaProvisional: Deuda
+    public class DeudaCuotaCajaPrevisional : Deuda
     {
-        public DescuentoCuotaCajaProvisional DescuentoAsociado { get; set; }
+        public DescuentoCuotaCajaPrevisional DescuentoAsociado { get; set; }
     }
 }

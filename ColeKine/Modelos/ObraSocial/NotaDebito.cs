@@ -1,8 +1,10 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class NotaDebito: TipoTalonario
     {
-        public MotivoNotaReclamo MotivoNotaReclamo { get; set; }
+        public virtual MotivoNota MotivoNota { get; set; }
         public float MontoTotalPagar { get; set; }
     }
 }

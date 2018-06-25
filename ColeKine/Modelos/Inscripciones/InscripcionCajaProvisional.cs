@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    public class InscripcionCajaProvisional
+    public class InscripcionCajaPrevisional 
     {
-        public int IdInscripcionCajaProvisional { get; set; }
-        public ProfesionalAportante Profesional { get; set; }
+        [Key]
+        public int IdInscripcionCajaPrevisional { get; set; }
+        public virtual ProfesionalAportante Profesional { get; set; }
         public DateTime FechaInscripcion { get; set; }
         public bool PagaMinimoValor { get; set; }
         public float ValorDeseadoAPagar { get; set; }
-        public CajaProvisional CajaProvisional { get; set; }
+        public virtual CajaPrevisional CajaPrevisional { get; set; }
 
-        public InscripcionSeguroVida SeguroVida { get; set; }
+        public virtual InscripcionSeguroVida SeguroVida { get; set; }
 
 
-        public IEnumerable<CuotaCajaProvisional> CuotasAsociadas { get; set; }
+        public IList<CuotaCajaPrevisional > CuotasAsociadas { get; set; }
 
     }
 }

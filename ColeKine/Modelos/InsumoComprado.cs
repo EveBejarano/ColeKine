@@ -17,7 +17,7 @@ namespace ColeKine.Modelos
         public int? CantidadComprada { get; set; }
         public float MontoTotal { get; set; }
 
-        public DescuentoXInsumos DescuentoAsociado { get; set; }
-        public FormaDePagoCobro FormaPago { get; set; }
+        public virtual DescuentoXInsumos DescuentoAsociado { get; set; }
+        public virtual FormaDePagoCobro FormaPago { get; set; }
     }
 }

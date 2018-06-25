@@ -5,7 +5,7 @@ using ColeKine.Modelos;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace ColeKineWebApplication.Models
+namespace ColeKine
 {
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
@@ -27,7 +27,7 @@ namespace ColeKineWebApplication.Models
         public DbSet<TituloProfesional> TitulosProfesionales { get; set; }
         public DbSet<TipoSocio> TiposSocios { get; set; }
         public DbSet<GrupoProfesionales> GruposProfesionales { get; set; }
-        public DbSet<GrupoFamiliar> GruposFamiliares { get; set; }
+        public DbSet<Familiar> Familiares { get; set; }
         #endregion
 
         #region Matricula
@@ -43,15 +43,15 @@ namespace ColeKineWebApplication.Models
         public DbSet<DepartamentoObraSocial> DepartamentosObrasSociales { get; set; }
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<NomencladorPracticas> NomencladoresPracticas { get; set; }
-        public DbSet<MotivoNotaReclamo> MotivosNotasReclamos { get; set; }
+        public DbSet<MotivoNota> MotivosNotasReclamos { get; set; }
         public DbSet<PracticasXObraSocial> PracticasXObraSociales { get; set; }
         public DbSet<ReclamoObraSocial> ReclamosObrasSociales { get; set; }
         public DbSet<ValorJerarquizacion> ValoresJerarquizaciones { get; set; }
         public DbSet<PeriodoFacturacion> PeriodosFacturacion { get; set; }
         #endregion
 
-        #region CajaProvisional
-        public DbSet<ValorCuotaCajaProvisional> ValoresCuotaCajaProvisional { get; set; }
+        #region CajaPrevisional 
+        public DbSet<ValorCuotaCajaPrevisional > ValoresCuotaCajaPrevisional { get; set; }
         #endregion
 
         

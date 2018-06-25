@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace ColeKine.Modelos
 {
     public class FormaDePagoCobro
     {
-        public TipoTalonario TipoTalonarioAsociado { get; set; }
+        [Key] public int IdFormaPagoCobro { get; set; }
+        public virtual TipoTalonario TipoTalonarioAsociado { get; set; }
     }
 }

@@ -1,11 +1,15 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class Linea_OrdenPago
     {
-        public ServicioConsumido ServicioConsumido { get; set; }
+        [Key]
+        public int IdLinea_OrdenPago { get; set; }
+        public virtual ServicioConsumido ServicioConsumido { get; set; }
         public int CantidadDeConsumicion { get; set; }
         public int PrecioUnitario { get; set; }
         public int MontoAPagar { get; set; }
-        public OrdenPagoProveedor OrdenPago { get; set; }
+        public virtual OrdenPagoProveedor OrdenPago { get; set; }
     }
 }

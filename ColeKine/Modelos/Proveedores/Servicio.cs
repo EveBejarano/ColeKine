@@ -1,8 +1,12 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class Servicio
     {
-        public Proveedor Proveedor { get; set; }
+        [Key]
+        public int IdServicio { get; set; }
+        public virtual Proveedor Proveedor { get; set; }
         public string NombreServicio { get; set; }
         public string DescripcionServicio { get; set; }
     }

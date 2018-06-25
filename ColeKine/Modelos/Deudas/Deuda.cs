@@ -8,6 +8,6 @@ namespace ColeKine.Modelos
         public int IdDeuda { get; set; }
         public TasaDeRecargo TasaDeRecargo { get; set; }
         public InscripcionMatricula Inscripcion { get; set; }
-        public CuotaCajaProvisional CuotaCajaProvisional { get; set; }
+        public CuotaCajaPrevisional CuotaCajaPrevisional { get; set; }
     }
 }

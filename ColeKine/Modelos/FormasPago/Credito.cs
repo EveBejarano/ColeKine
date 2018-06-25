@@ -1,7 +1,11 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class Credito
     {
-        public CuentaBancaria CuentaAsociada { get; set; }
+        [Key]
+        public int IdCredito { get; set; }
+        public virtual CuentaBancaria CuentaAsociada { get; set; }
     }
 }

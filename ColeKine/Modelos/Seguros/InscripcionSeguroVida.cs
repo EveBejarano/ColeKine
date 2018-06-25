@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class InscripcionSeguroVida: InscripcionSeguro
     {
-        public ProfesionalAportante ProfesionalAsociado { get; set; }
-        public PolizaSeguroVida PolizaSeguroVida { get; set; }
-        public InscripcionCajaProvisional InscripcionProfesional { get; set; }
-        public IEnumerable<CuotaCajaProvisional> CuotasAsociadas { get; set; }
-        public IEnumerable<Persona> Beneficiarios{ get; set; }
+        public virtual ProfesionalAportante ProfesionalAsociado { get; set; }
+        public virtual PolizaSeguroVida PolizaSeguroVida { get; set; }
+        public virtual InscripcionCajaPrevisional InscripcionProfesional { get; set; }
+        public virtual IList<CuotaCajaPrevisional > CuotasAsociadas { get; set; }
+        public virtual IList<Persona> Beneficiarios{ get; set; }
 
     }
 }

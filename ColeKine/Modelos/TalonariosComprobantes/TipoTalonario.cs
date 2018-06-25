@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class TipoTalonario
     {
-        public Talonario Talonario { get; set; }
-        public FormaDePagoCobro FormaDePagoCobro { get; set; }
+        [Key]
+        public int IdTipoTalonario { get; set; }
+        public virtual Talonario Talonario { get; set; }
+        public virtual FormaDePagoCobro FormaDePagoCobro { get; set; }
     }
 }

@@ -1,7 +1,8 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class CuentaCorriente:CuentaBancaria
     {
-        public Banco Banco { get; set; }
     }
 }

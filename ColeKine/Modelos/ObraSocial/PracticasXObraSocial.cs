@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,10 @@ namespace ColeKine.Modelos
 {
     public class PracticasXObraSocial
     {
+        [Key]
         public int IdPracticasXObraSocial { get; set; }
-        public ObraSocial ObraSocial { get; set; }
-        public NomencladorPracticas Practica { get; set; }
+        public virtual ObraSocial ObraSocial { get; set; }
+        public virtual NomencladorPracticas Practica { get; set; }
         public string NomenclaturaObraSocial { get; set; }
         public float PrecioActual { get; set; }
         public float PrecioFuturo { get; set; }

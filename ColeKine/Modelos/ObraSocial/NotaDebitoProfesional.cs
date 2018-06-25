@@ -1,8 +1,10 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
-    public class NotaDebitoProfesional
+    public class NotaDebitoProfesional: NotaDebito
     {
-        public NotaCreditoObraSocial NotaCreditoObraSocial { get; set; }
-        public TotalAPagarObraSocial TotalAPagarObraSocial { get; set; }
+        public virtual NotaCreditoObraSocial NotaCreditoObraSocial { get; set; }
+        public virtual TotalAPagarObraSocial TotalAPagarObraSocial { get; set; }
     }
 }

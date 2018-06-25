@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class PeriodoFacturacion
     {
+        [Key]
         public int IdPeriodoFacturacion { get; set; }
         public string Mes { get; set; }
         public string Año { get; set; }

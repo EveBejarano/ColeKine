@@ -1,9 +1,11 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class NotaCreditoProfesional: NotaCredito
     {
-        public Talonario Type { get; set; }
-        public NotaDebitoObraSocial NotaDebitoObraSocial { get; set; }
-        public ReciboHonorarios ReciboHonorarios { get; set; }
+        public virtual Talonario Type { get; set; }
+        public virtual NotaDebitoObraSocial NotaDebitoObraSocial { get; set; }
+        public virtual ReciboHonorarios ReciboHonorarios { get; set; }
     }
 }

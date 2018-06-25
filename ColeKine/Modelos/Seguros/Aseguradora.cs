@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class Aseguradora
     {
+        [Key]
         public int IdAseguradora { get; set; }
         public string Name { get; set; }
-        public IEnumerable<PolizaColectiva> PolizasAsociadas { get; set; }
-        public IEnumerable<Novedad> NovedadesAsociadas { get; set; }
+        public virtual IList<PolizaColectiva> PolizasAsociadas { get; set; }
+        public virtual IList<Novedad> NovedadesAsociadas { get; set; }
     }
 }

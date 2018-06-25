@@ -11,7 +11,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdCobroCuotaMatricula { get; set; }
-        public FormaDePagoCobro MedioDeCobro { get; set; }
+        public virtual FormaDePagoCobro MedioDeCobro { get; set; }
         public float MontoAbonado { get; set; }
 
         public virtual CuotaMatricula CuotaMatricula { get; set; }

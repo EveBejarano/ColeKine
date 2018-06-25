@@ -1,25 +1,28 @@
-﻿using System;
+﻿using ColeKine.Modelos;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    public class CuotaCajaProvisional
+    public class CuotaCajaPrevisional 
     {
-        public CajaProvisional CajaProvisionalAsociada { get; set; }
-        public ProfesionalAportante ProfesionalAsociado { get; set; }
+        [Key] public int IdCuotaCajaPrevisional { get; set; }
+        public virtual CajaPrevisional CajaPrevisionalAsociada { get; set; }
+        public virtual  ProfesionalAportante ProfesionalAsociado { get; set; }
 
         // para sacar el valor que desea pagar en caso de no ser el minimo
-        public InscripcionCajaProvisional InscripcionCajaProvisionalAsociado { get; set; }
+        public virtual InscripcionCajaPrevisional InscripcionCajaPrevisionalAsociado { get; set; }
         
-        public InscripcionSeguroVida InscripcionSeguroVida { get; set; }
+        public virtual InscripcionSeguroVida InscripcionSeguroVida { get; set; }
 
         public int MesCorrespondiente { get; set; }
         public int AñoCorrespondiente { get; set; }
         
         public DateTime FechaVencimiento { get; set; }
         public DateTime FechaCobrado { get; set; }
-        public FormaDePagoCobro FormaDePagoCobro { get; set; }
-        public ValorCuotaCajaProvisional ValorCuotaAsociada { get; set; }
-        public DescuentoCuotaCajaProvisional DescuentoCuotaCajaProvicional { get; set; }
+        public virtual FormaDePagoCobro FormaDePagoCobro { get; set; }
+        public virtual ValorCuotaCajaPrevisional ValorCuotaAsociada { get; set; }
+        public virtual DescuentoCuotaCajaPrevisional DescuentoCuotaCajaProvicional { get; set; }
         public decimal TotalACobrar { get; set; }
         public decimal TotalSeguroVida { get; set; }
         public decimal TotalAdministrativo { get; set; }
@@ -27,7 +30,7 @@ namespace ColeKine.Modelos
 
         public bool Pagado { get; set; }
 
-        public DeudaCuotaCajaProvisional DeudaAsociada{ get; set; }
+        public virtual DeudaCuotaCajaPrevisional DeudaAsociada{ get; set; }
         //fijarse bien las divisiones de la cuota, supus son 4
 
     }

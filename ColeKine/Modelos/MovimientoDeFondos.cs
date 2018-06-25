@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,10 @@ namespace ColeKine.Modelos
 {
     class MovimientoDeFondos
     {
-        public TipoMovimiento TipoMovimiento { get; set; }
-        public Tesoreria Tesoreria { get; set; }
-        public FondoDeDinero FondoAsociado { get; set; }
-        public Comprobante ComprobanteAsociado { get; set; }
+        [Key] public int IdMovimientoFondos { get; set; }
+        public virtual TipoMovimiento TipoMovimiento { get; set; }
+        public virtual Tesoreria Tesoreria { get; set; }
+        public virtual  FondoDeDinero FondoAsociado { get; set; }
+        public virtual Comprobante ComprobanteAsociado { get; set; }
     }
 }

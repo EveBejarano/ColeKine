@@ -60,10 +60,10 @@
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Modelos\DescuentoMoratoria.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoXCredito.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoXInsumos.cs" />
-    <Compile Include="Modelos\Descuentos\DeudaInsumoComprado.cs" />
-    <Compile Include="Modelos\Descuentos\DeudaXCreditoProfesional.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXCredito.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXInsumos.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DeudaInsumoComprado.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DeudaXCreditoProfesional.cs" />
     <Compile Include="Modelos\Domicilio.cs" />
     <Compile Include="Modelos\DomicilioLaboral.cs" />
     <Compile Include="Modelos\EstadoCivil.cs" />
@@ -75,7 +75,7 @@
     <Compile Include="Modelos\Matricula\EstadosMatricula\Honorario.cs" />
     <Compile Include="Modelos\Matricula\EstadosMatricula\MotivoBajaMatricula.cs" />
     <Compile Include="Modelos\Matricula\InscripcionMatricula.cs" />
-    <Compile Include="Modelos\ObraSocial\MotivoNotaReclamo.cs" />
+    <Compile Include="Modelos\ObraSocial\MotivoNota.cs" />
     <Compile Include="Modelos\ObraSocial\NotaCredito.cs" />
     <Compile Include="Modelos\ObraSocial\NotaCreditoObraSocial.cs" />
     <Compile Include="Modelos\ObraSocial\NotaCreditoProfesional.cs" />
@@ -119,11 +119,11 @@
     <Compile Include="Modelos\Matricula\CuotaMatricula.cs" />
     <Compile Include="Modelos\FormasPago\Debito.cs" />
     <Compile Include="Modelos\Deposito.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoComisionColegio.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoCuotaCajaProvisional.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoCuotaMatricula.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoEmbargo.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoSeguro.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoComisionColegio.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoCuotaCajaProvisional.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoCuotaMatricula.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoEmbargo.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoSeguro.cs" />
     <Compile Include="Modelos\Deudas\DeudaCuotaCajaProvisional.cs" />
     <Compile Include="Modelos\Deudas\DeudaCuotaMatricula.cs" />
     <Compile Include="Modelos\Deudas\DeudaEmbargo.cs" />
@@ -134,7 +134,6 @@
     <Compile Include="Modelos\Profesional\Familiar.cs" />
     <Compile Include="Modelos\FondoDeDinero.cs" />
     <Compile Include="Modelos\FormaDePagoCobro.cs" />
-    <Compile Include="Modelos\Profesional\GrupoFamiliar.cs" />
     <Compile Include="Modelos\Profesional\GrupoProfesionales.cs" />
     <Compile Include="Modelos\Inscripciones\InscripcionCajaProvisional.cs" />
     <Compile Include="Modelos\Seguros\InscripcionSeguro.cs" />
@@ -152,10 +151,10 @@
     <Compile Include="Modelos\Profesional\TituloProfesional.cs" />
     <Compile Include="Modelos\ReciboPagoMatricula.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Comprobante.cs" />
-    <Compile Include="Modelos\Descuentos\DescuentoXServicioConsumido.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXServicioConsumido.cs" />
     <Compile Include="Modelos\Factura.cs" />
     <Compile Include="Modelos\CajaProvisional.cs" />
-    <Compile Include="Modelos\Descuentos\Descuento.cs" />
+    <Compile Include="Modelos\TalonariosComprobantes\Descuentos\Descuento.cs" />
     <Compile Include="Modelos\Deudas\Deuda.cs" />
     <Compile Include="Modelos\Proveedores\Linea_OrdenPago.cs" />
     <Compile Include="Modelos\Matricula\Matricula.cs" />

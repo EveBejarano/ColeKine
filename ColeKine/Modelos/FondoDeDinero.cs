@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class FondoDeDinero
     {
+        [Key] public int IdFondoDeDinero { get; set; }
         public string Nombre { get; set; }
-        public IEnumerable<Inversion> InversionesRealizadas { get; set; }
-        public IEnumerable<Prestamo> PrestamosRealizados { get; set; }
-        public IEnumerable<IngresoDinero> IngresosDineroRealizados { get; set; }
+        public virtual IList<Inversion> InversionesRealizadas { get; set; }
+        public virtual IList<Prestamo> PrestamosRealizados { get; set; }
+        public virtual IList<IngresoDinero> IngresosDineroRealizados { get; set; }
     }
 }

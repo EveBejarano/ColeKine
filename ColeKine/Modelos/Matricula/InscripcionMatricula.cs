@@ -11,8 +11,8 @@ namespace ColeKine.Modelos
         public bool Pagado { get; set; }
         public float Monto { get; set; }
         public virtual Matricula Matricula { get; set; }
-        public ReciboCobroInscripcion ReciboInscripcion { get; set; }
-        public BajaMatricula BajaAsociada { get; set; }
+        public virtual ReciboCobroInscripcion ReciboInscripcion { get; set; }
+        public virtual BajaMatricula BajaAsociada { get; set; }
 
     }
 }

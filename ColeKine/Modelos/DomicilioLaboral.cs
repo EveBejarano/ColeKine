@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace ColeKine.Modelos
     {
         public string NombreLocal { get; set; }
         public bool Habilitado { get; set; }
-        public IEnumerable<Profesional> ProfesionalesAsociados { get; set; }
-        public IEnumerable<GrupoProfesionales> GrupoProfesionales { get; set; }
+        public virtual IList<Profesional> ProfesionalesAsociados { get; set; }
+        public virtual IList<GrupoProfesionales> GrupoProfesionales { get; set; }
       
     }
 }

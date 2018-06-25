@@ -1,7 +1,10 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
     public class ValorJerarquizacion
     {
+        [Key]
         public int IdValoresJerarquizacion { get; set; }
         public string Nombre { get; set; }
         public int CantidadAñosMinima { get; set; }

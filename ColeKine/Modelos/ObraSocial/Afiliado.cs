@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class Afiliado: Persona
     {
-        public int IdAfiliado { get; set; }
-        public ObraSocial ObraSocial { get; set; }
-        public IEnumerable<OrdenPractica> OrdenPractica { get; set; }
+        public virtual ObraSocial ObraSocial { get; set; }
+        public virtual IList<OrdenPractica> OrdenPractica { get; set; }
     }
 }

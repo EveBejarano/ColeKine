@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class NotaDebitoObraSocial:NotaDebito
     {
-        public DepartamentoObraSocial DepartamentoObraSocial { get; set; }
-        public TotalAPagarObraSocial ResumenPagoObraSocial { get; set; }
-        public IEnumerable<NotaCreditoProfesional> NotasCreditosProfesionales { get; set; }
+        public virtual DepartamentoObraSocial DepartamentoObraSocial { get; set; }
+        public virtual TotalAPagarObraSocial ResumenPagoObraSocial { get; set; }
+        public virtual IList<NotaCreditoProfesional> NotasCreditosProfesionales { get; set; }
     }
 
 

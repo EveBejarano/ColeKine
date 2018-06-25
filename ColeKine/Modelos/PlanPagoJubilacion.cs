@@ -11,7 +11,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdPlanPagoJubilacion { get; set; }
-        public IEnumerable<CuotaPagoJubilacion> MyProperty { get; set; }
+        public virtual  IList<CuotaPagoJubilacion> CuotasPagosJubilacion { get; set; }
 
         
     }

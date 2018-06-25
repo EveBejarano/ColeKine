@@ -9,7 +9,7 @@ namespace ColeKine.Modelos
 {
     public class BajaMatricula: EstadoMatricula
     {
-        public MotivoBajaMatricula MotivoBajaMatricula { get; set; }
+        public virtual MotivoBajaMatricula MotivoBajaMatricula { get; set; }
         
     }
 }

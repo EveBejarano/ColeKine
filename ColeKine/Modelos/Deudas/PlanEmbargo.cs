@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
     public class PlanEmbargo
-    {
+    {[Key]
+        public int IdPlanEmbargo { get; set; }
         public DateTime FechaInicioVigenciaEmbargo { get; set; }
         public DateTime FechaFinVigencia { get; set; }
         public CuentaBancaria CuentaDondeDepositar { get; set; }
@@ -16,7 +18,7 @@ namespace ColeKine.Modelos
         public float MontoCubierto { get; set; }
 
         public float MontoACubrir { get; set; }
-        public IEnumerable<DescuentoEmbargo> DescuentosRealizadosEmbargo { get; set; }
+        public IList<DescuentoEmbargo> DescuentosRealizadosEmbargo { get; set; }
         public ConvenioPrestadores ConvenioProfesionalAsociado { get; set; }
     }
 }

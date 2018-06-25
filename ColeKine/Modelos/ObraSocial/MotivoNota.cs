@@ -1,7 +1,11 @@
-﻿namespace ColeKine.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ColeKine.Modelos
 {
-    public class MotivoNotaReclamo
+    public class MotivoNota
     {
+        [Key]
+        public int IdMotivoNota { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 

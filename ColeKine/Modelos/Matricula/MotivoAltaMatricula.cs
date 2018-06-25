@@ -15,6 +15,6 @@ namespace ColeKine.Modelos
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
-        public InscripcionMatricula Inscripcion { get; set; }
+        public virtual InscripcionMatricula Inscripcion { get; set; }
     }
 }

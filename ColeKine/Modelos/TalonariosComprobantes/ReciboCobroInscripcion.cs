@@ -4,10 +4,8 @@ namespace ColeKine.Modelos
 {
     public class ReciboCobroInscripcion: Recibo
     {
-        [Key]
-        public int IdReciboCobroInscripcion { get; set; }
-        public InscripcionMatricula Inscripcion { get; set; }
-        public Deuda DeudaPagoInscripcion { get; set; }
+        public virtual InscripcionMatricula Inscripcion { get; set; }
+        public virtual Deuda DeudaPagoInscripcion { get; set; }
 
     }
 }
