@@ -7,10 +7,10 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdCajaPrevisional { get; set; }
-        public IEnumerable<CuotaCajaPrevisional> CuotasAsociadas { get; set; }
-        public IEnumerable<Talonario> Talonarios { get; set; }
+        public IEnumerable<CuotaCajaPrevisional> CuotasAsociadas { get; set; }//estructura de las cuotas conformadas por capitalizacion, seguro de vida gasto adm y fondo compensador
+        public IEnumerable<Talonario> Talonarios { get; set; }//para RECIBOS de sidepreki
         public IEnumerable<FondoDeDinero> FondosAsociados { get; set; }
-        public IEnumerable<InscripcionCajaPrevisional> InscripcionesAsociadas { get; set; }
+       
         public Institucion Institucion { get; set; }
         public PolizaSeguroVida PolizaSeguroVida { get; set; }
 

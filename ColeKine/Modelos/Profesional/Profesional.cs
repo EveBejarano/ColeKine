@@ -12,8 +12,9 @@ namespace ColeKine.Modelos
         //cajas previsionales
         public virtual CajaPrevisional CajaPrevisional { get; set; } //sidepreki
         public string OtrasCajasPrevisionales { get; set; }
-       
-        
+        public virtual IEnumerable<InscripcionCajaPrevisional> InscripcionesAsociadas { get; set; }
+
+
         //public IList<Deuda> DeudasAsociadas { get; set; }
         public virtual GrupoFamiliar GrupoFamiliar { get; set; }
         public virtual IList<GrupoProfesionales> GrupoProfesionales { get; set; }
