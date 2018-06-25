@@ -4,15 +4,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    public class InscripcionCajaProvisional
+    public class InscripcionCajaPrevisional
     {
         [Key]
-        public int IdInscripcionCajaProvisional { get; set; }
+        public int IdInscripcionCajaPrevisional { get; set; }
         
         public DateTime FechaInscripcion { get; set; }
         public bool PagaMinimoValor { get; set; }
         public float ValorDeseadoAPagar { get; set; }
-        public CajaPrevisional CajaProvisional { get; set; }
+        public CajaPrevisional CajaPrevisional { get; set; }
 
         public InscripcionSeguroVida SeguroVida { get; set; }
 

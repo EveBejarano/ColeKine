@@ -5,7 +5,7 @@ namespace ColeKine.Modelos
 {
     public class ProfesionalAportante: Profesional
     {
-        public virtual InscripcionCajaProvisional InscripcionCajaProvisional { get; set; }
+        public virtual InscripcionCajaPrevisional InscripcionCajaProvisional { get; set; }
 
         public IEnumerable<ConvenioPrestadores> ConvenioPrestadoresFirmado { get; set; }
         public IEnumerable<CuotaCajaPrevisional> CuotasAsociadas { get; set; }

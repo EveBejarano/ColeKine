@@ -136,7 +136,7 @@
     <Compile Include="Modelos\FormaDePagoCobro.cs" />
     <Compile Include="Modelos\Profesional\GrupoFamiliar.cs" />
     <Compile Include="Modelos\Profesional\GrupoProfesionales.cs" />
-    <Compile Include="Modelos\Inscripciones\InscripcionCajaProvisional.cs" />
+    <Compile Include="Modelos\Inscripciones\InscripcionCajaPrevisional.cs" />
     <Compile Include="Modelos\Seguros\InscripcionSeguro.cs" />
     <Compile Include="Modelos\Seguros\InscripcionSeguroVida.cs" />
     <Compile Include="Modelos\MovimientoDeFondos.cs" />
