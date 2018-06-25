@@ -2,7 +2,7 @@
 {
     public class NotaDebito: TipoTalonario
     {
-        public MotivoNotas MotivoNota { get; set; }
+        public MotivoNotaReclamo MotivoNotaReclamo { get; set; }
         public float MontoTotalPagar { get; set; }
     }
 }

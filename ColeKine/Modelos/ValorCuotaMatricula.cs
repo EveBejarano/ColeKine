@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public class ValoresCuotaMatricula
+    public class ValorCuotaMatricula
     {
         [Key]
         public int IdValoresCuotaMatricula { get; set; }

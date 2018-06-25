@@ -18,7 +18,7 @@ namespace ColeKine.Modelos
         public DateTime FechaVencimiento { get; set; }
         public DateTime FechaCobrado { get; set; }
         public FormaDePagoCobro FormaDePagoCobro { get; set; }
-        public ValoresCuotaCajaProvisional ValoresCuotaAsociada { get; set; }
+        public ValorCuotaCajaProvisional ValorCuotaAsociada { get; set; }
         public DescuentoCuotaCajaProvisional DescuentoCuotaCajaProvicional { get; set; }
         public decimal TotalACobrar { get; set; }
         public decimal TotalSeguroVida { get; set; }

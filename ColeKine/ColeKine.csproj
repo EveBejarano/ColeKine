@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
@@ -46,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IdentityModels.cs" />
     <Compile Include="Modelos\DescuentoMoratoria.cs" />
     <Compile Include="Modelos\Descuentos\DescuentoXCredito.cs" />
     <Compile Include="Modelos\Descuentos\DescuentoXInsumos.cs" />
@@ -61,7 +74,7 @@
     <Compile Include="Modelos\Matricula\EstadosMatricula\Honorario.cs" />
     <Compile Include="Modelos\Matricula\EstadosMatricula\MotivoBajaMatricula.cs" />
     <Compile Include="Modelos\Matricula\InscripcionMatricula.cs" />
-    <Compile Include="Modelos\ObraSocial\MotivoNotas.cs" />
+    <Compile Include="Modelos\ObraSocial\MotivoNotaReclamo.cs" />
     <Compile Include="Modelos\ObraSocial\NotaCredito.cs" />
     <Compile Include="Modelos\ObraSocial\NotaCreditoObraSocial.cs" />
     <Compile Include="Modelos\ObraSocial\NotaCreditoProfesional.cs" />
@@ -160,12 +173,12 @@
     <Compile Include="Modelos\TalonariosComprobantes\Talonario.cs" />
     <Compile Include="Modelos\Tesoreria.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\TipoTalonario.cs" />
-    <Compile Include="Modelos\TasasDeRecargo.cs" />
+    <Compile Include="Modelos\TasaDeRecargo.cs" />
     <Compile Include="Modelos\TipoInversion.cs" />
     <Compile Include="Modelos\FormasPago\TipoMovimiento.cs" />
     <Compile Include="Modelos\Seguros\TipoSeguro.cs" />
-    <Compile Include="Modelos\ValoresCuotaCajaProvisional.cs" />
-    <Compile Include="Modelos\ValoresCuotaMatricula.cs" />
+    <Compile Include="Modelos\ValorCuotaCajaProvisional.cs" />
+    <Compile Include="Modelos\ValorCuotaMatricula.cs" />
     <Compile Include="Modelos\Zona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validaciones\Matricula\NumeroUnicoMatricula.cs" />

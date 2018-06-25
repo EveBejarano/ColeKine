@@ -1,6 +1,6 @@
 ﻿namespace ColeKine.Modelos
 {
-    public class ValoresJerarquizacion
+    public class ValorJerarquizacion
     {
         public int IdValoresJerarquizacion { get; set; }
         public string Nombre { get; set; }
