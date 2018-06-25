@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    public class CajaProvisional
+    public class CajaPrevisional
     {
         [Key]
         public int IdCajaPrevisional { get; set; }
-        public IEnumerable<CuotaCajaProvisional> CuotasAsociadas { get; set; }
+        public IEnumerable<CuotaCajaPrevisional> CuotasAsociadas { get; set; }
         public IEnumerable<Talonario> Talonarios { get; set; }
         public IEnumerable<FondoDeDinero> FondosAsociados { get; set; }
         public IEnumerable<InscripcionCajaProvisional> InscripcionesAsociadas { get; set; }

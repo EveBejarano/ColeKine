@@ -2,9 +2,9 @@
 
 namespace ColeKine.Modelos
 {
-    public class CuotaCajaProvisional
+    public class CuotaCajaPrevisional
     {
-        public CajaProvisional CajaProvisionalAsociada { get; set; }
+        public CajaPrevisional CajaProvisionalAsociada { get; set; }
         public ProfesionalAportante ProfesionalAsociado { get; set; }
 
         // para sacar el valor que desea pagar en caso de no ser el minimo

@@ -2,10 +2,9 @@
 
 namespace ColeKine.Modelos
 {
-    public class TipoSocio
+    public class TipoSocio //esto es para CPCE
     {
-        [Key]
-        public int IdTipoSocio { get; set; }
+        [Key] public int IdTipoSocio { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int CantidadAñosMinima { get; set; }
