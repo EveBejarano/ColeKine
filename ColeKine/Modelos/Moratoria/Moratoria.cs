@@ -11,6 +11,5 @@ namespace ColeKine.Modelos
     {
         [Key] public int IdMoratoria { get; set; }
         public virtual PlanCuotas PlanCuotasAsociado { get; set; }
-        public virtual IList<DescuentoMoratoria> DescuentosAsociados { get; set; }
     }
 }

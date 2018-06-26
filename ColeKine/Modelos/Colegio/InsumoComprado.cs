@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ColeKine.Modelos.Descuentos;
 
 namespace ColeKine.Modelos
 {
@@ -16,8 +15,7 @@ namespace ColeKine.Modelos
         public float PrecioUnitario { get; set; }
         public int? CantidadComprada { get; set; }
         public float MontoTotal { get; set; }
+        
 
-        public virtual DescuentoXInsumos DescuentoAsociado { get; set; }
-        public virtual FormaDePagoCobro FormaPago { get; set; }
     }
 }

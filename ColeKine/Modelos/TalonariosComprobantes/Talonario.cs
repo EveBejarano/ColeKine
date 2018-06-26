@@ -14,7 +14,6 @@ namespace ColeKine.Modelos
         public int IdTalonario { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public virtual IList<TipoTalonario> ConjuntoDeTipoTalonario { get; set; }
         public virtual Tesoreria Tesoreria { get; set; }
 
     }

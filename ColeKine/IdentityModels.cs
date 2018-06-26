@@ -51,7 +51,6 @@ namespace ColeKine
         #endregion
 
         #region CajaPrevisional 
-        public DbSet<ValorCuotaCajaPrevisional > ValoresCuotaCajaPrevisional { get; set; }
         #endregion
 
         

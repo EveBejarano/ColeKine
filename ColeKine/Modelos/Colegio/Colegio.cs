@@ -13,7 +13,6 @@ namespace ColeKine.Modelos
         public virtual IList<Talonario> Talonarios { get; set; }
         public virtual IList<Proveedor> Proveedores { get; set; }
         public virtual IList<FondoDeDinero> FondosAsociados { get; set; }
-        public virtual IList<DescuentoComisionColegio> ComisionesObtenidas { get; set; }
         public virtual IList<CuotaMatricula> CuotasMatriculasCobradas { get; set; }
         public virtual Institucion Institucion { get; set; }
         public virtual IList<ObraSocial> ObrasSociales { get; set; }

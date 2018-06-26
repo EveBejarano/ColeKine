@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace ColeKine.Modelos
 {
     public class ConceptoBancario
     {
+        [Key]
         public int IdConceptoBancario { get; set; }
         public float Monto { get; set; }
         public DateTime Fecha { get; set; }
