@@ -16,7 +16,7 @@ namespace ColeKine.Modelos
 
 
         //public IList<Deuda> DeudasAsociadas { get; set; }
-        public virtual GrupoFamiliar GrupoFamiliar { get; set; }
+        public IList<Familiar> GrupoFamiliar { get; set; }
         public virtual IList<GrupoProfesionales> GrupoProfesionales { get; set; }
         public virtual IList<DomicilioLaboral> DomiciliosLaborales{ get; set; }
        
