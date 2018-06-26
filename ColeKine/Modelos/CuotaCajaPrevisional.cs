@@ -17,21 +17,20 @@ namespace ColeKine.Modelos
 
         public int MesCorrespondiente { get; set; }
         public int AñoCorrespondiente { get; set; }
-        
         public DateTime FechaVencimiento { get; set; }
-        public DateTime FechaCobrado { get; set; }
-        public virtual FormaDePagoCobro FormaDePagoCobro { get; set; }
         public virtual ValorCuotaCajaPrevisional ValorCuotaAsociada { get; set; }
-        public virtual DescuentoCuotaCajaPrevisional DescuentoCuotaCajaProvicional { get; set; }
+
+        // Valores de Cuota
         public decimal TotalACobrar { get; set; }
         public decimal TotalSeguroVida { get; set; }
         public decimal TotalAdministrativo { get; set; }
         public decimal TotalJubilacion { get; set; }
+        //Fondo Extraordinario Compensador
+        public decimal TotalFec{ get; set; }
 
+        //Referido a Cobro
         public bool Pagado { get; set; }
-
-        public virtual DeudaCuotaCajaPrevisional DeudaAsociada{ get; set; }
-        //fijarse bien las divisiones de la cuota, supus son 4
+        public DateTime FechaCobrado { get; set; }
 
     }
 }

@@ -141,9 +141,9 @@
     <Compile Include="Modelos\MovimientoDeFondos.cs" />
     <Compile Include="Modelos\Persona.cs" />
     <Compile Include="Modelos\PlanCuotas.cs" />
-    <Compile Include="Modelos\Deudas\PlanEmbargo.cs" />
-    <Compile Include="Modelos\Deudas\PlanEmbargoCuotas.cs" />
-    <Compile Include="Modelos\Deudas\PlanEmbargoPorcentaje.cs" />
+    <Compile Include="Modelos\PlanEmbargo\PlanEmbargo.cs" />
+    <Compile Include="Modelos\PlanEmbargo\PlanEmbargoCuotas.cs" />
+    <Compile Include="Modelos\PlanEmbargo\PlanEmbargoPorcentaje.cs" />
     <Compile Include="Modelos\Seguros\PolizaColectiva.cs" />
     <Compile Include="Modelos\Seguros\PolizaSeguroVida.cs" />
     <Compile Include="Modelos\Profesional\ProfesionalAportante.cs" />
@@ -154,7 +154,6 @@
     <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXServicioConsumido.cs" />
     <Compile Include="Modelos\Factura.cs" />
     <Compile Include="Modelos\CajaPrevisional.cs" />
-    <Compile Include="Modelos\Descuentos\Descuento.cs" />
     <Compile Include="Modelos\Deudas\Deuda.cs" />
     <Compile Include="Modelos\Proveedores\Linea_OrdenPago.cs" />
     <Compile Include="Modelos\Matricula\Matricula.cs" />
