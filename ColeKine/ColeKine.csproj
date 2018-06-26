@@ -153,7 +153,7 @@
     <Compile Include="Modelos\TalonariosComprobantes\Comprobante.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXServicioConsumido.cs" />
     <Compile Include="Modelos\Factura.cs" />
-    <Compile Include="Modelos\CajaPrevisional.cs" />
+    <Compile Include="Modelos\CajaPrevisional\CajaPrevisional.cs" />
     <Compile Include="Modelos\Descuentos\Descuento.cs" />
     <Compile Include="Modelos\Deudas\Deuda.cs" />
     <Compile Include="Modelos\Proveedores\Linea_OrdenPago.cs" />
