@@ -74,7 +74,6 @@
     <Compile Include="Modelos\CajaPrevisional\InscripcionCajaPrevisional.cs" />
     <Compile Include="Modelos\CajaPrevisional\Jubilacion\CuotaPagoJubilacion.cs" />
     <Compile Include="Modelos\CajaPrevisional\Jubilacion\PlanPagoJubilacion.cs" />
-    <Compile Include="Modelos\CajaPrevisional\ValorCuotaCajaProvisional.cs" />
     <Compile Include="Modelos\Colegio\Colegio.cs" />
     <Compile Include="Modelos\Colegio\InsumoComprado.cs" />
     <Compile Include="Modelos\Deudas\Descuentos\Descuento.cs" />

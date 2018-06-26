@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class NovedadSeguro: Novedad
+    public class NovedadSeguro: Novedad
     {
         public virtual Aseguradora Aseguradora { get; set; }
     }
