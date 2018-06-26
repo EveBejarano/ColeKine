@@ -14,7 +14,9 @@ namespace ColeKine.Modelos
         public int CBU { get; set; }
         public virtual Banco Banco { get; set; }
         public string TipoMoneda { get; set; }
-        public virtual IList<Credito> Creditos { get; set; }
-        public virtual IList<Debito> Debitos { get; set; }
+        public virtual IList<TarjetaCredito> Creditos { get; set; }
+        public virtual IList<TarjetaDebito> Debitos { get; set; }
+        public virtual IList<MovimientoCuentaBancaria> MovimientosRealizados { get; set; }
+        
     }
 }
