@@ -21,19 +21,25 @@ namespace ColeKine
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        #region Profesional
-        public DbSet<Profesional> Profesionales { get; set; }
-        public DbSet<Matricula> Matriculas { get; set; }
-        public DbSet<TituloProfesional> TitulosProfesionales { get; set; }
-        public DbSet<TipoSocio> TiposSocios { get; set; }
-        public DbSet<GrupoProfesionales> GruposProfesionales { get; set; }
-        public DbSet<Familiar> Familiares { get; set; }
+        #region Bancos
+        #endregion
+
+        #region CajaPrevisional 
+        #endregion
+
+        #region Colegio
+        #endregion
+
+        #region Inversiones
         #endregion
 
         #region Matricula
         public DbSet<CategoriaMatricula> TiposMatriculas { get; set; }
         public DbSet<ValorCuotaMatricula> ValoresCuotaMatricula { get; set; }
 
+        #endregion
+
+        #region Moratoria
         #endregion
 
         #region ObraSocial
@@ -50,10 +56,28 @@ namespace ColeKine
         public DbSet<PeriodoFacturacion> PeriodosFacturacion { get; set; }
         #endregion
 
-        #region CajaPrevisional 
+        #region Plan Embargo
         #endregion
 
-        
+        #region Profesional
+        public DbSet<Profesional> Profesionales { get; set; }
+        public DbSet<Matricula> Matriculas { get; set; }
+        public DbSet<TituloProfesional> TitulosProfesionales { get; set; }
+        public DbSet<TipoSocio> TiposSocios { get; set; }
+        public DbSet<GrupoProfesionales> GruposProfesionales { get; set; }
+        public DbSet<Familiar> Familiares { get; set; }
+        #endregion
+
+        #region Proveedores
+        #endregion
+
+        #region Seguros
+        #endregion
+
+        #region Talonarios
+        #endregion
+
+
         public DbSet<Zona> Zona { get; set; }
         public DbSet<TipoInversion> TiposInversiones { get; set; }
 
