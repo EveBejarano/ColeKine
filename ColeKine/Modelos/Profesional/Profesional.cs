@@ -10,13 +10,13 @@ namespace ColeKine.Modelos
         public IList<TituloProfesional> TitulosProfesional { get; set; }
 
         //cajas previsionales
-        public virtual CajaPrevisional CajaPrevisional { get; set; } //sidepreki
+        public bool  AportaCajaPrevisional { get; set; } //sidepreki
         public string OtrasCajasPrevisionales { get; set; }
         public virtual IEnumerable<InscripcionCajaPrevisional> InscripcionesAsociadas { get; set; }
 
 
         //public IList<Deuda> DeudasAsociadas { get; set; }
-        public IList<Familiar> GrupoFamiliar { get; set; }
+        public virtual IList<Familiar> GrupoFamiliar { get; set; }
         public virtual IList<GrupoProfesionales> GrupoProfesionales { get; set; }
         public virtual IList<DomicilioLaboral> DomiciliosLaborales{ get; set; }
        
