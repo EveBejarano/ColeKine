@@ -7,7 +7,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdObraSocial { get; set; }
-        public virtual IList<PracticasXObraSocial> PracticasXObraSocials { get; set; }
+
 
         public virtual IList<Afiliado> Afiliados { get; set; }
         public virtual IList<DepartamentoObraSocial> DepartamentosObraSociales { get; set; }

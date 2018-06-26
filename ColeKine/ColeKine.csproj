@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Modelos\Bancos\ConceptoBancario.cs" />
     <Compile Include="Modelos\Deudas\Descuentos\DescuentoMoratoria.cs" />
     <Compile Include="Modelos\Deudas\Descuentos\DescuentoXCredito.cs" />
     <Compile Include="Modelos\Deudas\Descuentos\DescuentoXInsumos.cs" />
@@ -133,9 +134,8 @@
     <Compile Include="Modelos\Inversiones\FondoDeDinero.cs" />
     <Compile Include="Modelos\FormaDePagoCobro.cs" />
     <Compile Include="Modelos\Profesional\GrupoProfesionales.cs" />
-    <Compile Include="Modelos\Inscripciones\InscripcionCajaPrevisional.cs" />
+    <Compile Include="Modelos\CajaPrevisional\InscripcionCajaPrevisional.cs" />
     <Compile Include="Modelos\Seguros\InscripcionSeguro.cs" />
-    <Compile Include="Modelos\Seguros\InscripcionSeguroVida.cs" />
     <Compile Include="Modelos\Bancos\MovimientoDeFondos.cs" />
     <Compile Include="Modelos\Persona.cs" />
     <Compile Include="Modelos\Moratoria\PlanCuotas.cs" />
@@ -143,7 +143,6 @@
     <Compile Include="Modelos\Deudas\PlanEmbargoCuotas.cs" />
     <Compile Include="Modelos\Deudas\PlanEmbargoPorcentaje.cs" />
     <Compile Include="Modelos\Seguros\PolizaColectiva.cs" />
-    <Compile Include="Modelos\Seguros\PolizaSeguroVida.cs" />
     <Compile Include="Modelos\Profesional\ProfesionalAportante.cs" />
     <Compile Include="Modelos\Profesional\TipoSocio.cs" />
     <Compile Include="Modelos\Profesional\TituloProfesional.cs" />
@@ -164,7 +163,6 @@
     <Compile Include="Modelos\TalonariosComprobantes\Recibo.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\ReciboCobroInscripcion.cs" />
     <Compile Include="Modelos\Profesional\OrdenPractica\ReciboHonorarios.cs" />
-    <Compile Include="Modelos\Proveedores\ReciboPagoProveedor.cs" />
     <Compile Include="Modelos\Proveedores\Servicio.cs" />
     <Compile Include="Modelos\Proveedores\ServicioConsumido.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Talonario.cs" />

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ColeKine.Modelos
+namespace ColeKine.Modelos.Bancos
 {
     public class Chequera
     {

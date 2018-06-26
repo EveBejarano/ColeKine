@@ -12,6 +12,6 @@ namespace ColeKine.Modelos
         public virtual IList<FondoDeDinero> FondosAsociados { get; set; }
         public virtual IList<InscripcionCajaPrevisional > InscripcionesAsociadas { get; set; }
         public virtual Institucion Institucion { get; set; }
-        public virtual PolizaSeguroVida PolizaSeguroVida { get; set; }
+        public virtual PolizaColectiva PolizaSeguroVida { get; set; }
     }
 }

@@ -11,9 +11,9 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdPracticasXObraSocial { get; set; }
-        public virtual ObraSocial ObraSocial { get; set; }
+        public virtual DepartamentoObraSocial ObraSocial { get; set; }
         public virtual NomencladorPracticas Practica { get; set; }
-        public string NomenclaturaObraSocial { get; set; }
+        public string NomenclaturaDepartamento { get; set; }
         public float PrecioActual { get; set; }
         public float PrecioFuturo { get; set; }
         public DateTime FechaInicioVigencia { get; set; }
