@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ColeKine.Modelos.Bancos
+namespace ColeKine.Modelos
 {
     public class ConceptoBancario
     {

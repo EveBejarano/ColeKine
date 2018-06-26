@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ColeKine.Modelos.Bancos
+namespace ColeKine.Modelos
 {
     public class CuentaCorriente:CuentaBancaria
     {

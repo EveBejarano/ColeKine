@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ColeKine.Modelos.Bancos
+namespace ColeKine.Modelos
 {
     public class CuentaBancaria
     {

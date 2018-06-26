@@ -12,7 +12,7 @@ namespace ColeKine.Modelos
         public DateTime FechaInscripcion { get; set; }
 
         // sera 0 si paga el minimo
-        public float MontoAdicionalVoluntario { get; set; }
+        public float? MontoAdicionalVoluntario { get; set; }
         public CajaPrevisional CajaPrevisional { get; set; }
 
         //public InscripcionSeguroVida SeguroVida { get; set; }

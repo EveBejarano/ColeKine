@@ -1,4 +1,4 @@
-﻿namespace ColeKine.Modelos.Bancos
+﻿namespace ColeKine.Modelos
 {
     public class Cheque
     {
