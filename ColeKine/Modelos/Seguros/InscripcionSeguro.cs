@@ -8,7 +8,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdInscripcionSeguro { get; set; }
-        public ProfesionalAportante ProfesionalAsociado { get; set; }
+        public virtual ProfesionalAportante ProfesionalAsociado { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public DateTime FechaInscripcion { get; set; }

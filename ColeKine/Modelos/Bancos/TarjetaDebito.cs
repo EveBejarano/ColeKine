@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ColeKine.Modelos
+namespace ColeKine.Modelos.Bancos
 {
     public class TarjetaDebito
     {

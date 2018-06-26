@@ -9,5 +9,6 @@ namespace ColeKine.Modelos
         public int IdProveedor { get; set; }
         public virtual Colegio Colegio  { get; set; }
         public virtual IList<OrdenPagoProveedor> OrdenesDePago { get; set; }
+        public virtual IList<Servicio> ServiciosQueBrinda{ get; set; }
     }
 }

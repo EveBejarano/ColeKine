@@ -11,5 +11,6 @@ namespace ColeKine.Modelos
         public virtual ValorJerarquizacion TablaJerarquización { get; set; }
         public string CodigoDiscapacidad { get; set; }
         public virtual IList<ReclamoObraSocial> ReclamosRealizados { get; set; }
+        public virtual IList<PracticasXObraSocial> PracticasXObraSocials { get; set; }
     }
 }

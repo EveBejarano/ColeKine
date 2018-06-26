@@ -7,6 +7,8 @@ namespace ColeKine.Modelos
     {
         public int IdMatricula { get; set; }
         public virtual Matricula Matricula { get; set; }
+
+        public EstadoCivil EstadoCivil { get; set; }
         public IList<TituloProfesional> TitulosProfesional { get; set; }
 
         //cajas previsionales: PROFESIONAL APORTANTE A SIDEPREKI

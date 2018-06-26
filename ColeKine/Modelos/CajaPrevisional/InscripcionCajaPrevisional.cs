@@ -10,14 +10,15 @@ namespace ColeKine.Modelos
         public int IdInscripcionCajaPrevisional { get; set; }
         
         public DateTime FechaInscripcion { get; set; }
-        public bool PagaMinimoValor { get; set; }
-        public float ValorDeseadoAPagar { get; set; }
+
+        // sera 0 si paga el minimo
+        public float MontoAdicionalVoluntario { get; set; }
         public CajaPrevisional CajaPrevisional { get; set; }
 
-        public InscripcionSeguroVida SeguroVida { get; set; }
+        //public InscripcionSeguroVida SeguroVida { get; set; }
 
         public virtual ProfesionalAportante Profesional { get; set; }
-        public IEnumerable<CuotaCajaPrevisional> CuotasAsociadas { get; set; }
+        public virtual IList<Familiar> Beneficiarios { get; set; }
 
     }
 }

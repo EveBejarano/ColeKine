@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ColeKine.Modelos
+namespace ColeKine.Modelos.Bancos
 {
     public class CuentaBancaria
     {
@@ -17,6 +13,8 @@ namespace ColeKine.Modelos
         public virtual IList<TarjetaCredito> Creditos { get; set; }
         public virtual IList<TarjetaDebito> Debitos { get; set; }
         public virtual IList<MovimientoCuentaBancaria> MovimientosRealizados { get; set; }
+
+        public virtual IList<ConceptoBancario> ConceptosBancariosSufridos{ get; set; }
         
     }
 }
