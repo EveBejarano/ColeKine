@@ -9,10 +9,13 @@ namespace ColeKine.Modelos
         public virtual Matricula Matricula { get; set; }
         public IList<TituloProfesional> TitulosProfesional { get; set; }
 
-        //cajas previsionales
-        public bool  AportaCajaPrevisional { get; set; } //sidepreki
+        //cajas previsionales: PROFESIONAL APORTANTE A SIDEPREKI
+        //----Se puede poner una tilde en el front que indica si
+        //es profesional aportante y en base a eso decidir si se crea un objeto
+        //profesional o profesional aportante----
+        //public bool  AportaCajaPrevisional { get; set; } //sidepreki
         public string OtrasCajasPrevisionales { get; set; }
-        public virtual IEnumerable<InscripcionCajaPrevisional> InscripcionesAsociadas { get; set; }
+        //public virtual IEnumerable<InscripcionCajaPrevisional> InscripcionesAsociadas { get; set; }
 
 
         //public IList<Deuda> DeudasAsociadas { get; set; }

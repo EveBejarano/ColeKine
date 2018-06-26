@@ -59,7 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Modelos\CajaPrevisional\CategoriaCuotaCajaPrevisional.cs" />
     <Compile Include="Modelos\DescuentoMoratoria.cs" />
+    <Compile Include="Modelos\PlanEmbargo\PlanEmbargo.cs" />
+    <Compile Include="Modelos\PlanEmbargo\PlanEmbargoCuotas.cs" />
+    <Compile Include="Modelos\PlanEmbargo\PlanEmbargoPorcentaje.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXCredito.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DescuentoXInsumos.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\Descuentos\DeudaInsumoComprado.cs" />
@@ -115,7 +119,7 @@
     <Compile Include="Modelos\FormasPago\Credito.cs" />
     <Compile Include="Modelos\FormasPago\CuentaBancaria.cs" />
     <Compile Include="Modelos\FormasPago\CuentaCorriente.cs" />
-    <Compile Include="Modelos\CuotaCajaPrevisional.cs" />
+    <Compile Include="Modelos\CajaPrevisional\CuotaCajaPrevisional.cs" />
     <Compile Include="Modelos\Matricula\CuotaMatricula.cs" />
     <Compile Include="Modelos\FormasPago\Debito.cs" />
     <Compile Include="Modelos\Deposito.cs" />
