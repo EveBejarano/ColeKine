@@ -17,7 +17,5 @@ namespace ColeKine.Modelos
         public bool ActivoNoActivo { get; set; }
         public virtual PolizaColectiva PolizaAsociada { get; set; }
 
-        public virtual IList<DescuentoSeguro> CuotasSeguro { get; set; }
-
     }
 }

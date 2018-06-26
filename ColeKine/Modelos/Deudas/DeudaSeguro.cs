@@ -6,6 +6,5 @@ namespace ColeKine.Modelos
     {
         [Key] public int IdDeudaSeguro { get; set; }
         public DescuentoSeguro DescuentoAsociado { get; set; }
-        public ProfesionalAportante ProfesionalAsociado { get; set; }
     }
 }

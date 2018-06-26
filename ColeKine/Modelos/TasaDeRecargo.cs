@@ -16,7 +16,5 @@ namespace ColeKine.Modelos
         public string CategoriaTipoDeuda { get; set; }
         public float  TasaRecargo { get; set; }
 
-        public virtual IList<Deuda> DeudasConRecargos { get; set; }
-
     }
 }

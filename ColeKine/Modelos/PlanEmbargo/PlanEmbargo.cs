@@ -18,7 +18,6 @@ namespace ColeKine.Modelos
         public float MontoCubierto { get; set; }
 
         public float MontoACubrir { get; set; }
-        public IList<DescuentoEmbargo> DescuentosRealizadosEmbargo { get; set; }
         public ConvenioPrestadores ConvenioProfesionalAsociado { get; set; }
     }
 }
