@@ -19,7 +19,7 @@ namespace ColeKine.Modelos
         public int? CantidadAñosMin { get; set; }// solo 5 la categoria B
 
         public DateTime FechaInicioVigencia { get; set; }
-        public DateTime FechaFinVigencia { get; set; }
+        public DateTime? FechaFinVigencia { get; set; }// cargar mediante controlador con la fecha de inicio proxima
 
         //PARTES DE LA CUOTA
         public float PorcentajeCapitalizacion { get; set; }

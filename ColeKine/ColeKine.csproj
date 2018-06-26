@@ -100,11 +100,12 @@
     <Compile Include="Modelos\PlanEmbargo\PlanEmbargo.cs" />
     <Compile Include="Modelos\PlanEmbargo\PlanEmbargoCuotas.cs" />
     <Compile Include="Modelos\PlanEmbargo\PlanEmbargoPorcentaje.cs" />
-    <Compile Include="Modelos\Profesional\Domicilio\Domicilio.cs" />
-    <Compile Include="Modelos\Profesional\Domicilio\DomicilioLaboral.cs" />
-    <Compile Include="Modelos\Profesional\Domicilio\Localidad.cs" />
-    <Compile Include="Modelos\Profesional\Domicilio\Zona.cs" />
+    <Compile Include="Modelos\Domicilio\Domicilio.cs" />
+    <Compile Include="Modelos\Domicilio\DomicilioLaboral.cs" />
+    <Compile Include="Modelos\Domicilio\Localidad.cs" />
+    <Compile Include="Modelos\Domicilio\Zona.cs" />
     <Compile Include="Modelos\Profesional\EstadoCivil.cs" />
+    <Compile Include="Modelos\Profesional\NovedadProfesional.cs" />
     <Compile Include="Modelos\Profesional\OrdenPractica\PeriodoFacturacion.cs" />
     <Compile Include="Modelos\Matricula\CategoriaMatricula.cs" />
     <Compile Include="Modelos\Matricula\CobroCuotaMatricula.cs" />
