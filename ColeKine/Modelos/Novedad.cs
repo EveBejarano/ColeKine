@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
@@ -7,5 +8,6 @@ namespace ColeKine.Modelos
         public int IdNovedad { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
+        public DateTime FechaNovedad { get; set; }
     }
 }
