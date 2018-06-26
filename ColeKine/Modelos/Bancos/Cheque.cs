@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class TipoMovimiento
+    public class Cheque
     {
-        [Key]
-        public int IdTipoMovimiento { get; set; }
-        public virtual CuentaBancaria CuentaAsociada { get; set; }
+        public virtual Chequera Chequera { get; set; }
     }
 }
