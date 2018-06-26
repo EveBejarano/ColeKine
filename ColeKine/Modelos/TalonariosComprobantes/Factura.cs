@@ -2,7 +2,7 @@
 
 namespace ColeKine.Modelos
 {
-    public class Factura: TipoTalonario
+    public class Factura
     {
     }
 }

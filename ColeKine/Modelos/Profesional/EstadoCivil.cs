@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    class EstadoCivil
+    public class EstadoCivil
     {
         [Key]
         public int IdEstadoCivil { get; set; }
