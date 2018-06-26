@@ -9,6 +9,7 @@ namespace ColeKine.Modelos
     public class CategoriaCuotaCajaPrevisional
     {
         public int IdCategoriaCuota { get; set; }
+        public virtual CajaPrevisional CajaPrevisional { get; set; }
 
         public string Nombre { get; set; } //A: hasta 5 años,
                                            //B: mas de 5 y hasta 10 o C: mas de 10
@@ -17,7 +18,8 @@ namespace ColeKine.Modelos
 
         public int? CantidadAñosMin { get; set; }// solo 5 la categoria B
 
-        public DateTime FechaVigencia { get; set; } //vigencia de la categoria
+        public DateTime FechaInicioVigencia { get; set; }
+        public DateTime FechaFinVigencia { get; set; }
 
         //PARTES DE LA CUOTA
         public float PorcentajeCapitalizacion { get; set; }
@@ -28,7 +30,7 @@ namespace ColeKine.Modelos
 
         public float PorcentajeFondoExtraordinarioCompensador { get; set; }
 
-        
+        public float MontoTotal { get; set; }
 
 
 
