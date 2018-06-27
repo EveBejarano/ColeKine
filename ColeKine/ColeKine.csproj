@@ -168,6 +168,7 @@
     <Compile Include="Modelos\TalonariosComprobantes\Talonario.cs" />
     <Compile Include="Modelos\Tesoreria.cs" />
     <Compile Include="Modelos\Seguros\TipoSeguro.cs" />
+    <Compile Include="Modelos\TipoResponsable.cs" />
     <Compile Include="Modelos\UsuarioRoles\Permission.cs" />
     <Compile Include="Modelos\UsuarioRoles\RoleDetails.cs" />
     <Compile Include="Modelos\UsuarioRoles\UserDetails.cs" />
