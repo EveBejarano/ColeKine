@@ -21,6 +21,10 @@ namespace ColeKine
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<UserDetails> DetallesUsuarios { get; set; }
+        public DbSet<RoleDetails> DetallesRoles { get; set; }
+        public DbSet<Permission> Permisos { get; set; }
+
         #region Profesional
         public DbSet<Profesional> Profesionales { get; set; }
         public DbSet<TituloProfesional> TitulosProfesionales { get; set; }
