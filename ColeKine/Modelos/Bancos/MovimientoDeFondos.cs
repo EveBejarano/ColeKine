@@ -2,7 +2,7 @@
 
 namespace ColeKine.Modelos
 {
-    class MovimientoDeFondos
+    public class MovimientoDeFondos
     {
         [Key] public int IdMovimientoFondos { get; set; }
         public virtual MovimientoCuentaBancaria Movimiento { get; set; }

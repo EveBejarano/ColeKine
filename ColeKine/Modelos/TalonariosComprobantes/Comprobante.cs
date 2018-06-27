@@ -7,5 +7,7 @@ namespace ColeKine.Modelos
 
         [Key]
         public int IdComprobante { get; set; }
+
+        public virtual Talonario Talonario { get; set; }
     }
 }
