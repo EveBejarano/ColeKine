@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace ColeKine.Modelos
 {
+   
     public class Profesional: Persona
     {
         public int IdMatricula { get; set; }
@@ -19,10 +20,12 @@ namespace ColeKine.Modelos
         public string OtrasCajasPrevisionales { get; set; }
         //public virtual IEnumerable<InscripcionCajaPrevisional> InscripcionesAsociadas { get; set; }
 
+        //fondo de solidaridad
+        public bool AportaFondoSolidaridad { get; set; } //generar novedad y activar/desactivar devengamiento.
 
         //public IList<Deuda> DeudasAsociadas { get; set; }
         public virtual IList<Familiar> GrupoFamiliar { get; set; }
-        public virtual IList<GrupoProfesionales> GrupoProfesionales { get; set; }
+        public GrupoProfesionales GrupoProfesionales { get; set; }
         public virtual IList<DomicilioLaboral> DomiciliosLaborales{ get; set; }
        
         public virtual TipoSocio TipoSocio { get; set; }//OPCIONAL: utilizado en CPCE

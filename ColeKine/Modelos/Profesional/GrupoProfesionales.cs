@@ -11,6 +11,8 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdGrupoProfesionales { get; set; }
+
+        public string Nombre { get; set; } //Denominacion
         public virtual IList<Profesional> ProfesionalesAsociados { get; set; }
         public virtual IList<DomicilioLaboral> DomicilioLaboral { get; set; }
     }
