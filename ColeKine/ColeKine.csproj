@@ -125,6 +125,7 @@
     <Compile Include="Modelos\ObraSocial\NotaDebitoProfesional.cs" />
     <Compile Include="Modelos\ObraSocial\ReclamoObraSocial.cs" />
     <Compile Include="Modelos\Periodo.cs" />
+    <Compile Include="Modelos\Seguros\TipoNovedadSeguro.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\FacturaElectronica.cs" />
     <Compile Include="Modelos\Institucion.cs" />
     <Compile Include="Modelos\Profesional\OrdenPractica\LineaOrdenPractica.cs" />
@@ -167,6 +168,9 @@
     <Compile Include="Modelos\TalonariosComprobantes\Talonario.cs" />
     <Compile Include="Modelos\Tesoreria.cs" />
     <Compile Include="Modelos\Seguros\TipoSeguro.cs" />
+    <Compile Include="Modelos\UsuarioRoles\Permission.cs" />
+    <Compile Include="Modelos\UsuarioRoles\RoleDetails.cs" />
+    <Compile Include="Modelos\UsuarioRoles\UserDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validaciones\Matricula\NumeroUnicoMatricula.cs" />
   </ItemGroup>
