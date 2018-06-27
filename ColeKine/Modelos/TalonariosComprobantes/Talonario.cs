@@ -15,6 +15,7 @@ namespace ColeKine.Modelos
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public virtual Tesoreria Tesoreria { get; set; }
+        public virtual IList<Comprobante> Comprobantes { get; set; }
 
     }
 }

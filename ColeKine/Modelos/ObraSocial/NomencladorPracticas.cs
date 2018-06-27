@@ -21,6 +21,7 @@ namespace ColeKine.Modelos
     // Nomencladas - Especialidades - No nomencladas
     public class ClasificacionNomenclatura
     {
+        [Key]
         public int IdClasificacionNomenclatura { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
@@ -30,6 +31,7 @@ namespace ColeKine.Modelos
     // cuenta - Acum como esp - acum como no nomenclada
     public class ComportamientoPractica   
     {
+        [Key]
         public int IdComportamientoPractica { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }

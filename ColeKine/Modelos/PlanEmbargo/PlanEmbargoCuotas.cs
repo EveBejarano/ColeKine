@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class PlanEmbargoCuotas: PlanEmbargo
+    public class PlanEmbargoCuotas: PlanEmbargo
     {
         public PlanCuotas PlanCuotas { get; set; }
         public int CantidadCuotas { get; set; }

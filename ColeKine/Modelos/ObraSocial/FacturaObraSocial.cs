@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ColeKine.Modelos
 {
-    public class TotalAPagarObraSocial
+    public class FacturaObraSocial
     {
         [Key]
         public int IdTotalAPagarObraSocial { get; set; }

@@ -11,7 +11,7 @@ namespace ColeKine.Modelos
     {
         [Key]
         public int IdFacturaElectronica { get; set; }
-        public virtual TotalAPagarObraSocial ResumenObraSocial { get; set; }
+        public virtual FacturaObraSocial ResumenObraSocial { get; set; }
 
         public int NroFacturaAfip { get; set; }
         public float Monto { get; set; }

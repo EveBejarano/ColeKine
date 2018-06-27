@@ -5,7 +5,7 @@ using ColeKine.Modelos;
 
 namespace ColeKine.Modelos
 {
-    public class PlanEmbargo
+    public abstract class PlanEmbargo
     {[Key]
         public int IdPlanEmbargo { get; set; }
         public DateTime FechaInicioVigenciaEmbargo { get; set; }

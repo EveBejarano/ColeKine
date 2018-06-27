@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    class PlanEmbargoPorcentaje:PlanEmbargo
+    public class PlanEmbargoPorcentaje:PlanEmbargo
     {
         public float PorcentajeARetener { get; set; }
         
