@@ -11,7 +11,8 @@ namespace ColeKineBusinessLayer.UnitOfWorks
         private ApplicationDbContext context = new ApplicationDbContext();
         private RolesRepository<IdentityRole, RoleDetails> rolesRepository;
         private UserRepository<IdentityUser, UserDetails> userRepository;
-        public GenericRepository<Permission> permissionRepository;
+       private GenericRepository<Permission> permissionRepository;
+        private GenericRepository<Profesional> profesionalRepository;
 
         public RolesRepository<IdentityRole,RoleDetails> RolesRepository
         {
@@ -52,6 +53,18 @@ namespace ColeKineBusinessLayer.UnitOfWorks
             }
         }
 
+        public GenericRepository<Profesional> ProfesionalRepository
+        {
+            get
+            {
+
+                if (this.profesionalRepository == null)
+                {
+                    this.profesionalRepository = new GenericRepository<Profesional>(context);
+                }
+                return profesionalRepository;
+            }
+        }
 
         public void Save()
         {

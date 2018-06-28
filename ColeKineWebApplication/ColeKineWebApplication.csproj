@@ -314,6 +314,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ColeKineBusinessLayer\ColeKineBusinessLayer.csproj">
+      <Project>{dc58096f-b346-4084-a963-bcaef7e876c2}</Project>
+      <Name>ColeKineBusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ColeKine\ColeKine.csproj">
       <Project>{675aad01-ab46-4ea5-a15b-c8d0c2b3a6bb}</Project>
       <Name>ColeKine</Name>
