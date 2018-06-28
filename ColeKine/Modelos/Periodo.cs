@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColeKine.Modelos
 {
-    public struct Periodo
+    public class Periodo
     {
         public int Mes { get; set; } //1  a 12
 

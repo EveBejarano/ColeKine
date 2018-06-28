@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ColeKine.Modelos
 {
-    public class Familiar
+    public class Familiar: Persona
     {
         [Column(Order = 0), Key]
         public int DniFamiliar { get; set; }
@@ -11,10 +11,6 @@ namespace ColeKine.Modelos
         public int DniProfesional { get; set; }
 
         public virtual Profesional Profesional { get; set; }
-        public string DNI { get; set; }
-        public string Nombres { get; set; }
-        public string Apellidos { get; set; }
-        public string Sexo { get; set; }
         public string Parentesco { get; set; }
         
     }

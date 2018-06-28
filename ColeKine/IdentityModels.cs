@@ -201,6 +201,12 @@ namespace ColeKine
             modelBuilder.Entity<Profesional>()
                 .HasRequired(s => s.Matricula)
                 .WithRequiredPrincipal(ad => ad.Profesional);
+
+            modelBuilder.Entity<Profesional>().ToTable("Profesional");
+            modelBuilder.Entity<ProfesionalAportante>().ToTable("AportantesACajaPrevisional");
+            modelBuilder.Entity<Afiliado>().ToTable("Afiliado");
+            modelBuilder.Entity<Familiar>().ToTable("Familiar");
+            modelBuilder.Entity<Medico>().ToTable("Medico");
         }
     }
 }

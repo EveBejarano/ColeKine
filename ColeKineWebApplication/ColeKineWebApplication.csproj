@@ -209,8 +209,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CuotaMatriculasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProfesionalController.cs" />
     <Compile Include="Controllers\TipoSociosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -284,6 +286,16 @@
     <Content Include="Views\TipoSocios\Details.cshtml" />
     <Content Include="Views\TipoSocios\Edit.cshtml" />
     <Content Include="Views\TipoSocios\Index.cshtml" />
+    <Content Include="Views\CuotaMatriculas\Create.cshtml" />
+    <Content Include="Views\CuotaMatriculas\Delete.cshtml" />
+    <Content Include="Views\CuotaMatriculas\Details.cshtml" />
+    <Content Include="Views\CuotaMatriculas\Edit.cshtml" />
+    <Content Include="Views\CuotaMatriculas\Index.cshtml" />
+    <Content Include="Views\Profesional\Create.cshtml" />
+    <Content Include="Views\Profesional\Delete.cshtml" />
+    <Content Include="Views\Profesional\Details.cshtml" />
+    <Content Include="Views\Profesional\Edit.cshtml" />
+    <Content Include="Views\Profesional\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

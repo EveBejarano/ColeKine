@@ -8,9 +8,25 @@ namespace ColeKine.Modelos
     {
         [Key] public int IdCuotaMatricula { get; set; }
         public DateTime FechaVencimiento { get; set; }
+        private Periodo periodo { get; set; }
 
-        public Periodo Periodo { get; set; } //corresponde a este periodo
+        public Periodo Periodo
+        {
+            get
+            {
+                return periodo;
+            }
+            set
+            {
+                periodo = value;
+                this.Mes = periodo.Mes;
+                this.Año = periodo.Año;
+            }
 
+        } //corresponde a este periodo
+
+        public int Mes { get; set; }
+        public int Año { get; set; }
         public bool Pagada { get; set; }
 
         public float Monto { get; set; }
