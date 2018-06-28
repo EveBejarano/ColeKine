@@ -12,7 +12,7 @@ namespace ColeKineBusinessLayer.UnitOfWorks
         private RolesRepository<IdentityRole, RoleDetails> rolesRepository;
         private UserRepository<IdentityUser, UserDetails> userRepository;
        private GenericRepository<Permission> permissionRepository;
-        private GenericRepository<Profesional> profesionalRepository;
+        private ProfesionalRepository profesionalRepository;
 
         public RolesRepository<IdentityRole,RoleDetails> RolesRepository
         {
@@ -53,14 +53,14 @@ namespace ColeKineBusinessLayer.UnitOfWorks
             }
         }
 
-        public GenericRepository<Profesional> ProfesionalRepository
+        public ProfesionalRepository ProfesionalRepository
         {
             get
             {
 
                 if (this.profesionalRepository == null)
                 {
-                    this.profesionalRepository = new GenericRepository<Profesional>(context);
+                    this.profesionalRepository = new ProfesionalRepository(context);
                 }
                 return profesionalRepository;
             }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -13,7 +12,7 @@ using ColeKineBusinessLayer.UnitOfWorks;
 
 namespace ColeKineWebApplication.Controllers
 {
-    public class ProfesionalController : Controller
+    public class ProfesionalsController : Controller
     {
         private readonly UnitOfWork UnitOfWork = new UnitOfWork();
 
@@ -50,7 +49,7 @@ namespace ColeKineWebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdPersona,DNI,CUIT,Nombres,Apellidos,FechaNacimiento,Foto,Sexo,Nacionalidad,Celular,Email,IdMatricula,OtrasCajasPrevisionales,AportaFondoSolidaridad")] Profesional profesional)
+        public ActionResult Create([Bind(Include = "IdPersona,DNI,CUIT,Nombres,Apellidos,FechaNacimiento,Foto,Sexo,Nacionalidad,Celular,Email,OtrasCajasPrevisionales,AportaFondoSolidaridad")] Profesional profesional)
         {
             if (ModelState.IsValid)
             {

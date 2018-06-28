@@ -212,7 +212,7 @@
     <Compile Include="Controllers\CuotaMatriculasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProfesionalController.cs" />
+    <Compile Include="Controllers\ProfesionalsController.cs" />
     <Compile Include="Controllers\TipoSociosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -296,9 +296,15 @@
     <Content Include="Views\Profesional\Details.cshtml" />
     <Content Include="Views\Profesional\Edit.cshtml" />
     <Content Include="Views\Profesional\Index.cshtml" />
+    <Content Include="Views\Profesionals\Create.cshtml" />
+    <Content Include="Views\Profesionals\Delete.cshtml" />
+    <Content Include="Views\Profesionals\Details.cshtml" />
+    <Content Include="Views\Profesionals\Edit.cshtml" />
+    <Content Include="Views\Profesionals\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Profesionales\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

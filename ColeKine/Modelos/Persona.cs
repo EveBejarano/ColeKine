@@ -11,6 +11,10 @@ namespace ColeKine.Modelos
         public string CUIT { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Fecha de Nacimiento")]
         public DateTime FechaNacimiento { get; set; }
         public string Foto { get; set; }
         public string Sexo { get; set; }

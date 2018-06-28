@@ -1,11 +1,13 @@
 ﻿using ColeKine.Modelos;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ColeKine.Modelos
 {
    
     public class Profesional: Persona
     {
+        [ForeignKey("Matricula")]
         public int IdMatricula { get; set; }
         public virtual Matricula Matricula { get; set; }
 
