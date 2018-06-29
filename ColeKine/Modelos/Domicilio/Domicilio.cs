@@ -14,8 +14,8 @@ namespace ColeKine.Modelos
          public string Calle { get; set; }
          public int Numero { get; set; }
          public string Barrio { get; set; }
-         public string Piso { get; set; }
-         public string Departamento { get; set; } //depto
+
+         public string Observaciones { get; set; }
 
          public virtual Localidad Localidad { get; set; }
 
