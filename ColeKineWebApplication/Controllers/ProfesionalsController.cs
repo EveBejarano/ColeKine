@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -42,6 +43,12 @@ namespace ColeKineWebApplication.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        internal struct Sexo
+        {
+            public int Id;
+            public string Nombre;
         }
 
         // POST: Profesional/Create
