@@ -65,6 +65,19 @@ namespace ColeKineBusinessLayer.UnitOfWorks
                 return profesionalRepository;
             }
         }
+        public GenericRepository<Localidad> localidadRepository { get; set; }
+        public GenericRepository<Localidad> LocalidadRepository
+        {
+            get
+            {
+
+                if (this.localidadRepository == null)
+                {
+                    this.localidadRepository = new GenericRepository<Localidad>(context);
+                }
+                return localidadRepository;
+            }
+        }
 
         public void Save()
         {

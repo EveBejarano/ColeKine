@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -8,18 +9,19 @@ using System.Web;
 using System.Web.Mvc;
 using ColeKine;
 using ColeKine.Modelos;
-using ColeKineBusinessLayer.UnitOfWorks;
+using ColeKineBusinessLayer;
+using ColeKineWebApplication.Models;
 
 namespace ColeKineWebApplication.Controllers
 {
     public class ProfesionalsController : Controller
     {
-        private readonly UnitOfWork UnitOfWork = new UnitOfWork();
+        private readonly DataService Service = new DataService();
 
         // GET: Profesional
         public ActionResult Index()
         {
-            var list = UnitOfWork.ProfesionalRepository.Get() ?? new List<Profesional>();
+            var list = Service.UnitOfWork.ProfesionalRepository.Get(includeProperties: "EstadoCivil,TitulosProfesional,GrupoFamiliar,GrupoProfesionales,DomiciliosLaborales");
             return View(list);
         }
 
@@ -30,7 +32,7 @@ namespace ColeKineWebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profesional profesional = UnitOfWork.ProfesionalRepository.GetByID(id);
+            Profesional profesional = Service.UnitOfWork.ProfesionalRepository.Get(filter: p=> p.IdMatricula == id, includeProperties: "EstadoCivil,TitulosProfesional,GrupoFamiliar,GrupoProfesionales,DomiciliosLaborales").First();
             if (profesional == null)
             {
                 return HttpNotFound();
@@ -49,15 +51,42 @@ namespace ColeKineWebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdPersona,DNI,CUIT,Nombres,Apellidos,FechaNacimiento,Foto,Sexo,Nacionalidad,Celular,Email,OtrasCajasPrevisionales,AportaFondoSolidaridad")] Profesional profesional)
+        public ActionResult Create([Bind(Include = "DNI,Nombres,Apellidos,FechaNacimiento,Sexo,Nacionalidad,Celular,Email,Calle,Numero,Barrio, Observacionesm, LocalidadParticular,CP")] PersonaViewModel profesional)
         {
             if (ModelState.IsValid)
             {
-                UnitOfWork.ProfesionalRepository.Insert(profesional);
-                UnitOfWork.Save();
+                var auxprofesional = new DatosProfesional
+                {
+                    DNI = profesional.DNI,
+                    Nombres = profesional.Nombres,
+                    Apellidos = profesional.Apellidos,
+                    FechaNacimiento = profesional.FechaNacimiento,
+                    Sexo = profesional.Sexo,
+                    Nacionalidad = profesional.Nacionalidad,
+                    Celular = profesional.Celular,
+                    Email = profesional.Email,
+                    Calle = profesional.Calle,
+                    Numero = profesional.Numero,
+                    Barrio = profesional.Barrio,
+                    LocalidadParticular = profesional.LocalidadParticular,
+                    CP = profesional.CP
+                };
+                Service.CrearNuevoProfesional(auxprofesional);
+                var pro = Service.UnitOfWork.ProfesionalRepository.Get(filter: p=> p.DNI == profesional.DNI & p.Nombres == profesional.Nombres && p.Apellidos == profesional.Apellidos).First().IdMatricula;
+
                 return RedirectToAction("Index");
+                //return RedirectToAction("AddProfesionalDataToNewProfesional", pro);
             }
 
+            return View(profesional);
+        }
+
+        public ActionResult AddProfesionalDataToNewProfesional(string matricula)
+        {
+            var profesional = new ProfesionalDataViewModel
+            {
+                idMatricula = Service.UnitOfWork.ProfesionalRepository.GetByMatricula(matricula).IdMatricula
+            };
             return View(profesional);
         }
 
@@ -68,7 +97,7 @@ namespace ColeKineWebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profesional profesional = UnitOfWork.ProfesionalRepository.GetByID(id);
+            Profesional profesional = Service.UnitOfWork.ProfesionalRepository.Get(filter: p => p.IdMatricula == id, includeProperties: "EstadoCivil,TitulosProfesional,GrupoFamiliar,GrupoProfesionales,DomiciliosLaborales").First();
             if (profesional == null)
             {
                 return HttpNotFound();
@@ -85,8 +114,8 @@ namespace ColeKineWebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                UnitOfWork.ProfesionalRepository.Update(profesional);
-                UnitOfWork.Save();
+                Service.UnitOfWork.ProfesionalRepository.Update(profesional);
+                Service.UnitOfWork.Save();
                 return RedirectToAction("Index");
             }
             return View(profesional);
@@ -99,7 +128,7 @@ namespace ColeKineWebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profesional profesional = UnitOfWork.ProfesionalRepository.GetByID(id);
+            Profesional profesional = Service.UnitOfWork.ProfesionalRepository.Get(filter: p => p.IdMatricula == id, includeProperties: "EstadoCivil,TitulosProfesional,GrupoFamiliar,GrupoProfesionales,DomiciliosLaborales").First();
             if (profesional == null)
             {
                 return HttpNotFound();
@@ -112,11 +141,12 @@ namespace ColeKineWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Profesional profesional = UnitOfWork.ProfesionalRepository.GetByID(id);
-            UnitOfWork.ProfesionalRepository.Delete(profesional);
-            UnitOfWork.Save();
+            Profesional profesional = Service.UnitOfWork.ProfesionalRepository.GetByMatricula(id);
+            Service.UnitOfWork.ProfesionalRepository.Delete(profesional);
+            Service.UnitOfWork.Save();
             return RedirectToAction("Index");
         }
+
 
     }
 }

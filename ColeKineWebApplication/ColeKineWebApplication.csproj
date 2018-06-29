@@ -212,6 +212,7 @@
     <Compile Include="Controllers\CuotaMatriculasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Models\PersonaViewModel.cs" />
     <Compile Include="Controllers\ProfesionalsController.cs" />
     <Compile Include="Controllers\TipoSociosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,6 +220,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProfesionalDataViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -359,20 +361,15 @@
     <Content Include="Views\CuotaMatriculas\Details.cshtml" />
     <Content Include="Views\CuotaMatriculas\Edit.cshtml" />
     <Content Include="Views\CuotaMatriculas\Index.cshtml" />
-    <Content Include="Views\Profesional\Create.cshtml" />
-    <Content Include="Views\Profesional\Delete.cshtml" />
-    <Content Include="Views\Profesional\Details.cshtml" />
-    <Content Include="Views\Profesional\Edit.cshtml" />
-    <Content Include="Views\Profesional\Index.cshtml" />
-    <Content Include="Views\Profesionals\Create.cshtml" />
     <Content Include="Views\Profesionals\Delete.cshtml" />
     <Content Include="Views\Profesionals\Details.cshtml" />
     <Content Include="Views\Profesionals\Edit.cshtml" />
     <Content Include="Views\Profesionals\Index.cshtml" />
+    <Content Include="Views\Profesionals\Create.cshtml" />
+    <Content Include="Views\Profesionals\AddProfesionalDataToNewProfesional.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Profesionales\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
