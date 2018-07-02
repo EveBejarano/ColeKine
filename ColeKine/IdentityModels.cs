@@ -36,6 +36,7 @@ namespace ColeKine
         public DbSet<EstadoCivil> EstadosCiviles { get; set; }
         public DbSet<ConvenioPrestadores> ConveniosPrestadores { get; set; }
         public DbSet<ProfesionalAportante> ProfesionalesAportantes { get; set; }
+        public DbSet<Sexo> Sexos { get; set; }
 
         #region OrdenPractica
 

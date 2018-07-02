@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using ColeKine.Modelos;
 
 namespace ColeKineWebApplication.Models
 {
@@ -15,7 +16,7 @@ namespace ColeKineWebApplication.Models
         [Display(Name = "Fecha de Nacimiento")]
         public DateTime FechaNacimiento { get; set; }
 
-        public string Sexo { get; set; }
+        public Sexo Sexo { get; set; }
         public string Nacionalidad { get; set; }
         public string Celular { get; set; }
         public string Email { get; set; }

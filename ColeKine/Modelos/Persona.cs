@@ -17,7 +17,7 @@ namespace ColeKine.Modelos
         [Display(Name = "Fecha de Nacimiento")]
         public DateTime FechaNacimiento { get; set; }
         public string Foto { get; set; }
-        public string Sexo { get; set; }
+        public Sexo Sexo { get; set; }
         public string Nacionalidad { get; set; }
         public string Celular { get; set; }
         public string Email { get; set; }

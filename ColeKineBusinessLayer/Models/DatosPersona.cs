@@ -1,4 +1,5 @@
 ﻿using System;
+using ColeKine.Modelos;
 
 namespace ColeKineBusinessLayer
 {
@@ -10,7 +11,7 @@ namespace ColeKineBusinessLayer
         public string LocalidadParticular { get; set; }
         public string Apellidos { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public string Sexo { get; set; }
+        public Sexo Sexo { get; set; }
         public string Nacionalidad { get; set; }
         public string Celular { get; set; }
         public string Email { get; set; }
