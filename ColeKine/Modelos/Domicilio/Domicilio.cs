@@ -19,6 +19,8 @@ namespace ColeKine.Modelos
 
          public virtual Localidad Localidad { get; set; }
 
+         public string Telefono { get; set; }
+
     }
 
 }

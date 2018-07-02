@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using ColeKine.Modelos;
 
 namespace ColeKineWebApplication.Models
 {
@@ -12,7 +14,7 @@ namespace ColeKineWebApplication.Models
         // Titulo
         public string TituloNombre { get; set; }
 
-        public string TTituloescripcion { get; set; }
+        public string TituloDescripcion { get; set; }
 
         public string TituloExpedidoPor { get; set; }
 
@@ -23,12 +25,17 @@ namespace ColeKineWebApplication.Models
 
         // DomicilioLaboral
         public string Institucion { get; set; }
-        public string DireccionLaboral { get; set; }
+        public string Calle { get; set; }
+        public int Numero { get; set; }
+        public string Observaciones { get; set; }
         public string LocalidadLaboral { get; set; }
         public int TelefonoLaboral { get; set; }
 
+        public string CPLaboral { get; set; }
+        public bool Habilitado { get; set; }
+
         //Grupo Familiar
-        public string GrupoFamiliar { get; set; }
+        public List<Familiar>  GrupoFamiliar{ get; set; }
 
         // Datos Fiscales
         public string CUIT { get; set; }

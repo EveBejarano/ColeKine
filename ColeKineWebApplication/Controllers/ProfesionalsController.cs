@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using ColeKine;
 using ColeKine.Modelos;
 using ColeKineBusinessLayer;
+using ColeKineBusinessLayer.Models;
 using ColeKineWebApplication.Models;
 
 namespace ColeKineWebApplication.Controllers
@@ -51,11 +52,11 @@ namespace ColeKineWebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DNI,Nombres,Apellidos,FechaNacimiento,Sexo,Nacionalidad,Celular,Email,Calle,Numero,Barrio, Observacionesm, LocalidadParticular,CP")] PersonaViewModel profesional)
+        public ActionResult Create([Bind(Include = "DNI,Nombres,Apellidos,FechaNacimiento,Sexo,Nacionalidad,Celular,Email,Calle,Numero,Barrio, Observaciones, LocalidadParticular,CP")] PersonaViewModel profesional)
         {
             if (ModelState.IsValid)
             {
-                var auxprofesional = new DatosProfesional
+                var auxprofesional = new DatosPersona
                 {
                     DNI = profesional.DNI,
                     Nombres = profesional.Nombres,
@@ -72,7 +73,47 @@ namespace ColeKineWebApplication.Controllers
                     CP = profesional.CP
                 };
                 Service.CrearNuevoProfesional(auxprofesional);
-                var pro = Service.UnitOfWork.ProfesionalRepository.Get(filter: p=> p.DNI == profesional.DNI & p.Nombres == profesional.Nombres && p.Apellidos == profesional.Apellidos).First().IdMatricula;
+                var auxmatricula = Service.UnitOfWork.ProfesionalRepository.Get(filter: p=> p.DNI == profesional.DNI & p.Nombres == profesional.Nombres && p.Apellidos == profesional.Apellidos).First().IdMatricula;
+
+                //return RedirectToAction("AddProfesionalDataToNewProfesional", routeValues: new {matricula = auxmatricula});
+                return RedirectToAction("Index");
+            }
+
+            return View(profesional);
+        }
+
+        public ActionResult AddProfesionalDataToNewProfesional(int matricula)
+        {
+            var profesional = new ProfesionalDataViewModel
+            {
+                idMatricula = Service.UnitOfWork.ProfesionalRepository.GetByMatricula(matricula).IdMatricula
+            };
+            ViewBag.Matricula = matricula;
+            return View(profesional);
+        }
+        
+        public ActionResult AddProfesionalDataToNewProfesionalReturn([Bind(Include = "TituloNombre,TituloDescripcion,TituloExpedidoPor,FechaOtorgamiento," +
+                                                                               "Institucion,Calle,Numero, Observaciones,LocalidadLaboral,CPLaboral,TelefonoLaboral,Habilitado,")] ProfesionalDataViewModel profesional1, ProfesionalDataViewModel profesional)
+        {
+            if (ModelState.IsValid)
+            {
+                var auxprofesional = new DatosProfesional
+                {
+                    IdMatricula = profesional.idMatricula,
+                    TituloNombre = profesional.TituloNombre,
+                    TituloDescripcion = profesional.TituloDescripcion,
+                    TituloExpedidoPor = profesional.TituloExpedidoPor,
+                    FechaOtorgamiento = profesional.FechaOtorgamiento,
+                    Institucion = profesional.Institucion,
+                    Calle = profesional.Calle,
+                    Numero = profesional.Numero,
+                    Observaciones = profesional.Observaciones,
+                    LocalidadLaboral = profesional.LocalidadLaboral,
+                    TelefonoLaboral = profesional.TelefonoLaboral,
+                    Habilitado = profesional.Habilitado,
+                    CP = profesional.CPLaboral
+                };
+                Service.AgregarDatosProfesional(auxprofesional);
 
                 return RedirectToAction("Index");
                 //return RedirectToAction("AddProfesionalDataToNewProfesional", pro);
@@ -81,13 +122,21 @@ namespace ColeKineWebApplication.Controllers
             return View(profesional);
         }
 
-        public ActionResult AddProfesionalDataToNewProfesional(string matricula)
+
+
+        public void AgregarFamiliar(int matricula, string DNIFamiliar)
         {
-            var profesional = new ProfesionalDataViewModel
+            var profesional = Service.UnitOfWork.ProfesionalRepository.GetByMatricula(matricula);
+            var familiar = new Familiar
             {
-                idMatricula = Service.UnitOfWork.ProfesionalRepository.GetByMatricula(matricula).IdMatricula
+                DNI = DNIFamiliar
             };
-            return View(profesional);
+
+            profesional.GrupoFamiliar.Add(familiar);
+            Service.UnitOfWork.ProfesionalRepository.Update(profesional);
+            Service.UnitOfWork.Save();
+
+            ViewBag.Matricula = matricula;
         }
 
         // GET: Profesional/Edit/5

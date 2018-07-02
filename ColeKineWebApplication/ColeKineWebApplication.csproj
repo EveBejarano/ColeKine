@@ -367,6 +367,7 @@
     <Content Include="Views\Profesionals\Index.cshtml" />
     <Content Include="Views\Profesionals\Create.cshtml" />
     <Content Include="Views\Profesionals\AddProfesionalDataToNewProfesional.cshtml" />
+    <Content Include="Views\Profesionals\AgregarFamiliar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

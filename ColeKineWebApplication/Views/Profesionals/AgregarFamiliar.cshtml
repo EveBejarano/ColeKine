@@ -1,0 +1,82 @@
+﻿@model ColeKineWebApplication.Models.ProfesionalDataViewModel
+@{
+    ViewBag.Title = "AgregarFamiliar";
+}
+
+<h2>AgregarFamiliar</h2>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#AddFamiliar').click(function () {
+            var _dniFamiliar = $('#IdFamiliar').val();
+            var _NombreFamiliar = $('#NombreFamiliar').val();
+            var _ApellidoFamiliar = $('#ApellidoFamiliar').val();
+            var _CelularFamiliar = $('#CelularFamiliar').val();
+            var _idProfesional = $('#IdMatricula').val();
+
+
+            if (_dniFamiliar == '') {
+                return false;
+            }
+
+            var _parameters = { Matricula: _idProfesional, DNIFamiliar: _dniFamiliar };
+            $.ajax({
+                url: "/Profesionals/AgregarFamiliar",
+                type: "GET",
+                data: _parameters
+                //success: function (data, textStatus, jqXHR) {
+                //    $('#FamiliarTable').html(data);
+                //    $('#Id').val("");
+                //}
+            });
+        });
+
+    });
+</script>
+
+
+@Html.HiddenFor(model => model.Matricula)
+<fieldset style="padding: 1em; font: 100%; color: Black; border-color: Black; border-style: solid;
+                                      border-width: thin; border-color: Silver; width: 740px">
+    <legend><strong>Nuevo Familiar:</strong></legend>
+    <form action="/action_page.php">
+        DNI: <input type="text" id="IdFamiliar"><br>
+        Nombres: <input type="text" name="lname"><br>
+        <input type="button" id="AddFamiliar" value="AgregarFamiliar" />
+    </form>
+    
+</fieldset>
+
+
+
+    @*var _dniFamiliar = $('#IdFamiliar').val();
+        var _NombreFamiliar = $('#NombreFamiliar').val();
+        var _ApellidoFamiliar = $('#ApellidoFamiliar').val();
+        var _CelularFamiliar = $('#CelularFamiliar').val();
+        var _idProfesional = $('#IdMatricula').val();*@
+    @*<table id="PermissionTable" style="width: 65%">
+            <thead>
+            <th style="width:90%">
+                Permission
+            </th>
+            <th>
+                Action
+            </th>
+            </thead>
+            @foreach (PruebaUsers.Models.Permission permission in Model.Permissions.OrderBy(n => n.PermissionDescription))
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(permission.PermissionDescription, "PermissionDetails", new { id = permission.Id_Permission })
+                    </td>
+                    <td>
+                        <center>
+                            <a href="@Url.Action("DeletePermission", "Admin", new { id = Model.Id_Role, permissionId = permission.Id_Permission })" class="deletePermission" id=@Model.Id_Role permissionid=@permission.Id_Permission>
+                                <img src="@Url.Content("~/Content/images/bin.png")" />
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </table>*@
+

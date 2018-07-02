@@ -70,9 +70,9 @@ namespace ColeKineBusinessLayer.Repositories
             }
         }
 
-        public virtual Profesional GetByMatricula(object id)
+        public virtual Profesional GetByMatricula(int id)
         {
-            return  Profesionales.Find(id);
+            return Profesionales.First(p => p.IdMatricula == id);
         }
 
         public virtual void Insert( Profesional entity)
