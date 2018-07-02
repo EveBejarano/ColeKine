@@ -125,6 +125,7 @@
     <Compile Include="Modelos\ObraSocial\NotaDebitoProfesional.cs" />
     <Compile Include="Modelos\ObraSocial\ReclamoObraSocial.cs" />
     <Compile Include="Modelos\Periodo.cs" />
+    <Compile Include="Modelos\Profesional\Sexo.cs" />
     <Compile Include="Modelos\Seguros\TipoNovedadSeguro.cs" />
     <Compile Include="Modelos\TalonariosComprobantes\FacturaElectronica.cs" />
     <Compile Include="Modelos\Institucion.cs" />

@@ -1,4 +1,5 @@
-﻿@model ColeKineWebApplication.Models.PersonaViewModel
+﻿@using ColeKineWebApplication.Controllers
+@model ColeKineWebApplication.Models.PersonaViewModel
 
 @{
     ViewBag.Title = "Create";
@@ -56,11 +57,14 @@
             @Html.DropDownListFor("Mmodel => model.Sexo, ViewBag.Sexos)
         </div>
     </div>*@
-    @*<div class="form-group">
-        @Html.DropDownListFor(m => m.Sexo, 
-            new SelectList(Model.Sexo, 
-                "SexoId", "Value"))
-    </div>*@
+    <div class="form-group">
+        <label class="control-label col-md-2">Sexo</label>
+        <div class="col-lg-10">
+            @*@Html.DropDownListFor(m => m.Sexo, new List<SelectListItem>())*@
+            @Html.DropDownListFor(m => m.Sexo, SexosController.GetDropDown(), new{@class="form-control"})
+        </div>
+      
+    </div>
 
    
 
