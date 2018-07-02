@@ -18,6 +18,8 @@ namespace ColeKineWebApplication.Models
         public string Sexo { get; set; }
         public string Nacionalidad { get; set; }
         public string Celular { get; set; }
+
+        [EmailAddress]
         public string Email { get; set; }
         public string Calle { get; set; }
         public int Numero { get; set; }

@@ -22,7 +22,7 @@ namespace ColeKineWebApplication.Controllers
         // GET: Profesional
         public ActionResult Index()
         {
-            var list = Service.UnitOfWork.ProfesionalRepository.Get(includeProperties: "EstadoCivil,TitulosProfesional,GrupoFamiliar,GrupoProfesionales,DomiciliosLaborales");
+            var list = Service.UnitOfWork.ProfesionalRepository.Get(includeProperties: "EstadoCivil,TitulosProfesionales,GrupoFamiliar,GrupoProfesionales,DomiciliosLaborales");
             return View(list);
         }
 
@@ -75,8 +75,8 @@ namespace ColeKineWebApplication.Controllers
                 Service.CrearNuevoProfesional(auxprofesional);
                 var auxmatricula = Service.UnitOfWork.ProfesionalRepository.Get(filter: p=> p.DNI == profesional.DNI & p.Nombres == profesional.Nombres && p.Apellidos == profesional.Apellidos).First().IdMatricula;
 
-                //return RedirectToAction("AddProfesionalDataToNewProfesional", routeValues: new {matricula = auxmatricula});
-                return RedirectToAction("Index");
+                return RedirectToAction("AddProfesionalDataToNewProfesional", routeValues: new {matricula = auxmatricula});
+                //return RedirectToAction("Index");
             }
 
             return View(profesional);
@@ -88,12 +88,11 @@ namespace ColeKineWebApplication.Controllers
             {
                 idMatricula = Service.UnitOfWork.ProfesionalRepository.GetByMatricula(matricula).IdMatricula
             };
-            ViewBag.Matricula = matricula;
             return View(profesional);
         }
         
-        public ActionResult AddProfesionalDataToNewProfesionalReturn([Bind(Include = "TituloNombre,TituloDescripcion,TituloExpedidoPor,FechaOtorgamiento," +
-                                                                               "Institucion,Calle,Numero, Observaciones,LocalidadLaboral,CPLaboral,TelefonoLaboral,Habilitado,")] ProfesionalDataViewModel profesional1, ProfesionalDataViewModel profesional)
+        [HttpPost]
+        public ActionResult AddProfesionalDataToNewProfesional([Bind(Include = "idMatricula,TituloNombre,FechaOtorgamiento,Institucion,Calle,Numero, Observaciones,LocalidadLaboral,CPLaboral,TelefonoLaboral,Habilitado,CUIT,IIBB,TipoContribuyente")] ProfesionalDataViewModel profesional)
         {
             if (ModelState.IsValid)
             {
@@ -101,8 +100,6 @@ namespace ColeKineWebApplication.Controllers
                 {
                     IdMatricula = profesional.idMatricula,
                     TituloNombre = profesional.TituloNombre,
-                    TituloDescripcion = profesional.TituloDescripcion,
-                    TituloExpedidoPor = profesional.TituloExpedidoPor,
                     FechaOtorgamiento = profesional.FechaOtorgamiento,
                     Institucion = profesional.Institucion,
                     Calle = profesional.Calle,
@@ -111,7 +108,11 @@ namespace ColeKineWebApplication.Controllers
                     LocalidadLaboral = profesional.LocalidadLaboral,
                     TelefonoLaboral = profesional.TelefonoLaboral,
                     Habilitado = profesional.Habilitado,
-                    CP = profesional.CPLaboral
+                    CP = profesional.CPLaboral,
+                    CUIT = profesional.CUIT,
+                    IIBB = profesional.IIBB,
+                    TipoContribuyente = profesional.TipoContribuyente
+
                 };
                 Service.AgregarDatosProfesional(auxprofesional);
 

@@ -6,8 +6,6 @@ namespace ColeKineBusinessLayer.Models
     {
         public int IdMatricula { get; set; }
         public string TituloNombre { get; set; }
-        public string TituloDescripcion { get; set; }
-        public string TituloExpedidoPor { get; set; }
         public DateTime FechaOtorgamiento { get; set; }
         public string Institucion { get; set; }
         public string Calle { get; set; }
@@ -17,5 +15,8 @@ namespace ColeKineBusinessLayer.Models
         public int TelefonoLaboral { get; set; }
         public bool Habilitado { get; set; }
         public string CP { get; set; }
+        public string CUIT { get; set; }
+        public string TipoContribuyente { get; set; }
+        public string IIBB { get; set; }
     }
 }

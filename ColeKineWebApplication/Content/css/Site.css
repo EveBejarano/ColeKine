@@ -22,3 +22,18 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.panel-body-form {
+
+    background-color: #dbefe699;
+}
+.panel-form {
+
+    color: black;
+    background-color: #1ce0cb;
+    border-color: #d6e9c6;
+    border-top-color: rgb(214, 233, 198);
+    border-right-color: rgb(214, 233, 198);
+    border-bottom-color: rgb(214, 233, 198);
+    border-left-color: rgb(214, 233, 198);
+}

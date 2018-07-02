@@ -12,7 +12,10 @@ namespace ColeKine.Modelos
         public virtual Matricula Matricula { get; set; }
 
         public EstadoCivil EstadoCivil { get; set; }
-        public IList<TituloProfesional> TitulosProfesional { get; set; }
+        public string TipoContribuyente { get; set; }
+
+        public string IIBB { get; set; }
+        public IList<TituloProfesional> TitulosProfesionales { get; set; }
 
         //cajas previsionales: PROFESIONAL APORTANTE A SIDEPREKI
         //----Se puede poner una tilde en el front que indica si

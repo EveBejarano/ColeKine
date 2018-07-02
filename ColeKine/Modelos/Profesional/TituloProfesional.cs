@@ -15,9 +15,6 @@ namespace ColeKine.Modelos
 
         public string Nombre { get; set; }
 
-        public string Descripcion { get; set; }
-
-        public string ExpedidoPor { get; set; }
 
         public DateTime FechaOtorgamiento { get; set; }
         public string Institucion { get; set; }

@@ -43,18 +43,23 @@ namespace ColeKineBusinessLayer
         public void AgregarDatosProfesional(DatosProfesional profesional)
         {
 
-            var auxprofesional = UnitOfWork.ProfesionalRepository.GetByMatricula(profesional.IdMatricula);
-            
+            var auxprofesional = UnitOfWork.ProfesionalRepository.Get(filter: p=> p.IdMatricula== profesional.IdMatricula, includeProperties: "TitulosProfesionales,DomiciliosLaborales").FirstOrDefault();
+            auxprofesional.CUIT = profesional.CUIT;
+            auxprofesional.IIBB = profesional.IIBB;
+            auxprofesional.TipoContribuyente = profesional.TipoContribuyente;
+
+
             var TituloProfesional = new TituloProfesional
             {
                 Nombre = profesional.TituloNombre,
-                Descripcion = profesional.TituloDescripcion,
-                ExpedidoPor = profesional.TituloExpedidoPor,
                 FechaOtorgamiento = profesional.FechaOtorgamiento,
                 Institucion = profesional.Institucion
             };
-            auxprofesional.TitulosProfesional.Add(TituloProfesional);
-
+            if (auxprofesional.TitulosProfesionales == null )
+            {
+                auxprofesional.TitulosProfesionales = new List<TituloProfesional>();
+            }
+            auxprofesional.TitulosProfesionales.Add(TituloProfesional);
             var domicilioLaboral = new DomicilioLaboral
             {
                 Calle = profesional.Calle,
@@ -62,6 +67,11 @@ namespace ColeKineBusinessLayer
                 Observaciones = profesional.Observaciones,
                 Localidad = UnitOfWork.LocalidadRepository.Get(filter: p => p.CodigoPostal == profesional.CP).FirstOrDefault()
             };
+
+            if (auxprofesional.DomiciliosLaborales == null)
+            {
+                auxprofesional.DomiciliosLaborales = new List<DomicilioLaboral>();
+            }
 
             auxprofesional.DomiciliosLaborales.Add(domicilioLaboral);
             UnitOfWork.ProfesionalRepository.Update(auxprofesional);
