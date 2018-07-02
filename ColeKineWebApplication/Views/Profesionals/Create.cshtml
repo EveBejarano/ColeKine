@@ -56,6 +56,13 @@
             @Html.DropDownListFor("Mmodel => model.Sexo, ViewBag.Sexos)
         </div>
     </div>*@
+    <div class="form-group">
+        @Html.DropDownListFor(m => m.Sexo, 
+            new SelectList(Model.Sexo, 
+                "SexoId", "Value"))
+    </div>
+
+   
 
     <div class="form-group">
         @Html.LabelFor(model => model.Nacionalidad, htmlAttributes: new { @class = "control-label col-md-2" })

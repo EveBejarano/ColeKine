@@ -5,33 +5,22 @@
 }
 
 <h2>Index</h2>
-
+<head>
+    @*<link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+</head>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table id="table" class="table">
+    <thead>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DNI)
+            Matrícula
         </th>
+       
         <th>
-            @Html.DisplayNameFor(model => model.CUIT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombres)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Foto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sexo)
-        </th>
+Nombre        </th>
+       
         <th>
             @Html.DisplayNameFor(model => model.Nacionalidad)
         </th>
@@ -42,64 +31,82 @@
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IdMatricula)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OtrasCajasPrevisionales)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AportaFondoSolidaridad)
+            @Html.DisplayNameFor(model => model.DNI)
         </th>
         <th></th>
     </tr>
+    </thead>
+    <tbody>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DNI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CUIT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombres)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Apellidos)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Foto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sexo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nacionalidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Celular)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IdMatricula)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OtrasCajasPrevisionales)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AportaFondoSolidaridad)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdMatricula }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdMatricula }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdMatricula })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula.NumeroMatricula)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres) @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+          <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DNI)
+            </td>
+           
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.IdMatricula}) |
+                @Html.ActionLink("Details", "Details", new {id = item.IdMatricula}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.IdMatricula})
+            </td>
+        </tr>
+    }
+    </tbody>
 </table>
+
+
+@section Scripts
+{
+@*<script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>*@
+    <script>
+        
+        $(document).ready(function () {
+
+            // Setup - add a text input to each footer cell
+            $('#table tfoot th').each( function () {
+                var title = $(this).text();
+                $(this).html( '<input type="text" placeholder="Buscar '+title+'" />' );
+            });
+
+            //datatable
+            $('#table').DataTable({
+                "language": {
+                    "url": '@Url.Content("~/Scripts/DataTables/spanish.json")'
+                }
+           
+            });
+
+            // Apply the search
+            table.columns().every( function () {
+                var that = this;
+ 
+                $( 'input', this.footer() ).on( 'keyup change', function () {
+                    if ( that.search() !== this.value ) {
+                        that
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+            } );
+        });
+
+    </script>
+   
+}

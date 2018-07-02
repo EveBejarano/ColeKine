@@ -18,10 +18,10 @@ namespace ColeKineWebApplication
                 "~/Scripts/demo.js",
                 "~/Scripts/jquery-2.1.1.min.js",
                 "~/Scripts/jquery.unobtrusive-ajax.min.js",
-                "~/Scripts/paper-dashboard.js"
+                "~/Scripts/paper-dashboard.js",
                 //"~/Scripts/bootbox.min.js",
                 //"~/Scripts/toastr.js",
-                //"~/Scripts/DataTables/jquery.datatables.min.js",
+                "~/Scripts/DataTables/jquery.datatables.min.js",
                 //"~/Scripts/DataTables/datatables.bootstrap.min.js",
                 //"~/Scripts/pestañas.js",
                 //"~/Scripts/select2.js",
@@ -47,8 +47,10 @@ namespace ColeKineWebApplication
                 "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Styles/css").Include(
-            "~/Content/css/animate.min.css",
+                "~/Content/DataTables/css/jquery.dataTables.min.css",
+                "~/Content/css/animate.min.css",
             "~/Content/css/bootstrap.min.css",
+           
             "~/Content/css/demo.css",
             "~/Content/css/paper-dashboard.css",
             //"~/Content/Site.css",
@@ -60,7 +62,7 @@ namespace ColeKineWebApplication
             //"~/Content/Layout/css/demo.css",
          
             //"~/Content/css/select2.css",
-            //"~/Content/DataTables/css/dataTables.bootstrap.min.css",
+           
             //"~/Content/jquery.steps.css",
             //"~/Content/jquery-ui.multidatespicker.css"
 
