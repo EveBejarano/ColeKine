@@ -20,5 +20,6 @@ namespace ColeKine.Modelos
         public string ExpedidoPor { get; set; }
 
         public DateTime FechaOtorgamiento { get; set; }
+        public string Institucion { get; set; }
     }
 }
